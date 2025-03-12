@@ -25,15 +25,15 @@ author:
   avatar           : "ckhuang.jpg"
   name             : "Chih-Kang Huang"
   pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
+  bio              : ""
   location         : "Nancy, France"
-  employer         : "Red Brick University"
+  employer         : "Université de Lorraine"
   uri              : # URL
   email            : "chih-kang.huang at univ-lorraine.fr" 
 
   # Academic websites
   arxiv            : # URL - Update with the correct link to your profile
-  googlescholar    : "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
+  googlescholar    : "https://scholar.google.com/citations?user=AWYdWSoAAAAJ"
   impactstory      : # URL
   orcid            : "0009-0005-3946-910X"
   semantic         : # URL
