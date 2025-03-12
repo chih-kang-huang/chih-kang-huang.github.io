@@ -1,7 +1,10 @@
 ---
-title: "Portfolio item number 1"
-excerpt: "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
+title: "How to determinate if two real estates correspond to the same property ?"
+excerpt: "Use classic method and ScentenceTrasformers to group real estate listings related to the same property"
 collection: portfolio
 ---
 
-This is an item in your portfolio. It can be have images or nice text. If you name the file .md, it will be parsed as markdown. If you name the file .html, it will be parsed as HTML. 
+This is a personal project using classic methods and LLM models (CamemBERT) to group the real estate listings related to the same property. Indeed, several professionals (or even individuals) publish listings on multiple real estate portals for the same property
+
+
+[Real_estates](/files/real_estate_Chih-Kang_HUANG.ipynb)
