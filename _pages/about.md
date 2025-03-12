@@ -23,10 +23,10 @@ Publications
 
 Transversal Projects in Machine Learning
 ======
-<!--* [How to determinate if two real estates correspond to the same](/portfolio/portfolio-1)-->
 * [Chatbot for automated meal order collection](https://github.com/CheesyPicodon/nca-linebot)
-* [CENTURI Hackathon for Quantitative Biology](https://github.com/CENTURI-Hackathon-2024), Depp single molecule unfolding detection, First Price
+* [CENTURI Hackathon 2024 for Quantitative Biology](https://github.com/CENTURI-Hackathon-2024), Deep single molecule unfolding detection, *First Price*, at Marseille 
 <!--* [Physic-Informed Neural Networks to solve PDEs](/portfolio/portfolio-2)-->
+<!--* [How to determinate if two real estates correspond to the same](/portfolio/portfolio-1)-->
 
 Hard Skills
 ======
