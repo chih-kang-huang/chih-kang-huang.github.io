@@ -8,34 +8,33 @@ redirect_from:
   - /about.html
 ---
 
-I received my Ph.D. in Mathematics and Applied Mathematics from Institut Camille Jordan, University of Lyon. My manuscript can be found [here](https://theses.hal.science/tel-03584255). 
-My thesis supervisers are [Olivier Druet](http://math.univ-lyon1.fr/homes-www/druet/) (CNRS) and [Simon Masnou](http://math.univ-lyon1.fr/homes-www/masnou/) (Institut Camille Jordan).
+I am currently a postdoctoral researcher at [Institut Elie Cartan de Lorrane](https://iecl.univ-lorraine.fr) and [Institut Jean Lamour](https://ijl.univ-lorraine.fr), Université de Lorraine. Previously, I received my Ph.D. in Mathematics and Applied Mathematics at [Institut Camille Jordan](https://math.univ-lyon1.fr/icj/), University of Lyon. My manuscript can be found [here](https://theses.hal.science/tel-03584255). 
 
-I just finished my mandatory military and civil service in July 2023. I am currently open to research-driven positions in Data Science/Machine Learning or Quantitative Research.
+<!--I finished my mandatory military and civil service in July 2023. I am currently open to research-driven positions in Data Science/Machine Learning or Quantitative Research.-->
 
 
 Publications
 ======
 * Chih-Kang Huang. [**Questions of approximation and compactness for geometric variational problems**](https://theses.hal.science/tel-03584255), Thesis, Université de Lyon, 2021
 * [**A thickness-aware Allen-Cahn equation for the mean curvature flow of thin structures**](https://arxiv.org/abs/2310.10272), with E. Bretin and S. Masnou
-* Asymptotic Analysis of embedded Willmore spheres in 3-dimensional manifolds, in preparation
+* Asymptotic Analysis of embedded Willmore spheres in 3-dimensional manifolds, with N. Marque, in preparation.
+* Neural network approximation of a phase-field model for dendritic growth, with B. Appolaire, L. Gagnon and M. Zaloznik, in preparation.
+* Null controllability of Allen-Cahn eqaution, with L. Gagnon, in preparation.
 
-Transversal Projects in Data Science and Machine Learning
+Transversal Projects in Machine Learning
 ======
-* [How to determinate if two real estates correspond to the same](/portfolio/portfolio-1)
-* [Physic-Informed Neural Networks to solve PDEs](/portfolio/portfolio-2)
+<!--* [How to determinate if two real estates correspond to the same](/portfolio/portfolio-1)-->
 * [Chatbot for automated meal order collection](https://github.com/CheesyPicodon/nca-linebot)
+* [CENTURI Hackathon for Quantitative Biology](https://github.com/CENTURI-Hackathon-2024), Depp single molecule unfolding detection, First Price
+<!--* [Physic-Informed Neural Networks to solve PDEs](/portfolio/portfolio-2)-->
 
 Hard Skills
 ======
 
-* **Mathematics :** Partial Differential Equations in Mathematical Modeling, Numerical Simulations, Optimization, Calculus of Variations, Geometric Analysis 
-* **Programming :** Python (Numpy, Scikit-learn, Pytorch,), C++, MatLab
-* **Tools :** Latex, Office, Git, Bash  **Cloud :** Heroku, Fly.io, Google Collab
-* **OS :** Linux, Windows, macOS  **Virtualization :** docker, podman
-
-
-
+* **Mathematics :** Analysis of PDEs, Numerical Simulations, Optimization, Calculus of Variations, Geometric Analysis 
+* **Programming :** Python (Numpy, Pytorch, JAX, etc), MatLab
+* **Tools :** Latex, Git, Docker, Slurm (HPC)
+* **OS :** Linux, Windows, macOS  
 
 
 <!-- Like many other Jekyll-based GitHub Pages templates, academicpages makes you separate the website's content from its form. The content & metadata of your website are in structured markdown files, while various other files constitute the theme, specifying how to transform that content & metadata into HTML pages. You keep these various markdown (.md), YAML (.yml), HTML, and CSS files in a public GitHub repository. Each time you commit and push an update to the repository, the [GitHub pages](https://pages.github.com/) service creates static HTML pages based on these files, which are hosted on GitHub's servers free of charge. -->
