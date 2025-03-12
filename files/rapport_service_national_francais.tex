@@ -1,0 +1,1998 @@
+%! TEX program = xelatex
+\documentclass[a4paper,14pt]{extarticle}
+\usepackage{fullpage}
+\usepackage[]{inputenc} %base
+%\usepackage[francais]{babel} %base pour francais
+%\usepackage[english]{babel} %base for english
+% \usepackage[T1]{fontenc} %base pour francais
+\usepackage[OT1]{fontenc} %base pour francais
+\PassOptionsToPackage{quiet}{fontspec}% (or try silent)
+\usepackage{mathtools} %base mathtools loads amsmath and some fixed features
+\usepackage{amsmath,amssymb,amsthm} %base 
+\usepackage{dsfont} %base 
+\usepackage{graphicx, wrapfig} % Insertion graphcs & wrap figure 
+\usepackage{grffile}
+\usepackage{float}
+%\usepackage[inkscapearea=page]{svg} % enable svg drawing
+%\usepackage[pdfencoding=auto, psdextra]{hyperref}
+%\usepackage[margin=3cm]{geometry} % réglage de marge
+\usepackage{pgf,tikz} %décommenté si besoin de faire des dessins
+\usepackage[all]{xy}
+\usepackage{mathrsfs} % \mathscr
+\usepackage{tikz}
+\usepackage{tikzscale}
+ % \usetikzlibrary{external}
+ % \tikzexternalize[prefix=fig/]
+\usetikzlibrary{arrows.meta}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=2pt] (char) {#1};}} % circled number
+\usepackage{tabularx}
+\usepackage{ltablex}
+% \renewcommand\tabularxcolumn[1]{m{#1}} % vertical centering
+\usepackage{booktabs} %base mathtools loads amsmath and some fixed features
+\usepackage[figurename=圖]{caption} % change figure name 
+%\usepackage[thmmarks, thref, amsmath]{ntheorem} % access to proofs, cases ...etc.
+\usepackage{xeCJK} % \mathscr
+%\setCJKmainfont[Scale=1]{Noto Sans CJK TC} 
+% \setCJKmonofont[Scale=1]{WenQuanYi Micro Hei Mono} 
+%\setCJKsansfont{Source Han Sans TC}
+% \setCJKmainfont[Scale=1]{WenQuanYi Micro Hei} 
+%\setCJKmonofont[Scale=1]{WenQuanYi Micro Hei Mono} 
+\xeCJKsetup{AutoFakeBold=true, AutoFakeSlant=true}
+\setCJKmainfont[Scale=1, BoldFont={SourceHanSansTW-Bold}]{WenQuanYi Micro Hei} 
+\setCJKmonofont[Scale=1, BoldFont={SourceHanSansTW-Bold}]{WenQuanYi Micro Hei Mono} 
+\usepackage{textcomp} % \textdegree
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage[titletoc]{appendix} % Appendix
+%\usepackage[nottoc, numbib]{tocbibind} % add bibliography to table of contents
+\usepackage{url}
+\usepackage{esint} %integral-mean
+% Notations
+\usepackage[]{longtable}
+\newcommand\nomenclature[2]{#1 & #2 \\}
+\usepackage[pdfencoding=auto, psdextra]{hyperref}
+\hypersetup{
+    %backref=true, %permet d'ajouter des liens dans...
+    %pagebackref=true,%...les bibliographies
+    plainpages=false,
+    %bookmarks=true,         % show bookmarks bar?
+    unicode=true,          % non-Latin characters in Acrobat\u2019s bookmarks
+    pdftoolbar=true,        % show Acrobat\u2019s toolbar?
+    pdfmenubar=true,        % show Acrobat\u2019s menu?
+    pdffitwindow=true,      % page fit to window when opened
+    pdftitle={My title},    % title
+    pdfauthor={Author},     % author
+    pdfsubject={Subject},   % subject of the document
+    pdfcreator={Creator},   % creator of the document
+    pdfproducer={Producer}, % producer of the document
+    pdfkeywords={keywords}, % list of keywords
+    pdfnewwindow=true,      % links in new window
+    colorlinks=true,       % false: boxed links; true: colored links   %%%%%%%%%%% MODIFIE
+    linkcolor=blue,          % color of internal links
+    citecolor=blue,        % color of links to bibliography
+    filecolor=blue,      % color of file links
+    urlcolor=magenta,          % color of external links  
+    urlbordercolor=0 1 1
+}
+
+
+% 中文相關
+\usepackage{zhnumber}
+\renewcommand\thesection{\zhnum{section}}
+\renewcommand \thesubsection {\arabic{section}.\arabic{subsection}}
+\renewcommand\refname{參考資料及文獻} % rename the reference title
+
+%\usetikzlibrary{arrows}
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{conj}[thm]{Conjecture}
+%\newtheorem{claim}{Claim}[section]
+\newtheorem*{thm*}{Theorem}
+\newtheorem{Def}[thm]{Definition}
+\newtheorem{claim}[thm]{Claim}
+%\newtheorem{Defprop}[thm]{Definition et Proposition}
+
+\theoremstyle{remark}
+\newtheorem{rmk}[thm]{Remark}
+
+
+%\theoremstyle{remark}
+\newtheorem{ex}[thm]{Example}
+
+%\usepackage{mathpazo} % add possibly `sc` and `osf` options
+%\usepackage{eulervm}
+\usepackage{palatino}
+\allowdisplaybreaks
+
+% Numerotation
+\numberwithin{equation}{section}
+% vim latex-suite shortcuts
+% greek map: 
+%`a through `z expand to \alpha through \zeta.
+%`D = \Delta
+%`F = \Phi
+%`G = \Gamma
+%`Q = \Theta
+%`L = \Lambda
+%`X = \Xi
+%`Y = \Psi
+%`S = \Sigma
+%`U = \Upsilon
+%`W = \Omega
+%Auc-Tex Key Bindings:
+%`^   Expands To   \Hat{}
+%`_   expands to   \bar{}
+%`6   expands to   \partial
+%`8   expands to   \infty
+%`/   expands to   \frac{}{}
+%`%   expands to   \frac{}{}
+%`@   expands to   \circ
+%`0   expands to   ^\circ
+%`=   expands to   \equiv
+%`\   expands to   \setminus
+%`.   expands to   \cdot
+%`*   expands to   \times
+%`&   expands to   \wedge
+%`-   expands to   \bigcap
+%`+   expands to   \bigcup
+%`(   expands to   \subset
+%`)   expands to   \supset
+%`<   expands to   \le
+%`>   expands to   \ge
+%`,   expands to   \nonumber
+%`~   expands to   \tilde{}
+%`;   expands to   \dot{}
+%`:   expands to   \ddot{}
+%`2   expands to   \sqrt{}
+%`|   expands to   \Big|
+%`I   expands to   \int_{}^{}
+%`(  encloses selection in \left( and \right)
+%`[  encloses selection in \left[ and \right]
+%`{  encloses selection in \left\{ and \right\}
+%`$  encloses selection in $$ or \[ \] depending 
+%    on characterwise or linewise selection
+
+
+% Step environment
+
+
+% lasse
+\newcommand{\dsty}{\displaystyle}
+
+% math symbol shortcuts
+\newcommand{\vide}{\varnothing}
+
+% blackboard
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bH}{\mathbb{H}}
+\newcommand{\bI}{\mathbb{I}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bQ}{\mathbb{Q}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bS}{\mathbb{S}}
+\newcommand{\bZ}{\mathbb{Z}}
+
+% calligraphic
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cG}{{\mathcal G}}
+\newcommand{\cK}{{\mathcal K}}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cP}{{\mathcal P}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cT}{{\mathcal T}}
+\newcommand{\cU}{{\mathcal U}}
+\newcommand{\cW}{{\mathcal W}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cY}{\mathcal{Y}}
+
+%mathfrak 
+\newcommand{\fm}{\mathfrak{m}}
+\newcommand{\fI}{\mathfrak{I}}
+%grec
+\newcommand{\gT}{\Theta}
+\newcommand{\go}{\omega}
+
+%mathscr
+\newcommand{\sO}{\mathscr{O}}
+
+% additional commands
+\newcommand{\expe}{\mathrm{exp}}
+\newcommand{\pgcd}{\mathrm{pgcd}}
+\newcommand{\Id}{\mathrm{Id}}
+\newcommand{\Gras}{\mathrm{Gras}}
+\newcommand{\ppcm}{\mathrm{ppcm}}
+\newcommand{\GL}{\mathrm{GL}}
+\newcommand{\Hom}{\mathrm{Hom}}
+\newcommand{\End}{\mathrm{End}}
+
+%outils utiles
+\newcommand{\inv}{^{-1}}
+\newcommand{\trans}{{}^t\!} %transposé d'une matrice
+\newcommand{\msk}{\medskip}
+\newcommand{\ssk}{\smallskip}
+
+% arrows
+\newcommand{\rar}{\rightarrow}
+\newcommand{\Rar}{\Rightarrow}
+\newcommand{\lar}{\leftarrow}
+\newcommand{\Lar}{\Leftarrow}
+\newcommand{\dar}{\leftrightarrow}
+\newcommand{\Dar}{\Leftrightarrow}
+\newcommand{\inj}{\hookrightarrow} % injection arrow
+\newcommand{\surj}{\twoheadrightarrow} %surjection arrow
+\newcommand{\bij}{\xrightarrow{\sim}} % bijection
+
+
+% Misc.
+\newcommand*{\dd}{\mathhop{}\!\mathrm{d}}
+\newcommand{\BV}{\mathrm{BV}}
+\newcommand{\SBV}{\mathrm{SBV}}
+\newcommand{\Sing}{\mathrm{Sing}}
+\def\ds{\displaystyle}
+\def\mdiv{\operatorname{div}}
+\def\mdet{\operatorname{det}}
+\newcommand{\res}{\mathop{\hbox{\vrule height 7pt width .5pt depth 0pt
+\vrule height .5pt width 6pt depth 0pt}}\nolimits}
+
+\hfuzz=100pt
+
+%\pdfoptionpdfminorversion=7
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+% des titres renommés
+\renewcommand{\contentsname}{目錄索引}
+\renewcommand{\abstractname}{摘要}
+
+\title{法國國民役制度探討及考究 \\ À propos du Service National Universel en France}
+\author{秘書室研考科替代役男 - T8344 黃治綱}
+\date{14/03/2023}
+
+\begin{document}
+
+%\maketitle
+%\abstract{test}
+%\begin{abstract}
+% (avant ou après le sommaire, à voir)
+%本報告的目的是介紹及研究由法國總統馬克宏於2017年總統競選期間提出、從2019年起以自願形式參加的\textbf{國民義務役} (Service national universel, 簡稱SNU)。首先我們簡要地介紹於1997年由時任總統席哈克暫停實施的法國徵兵制，以及之後作為替代方案的公民之路課程跟公民服務，最後我們將詳細探討未來間接取代徵兵制的國民義務役。
+%\par 
+%L'objectif de ce rapport vise à introduire et étudier le service national universel (abrégé en SNU) proposé par Emmanuel Macron lors de sa campagne présidentielle en 2017 puis mis en place depuis 2019 sous forme de volontariat. Nous présenterons brièvement d'abord l'histoire et le développement du service militaire en France, suspendu en 1997 sous le mandat de Jacques Chirac, ensuite le parcours citoyen et le service civique en tant que la réforme du service militaire, et enfin, nous parlerons en détail du service national universel qui succèdera indirectement au service militaire obligatoire.
+%
+%\end{abstract}
+
+
+\begin{titlepage}
+	\begin{center}
+
+
+% Upper part of the page
+
+%\textsc{\LARGE University of Beer}\\[1.5cm]
+%
+%\textsc{\Large A propos }\\[0.5cm]
+
+% Title
+\HRule \\[0.4cm]
+{ \Huge \bfseries 法國國民役制度探討及考究 }\\[0.4cm]
+{ \huge \bfseries À propos du Service National Universel en France}\\[0.4cm]
+
+\HRule \\[1.5cm]
+	\includegraphics[height=9cm]{./fig/logo_snu.png}
+
+% Author and supervisor
+	\vspace{3cm}
+%\begin{minipage}{0.4\textwidth}
+%\begin{flushleft} \Large
+%秘書室研考科 \\
+%替代役男 - T8344黃治綱
+%\end{flushleft}
+%\end{minipage}
+{\Large
+  秘書室研考科\hspace{0.2cm}  黃治綱
+\\
+\vspace{0.7cm}
+\includegraphics[height=1.5cm]{./fig/sub_service_logo.jpg} 
+內政部役政署
+}
+\vspace{0.5cm}
+
+\vfill
+% Bottom of the page
+{\Large 民國112年5月16日}
+
+\end{center}
+\end{titlepage}
+
+\newpage
+
+\tableofcontents
+\newpage
+
+% TODO
+
+\section{摘要} %(avant ou après le sommaire, à voir)
+本報告的目的是介紹及研究由法國總統馬克宏於2017年總統競選期間提出、從2019年起設立的\textbf{國民義務役} (\textbf{Service National Universel}, 簡稱SNU \textbf{國民役})。
+
+首先報告簡要地介紹於1997年由時任總統席哈克暫停實施的法國徵兵制，以及分別在2002年及2005年接續設立作為替代方案的國防公民日跟公民服務，再來將詳細探討未來計畫間接取代徵兵制的國民義務役。最後報告提出我國可以仿效法國國民役的部份並設想可能會面臨的法律問題及社會聲浪。
+
+\par 
+L'objectif de ce rapport vise à présenter et à étudier le \textbf{Service National Universel} (abrégé en \textbf{SNU}), proposé par le président français Emmanuel Macron lors de sa campagne présidentielle en 2017 puis mis en place depuis 2019 sous forme de volontariat. 
+
+Tout d'abord nous présenterons brièvement le système de conscription en France, suspendu en 1997 sous la présidence de Jacques Chirac, ainsi que les alternatives mises en place par la suite, telles que la Journée Défense et Citoyenneté en 2002 et le Service Civique en 2005. 
+Ensuite, nous parlerons en détail du Service National Universel qui succèdera indirectement au service militaire obligatoire.
+Enfin, nous proposerons ce que Taïwan puisse s'inspirer partiellement du SNU et nous envisagerons les problèmes juridiques et les réactions sociales auxquels nous pourrions être confrontés.
+
+\par 
+
+\section{法國義務徵兵制成立、演變及廢止}
+
+法國現代義務兵役始於18世紀末，並在近兩百多年之間有多次變動及革新，一直到法國前總統賈克·席哈克 Jacques Chirac 於第一任總統任期期間宣佈暫停實施，將軍人職業化。 以下大略列出法國義務兵役歷史幾個重大改革(詳見 \cite{histoire_service_militaire_parisien} e.g)：
+
+\begin{enumerate}
+	\item 起源：1798年9月5號，在大革命的氛圍之下，法國通過Jourdan-Delbrel法 << Tout Français est soldat et se doit à la défense de la patrie >>，規定每位法國公民男性需在二十歲入伍行使為期五年的義務役\cite{wiki_service_militaire}。
+	\item 1818年3月10號，波旁復辟時期通過古維翁·聖西爾(Gouvion-Saint-Cyr)法律: 義務役改成抽籤為期六年，並可找人替代且得以視家庭情況免役。
+%\begin{itemize}
+%	\item 1923: 18個月
+%	\item 1928/03/31 loi Paul Painlevé, 一年
+%\end{itemize}
+\item 1905年3月21號，第三共和國期間通過Berteaux法\cite{loi_berteaux_1905}基於公平原則移除抽籤機制，所有役齡內的男性公民皆需服兩年役期，唯一免役條件僅限於健康因素。
+\item 1946年第四共和國恢復於1940年短暫暫停的義務役，役期為一年，於1954-1962阿爾及利亞戰爭時改為三十個月，戰爭期間共一百五十萬名法國男性被徵召，大量傷亡及戰爭結果也導致了第四共和國垮台。
+\item 第五共和國 1963年12月21號 役期改為16個月並首次引入良心拒服兵役(Objecteurs de conscience)。役期於1970減為一年並在23歲前實行。同時開放女性志願從軍。隔年將義務兵役(Service militaire)改名為國家役(Service national)，同時允許役男報考士官跟軍官。
+\item 1992年1月4號，役期再縮減至10個月，良心拒服兵役者役期縮為20個月。
+\item 1976年起，國防部簽署數個社會行政協定，允許被徵召者於非軍事單位服勤(此為社會役前身)。 
+	%1996年有13437人在: ville, rapatriés, handicapés, environnement, anciens combattants, santé, culture et CEA.
+%À partir de 1976, le ministère de la Défense signe des protocoles avec diverses administrations civiles, permettant à des appelés de remplir des emplois non militaires26. Il s'agit de la première forme civile du service national après l'objection de conscience ; en 1996, cela concernait 13 437 personnes pour huit protocoles : ville, rapatriés, handicapés, environnement, anciens combattants, santé, culture et CEA. 
+%\item 1983/07/08, 義務役正式立法能於國家警察單位實行，並可以緩徵至22歲。
+\item 冷戰過後，地緣政治版圖改變，歐洲諸多國家刪減軍事預算並將其挪用為加入歐盟做準備。因應義務徵兵制龐大的支出以及不公平的分發機制（如窮人大部分部屬在陸軍，有錢人子弟多配發於輕鬆的職缺），加上1990-1991年間法國派遣義務兵於波斯灣戰爭成效不彰，見巴黎報\cite{service_militaire_parisien_2018}，法國總統賈克·席哈克於1996年2月22號的電視訪談中宣佈義務兵役暫停並將軍人職業化。隔年兵役改革案於國會通過。
+%1996. le 22 février, le président Jacques Chirac annonce la suppression du service militaire et la professionnalisation des armées au cours d'un entretien audiovisuel. La réforme du service national est adoptée par le parlement l'année d'après.
+\item 2002年，國家不再強制徵召國民從軍並以《公民教育》(Parcours Citoyen)取代：每一名法國青少男及青少女必須在他們16歲時參加《國防公民日》(Journée Défense et Citoyenneté)。國民與公民日年輕人必須通過法語測試以及學習基本急救術，此外之前徵兵時期的於市政府的公民登記仍保留必須要施行。
+%\item 2002. la conscription est arrêtée au profit d'un << parcours citoyen >> pour les jeunes hommes et femmes à partir de leur seizieme anniversaire avec une << journée défense et citoyenneté>> qui permet de tester leurs connaissances de français, de s'initier aux gestes de premiers secours. Le recensement en mairie de rous les jeunes d'au moins 16 ans reste obligatoire.
+
+\end{enumerate}
+
+
+\subsection{法國現行軍隊架構}
+
+\begin{figure}[H]
+	\centering
+  \includegraphics[width=\textwidth]{fig/structure_armee_francaise.tikz}
+\caption{法國軍隊組織架構}
+\label{fig:structure_armee_francaise}
+\end{figure}
+
+\paragraph{\underline{陸軍 Armée de Terre}}
+
+\begin{wrapfigure}[9]{r}{5.2cm}
+  \includegraphics[height=4cm]{./fig/armee_de_terre_logo.png}
+  \caption{法國陸軍 Logo}
+\end{wrapfigure}
+
+國內近幾年幾個著名行動包含：反恐任務(Sentinelle)、熱浪森林火災救援(Héphaïstos)、法屬圭亞那非法淘金取締(Harpie)以及協助新冠肺炎 傳染防治(Résilience)。另外軍隊在自然災害時也會協助民眾，例如水災等。
+
+% Les militaires apporttent aussi leur assistance aux civils lors de catastrophes naturelles telles que les inodations, etc. 
+
+
+
+
+法國陸軍在國外高風險地區支援民眾，並協助合法政府保障其領土安全。士兵也可以被派往協助保護法國或盟國的公民撤離疏散。
+
+
+
+% Sur le territoire étranger : 
+%
+% Les interventions à l'étranger dans les zones à haut risque ont pour but de soutenir les civils et assister les gouvernements légitimes à securiser leur territoire. 
+% Les soldats peuvent également être envoyés pour securiser les évacuations de ressortissants français ou alliés.
+
+
+
+\subparagraph{\underline{法國外籍兵團 Légion étrangère}}
+
+法國陸軍的外籍軍團(Légion \'Etrangère)是一個具有特殊指揮結構並包含步兵、騎兵、工兵和空降部隊等多個兵種部隊。法國外籍軍團在招募方面相較於其他正規軍隊部隊獨立自主。
+
+
+\begin{wrapfigure}[10]{l}{5cm}
+  \includegraphics[height=4cm]{./fig/legion_etrangere_logo.png}
+  \caption{外籍傭兵團 Logo}
+\end{wrapfigure}
+
+
+兵團成立於1831年，旨在允許外國士兵加入法國軍隊。外籍軍團隸屬於第19軍團，俗稱「非洲軍團」。它承襲了許多古老軍團的傳統，包括義大利、北法蘭克、波蘭、葡萄牙和愛爾蘭軍團。該軍團在世界各地的戰場上建立了聲譽，特別是在法國殖民征服、兩次世界大戰、印度支那戰爭和1962年的阿爾及利亞戰爭中。現代外籍兵團是一個參與全球行動的作戰單位，主要任務是戰鬥，同時也參與保護平民、維持和平以及與和法國簽訂協議的外國政府合作。外籍軍團的傳統包括服裝細節、特定徽章和象徵、歌曲和音樂，以及獨特的慶典活動。這個精英軍團的形象激發了大眾和藝術家的創作，涵蓋音樂、電影、繪畫、雕塑和文學等各個領域。兵團成員必須遵守著軍團守則，無論在戰爭還是和平期間，他們的行為都受到嚴格規範。
+
+% La Légion étrangère est un corps de l'Armée de terre française disposant d'un commandement particulier et comportant plusieurs subdivisions d'armes : infanterie, cavalerie, génie et troupes aéroportées. La Légion étrangère est également indépendante du point de vue de son recrutement.
+%
+%
+% Elle a été créée en 1831, pour permettre l'incorporation de soldats étrangers dans l'Armée française2 jusqu'à la fin de la guerre d'Algérie en 1962[pas clair]. Elle fait partie du 19e corps d'armée, communément appelée sous le vocable d'armée d'Afrique3,4,5. Elle hérite des traditions des anciennes Légions : Légion italique, Légion des Francs du Nord6, Légions polonaises, Légion portugaise et Légion irlandaise. En 1805, des unités étrangères hétérogènes ont été créées : le régiment de la Tour d’Auvergne, le régiment d’Isembourg, le régiment de Prusse et le bataillon d’Irlande. Ils deviendront, en 1811, les quatre premiers régiments étrangers. Pendant les Cent-Jours, leur nombre sera doublé. En 1815, ces huit régiments étrangers de la Grande Armée formeront par ordonnance royale la Légion royale Étrangère. Puis au gré de son démembrement, en 1818, la Légion royale devient la Légion de Hohenlohe avant de décliner en 1821 pour devenir le régiment de Hohenlohe du nom de son chef, le prince Louis Aloÿs de Hohenlohe-Waldenbourg-Bartenstein, un maréchal français de nationalité autrichienne. Ce régiment est dissous le 5 janvier 1831 mais le 10 mars de la même année une nouvelle ordonnance royale fait ressusciter de ses cendres la Légion Étrangère pour armer l’Armée d’Afrique déployée en Algérie.
+%
+%
+%
+% L'engagement dans la Légion est réservé aux hommes dont l'âge est compris entre 17 et 39,5 ans8 (dérogation possible) et a compté, depuis sa création jusqu'en 1963, plus de 600 000 soldats dont une majorité d'Allemands, suivi de trois fois et demie moins d'Italiens, puis de Belges, mais aussi de Français, d'Espagnols et de Suisses. De nombreuses autres nationalités sont représentées, comme les ressortissants des pays d'Europe de l'Est et des Balkans majoritaires dans les années 2000. De nos jours, c'est le prestige de ce corps d'élite qui suscite l'engagement. Cet attrait et, dans le passé, les soubresauts historiques (conflits mondiaux, crises économiques ou politiques), ont contribué à un recrutement plus spécifique : Espagnols à l'issue de la guerre d'Espagne, Allemands après 1945, Hongrois en 1956.
+%
+% Les légionnaires, surnommés également les képis blancs, de la couleur de leur coiffe, blanchie sous le soleil, ont acquis leur notoriété lors des combats menés sur les champs de bataille du monde entier, notamment dans le cadre des conquêtes coloniales, des deux guerres mondiales, et des guerres d'Indochine et d'Algérie. La Légion est une unité combattante qui intervient partout dans le monde. Si sa principale mission est le combat, elle participe également à des missions de protection des populations, de maintien de la paix ou de coopérations au profit des gouvernements étrangers liés à la France par des accords.
+%
+%
+% Les traditions à la Légion étrangère constituent un ciment pour ce corps qui se traduisent par les détails vestimentaires, les emblèmes et symboles spécifiques, les chants et musiques, et enfin par ses fêtes particulières. Son image auprès du grand public et des artistes est à l'origine de nombreuses œuvres dans tous les domaines : musique, cinéma, peinture, sculpture et littérature. Le code d'honneur du légionnaire dicte la conduite de ces hommes au quotidien, en temps de guerre comme en temps de paix.
+
+
+
+
+
+
+\paragraph{\underline{空軍 Armée de l'Air et de l'Espace}}
+
+
+\begin{wrapfigure}[10]{R}{0.35\textwidth}
+  \centering
+  \includegraphics[width=0.33\textwidth]{./fig/armee_de_lair_logo.png}
+  \caption{法國空軍 Logo}
+\end{wrapfigure}
+
+除了防衛法國領空安全以及全天候識別、辨別和攔截空中載具之外，法國空軍亦負責執行：
+
+
+
+\begin{itemize}
+  \item % Protection des concitoyens et des sites sensibles : surveiller et proteger les sites sensibles tels que les centres de commandement militaire, sites nucléaires militaires et civils, infrastructures stratégique, aéroports et lors des événements comme la féte nationale, les sommets politiques internationaux, les manifestations sportives/culturelles, etc.
+    保衛公民和重要場所：監視以及保護重要設施如軍事指揮中心、軍用和民用核設施、戰略基礎設施、機場 ; 重要活動如國慶日、國際政治高峰會、體育/文化表演等。
+  \item % surveillance spatiale (en collaboration avec le centre national d'études spatiales "CNES") : le commandement de l'espace met en oeuvre les stratégies d'acquisition des capacités spatiales et surveiller l'espace spatiale. 
+     與法國國家航空研究中心CNES合作監測外太空 : 由航空指揮部執行航太策略以及監控外太空活動。
+  \item % Renforcement des missions de service public : venir en aide  à la population lors des catastrophes naturelles ou lors des évacuations sanitaires. Une équipe de recherche et sauvetage est mobilisée 24h/24h, 7j/7j dans le cadre de missions de recherche et sauvetage terrestre et maritime.
+
+%    Lors des missions militaires à l'étranger, l'armée de l'air soutien les aillies au sol, effectue les reconnaissances, lance les attaques contre les hostiles et apporte un soutien aux forces étrangères alliées.
+%    Elle assure également le sauvetage et l'assistance  des personnes. 
+
+    支援公共任務：在自然災害或疏散撤離時為民眾提供援助。搜救小組24小時不間斷地進行陸地和海上搜救任務。
+\end{itemize}
+
+
+在海外軍事任務中，空軍負責支援地面盟軍，進行偵察、打擊敵方目標，並為盟軍提供支援。同時，空軍也負責人員的搜救和援助。
+
+
+\paragraph{\underline{海軍 Marine Nationale}}
+
+\begin{wrapfigure}[7]{r}{5cm}
+  \centering
+  \includegraphics[height=4cm]{./fig/armee_de_marine_logo.png}
+  \caption{法國海軍 Logo}
+\end{wrapfigure}
+
+
+
+法國領土沿海總計長$24900\mathrm{km}$、領海面積占$1100$萬$\mathrm{km}^2$。
+海上警備任務主要可以分成兩個類別：
+
+
+\begin{itemize}
+  \item 漁業管制、海洋污染、非法交易、海上搜救、未爆彈拆除等相關的活動。
+  \item 領海防衛隊負責監視和打擊敵對海上活動以及保衛國家。
+\end{itemize}
+
+除此之外，海軍兼負在危機中救援民眾（例如在黎巴嫩貝魯特爆炸時提供人道援助），並執行拯救遇險船舶和人員的任務。在武裝衝突中，海軍擁有海軍陸戰隊、潛艇和軍艦部隊。
+
+\paragraph{\underline{國家憲兵 Gendarmerie nationale}}
+
+
+% Les gendarmes (polices militaires) participent à des tâches comparables à celles de la police nationale, c'est-à-dire le maintien de l'ordre. 
+%
+% La gendarmerie est en général présente dans les zones rurales et les petites villes tandis que la police nationale manoeuvre principalement dans les grandes villes et les agglomérations. La gendarmerie est présentée dans 95\% du territoire français. 
+% La lutte contre la délinquance ou la criminalité, la sécurité routière, les enquêtes judiciaires et scientifiques, l'assistance et secours aux personnes, etc, font parties des différentes missions. 
+%
+% Elle est divisée en plusieurs structures telles que la gendarmerie de l'air, gendarmerie maritime, la cellule nationale nucléaire radiologique biologique chimique, etc. 
+%
+% Elle est aussi responsable de la protection du chef et des hautes autorités de l'Etat: c'est la garde républicaine. Elle dispose même d'une section cavalière. 
+%
+% Contre le terrorisme ou les interventions à haut risque , la gendarmerie peut être  mobilisée sur le territoire national ou déployée à l'étranger. Le GIGN (groupe d'intervention de la gendarmerie nationale) est l'unité d'élite consacrée à ces tâches comme la libération d'otage, l'interpellation d'individu dangereux, etc. 
+
+國家憲兵(武裝警察)參與的任務與國家警察類似，主要為維護公共秩序。
+憲兵通常駐紮在農村地區和小城鎮，而國家警察則主要在大城市和都會區域執行任務。憲兵在法全境部屬的覆蓋率高達95\%。
+打擊犯罪、交通安全、司法和犯罪科學調查、援助和救援等等都是他們的任務。
+
+\begin{wrapfigure}[8]{l}{5cm}
+  \includegraphics[height=4cm]{./fig/gendarmerie_nationale_logo.png}
+  \caption{國家憲兵 Logo}
+\end{wrapfigure}
+
+憲兵底下分為多個部隊，如憲兵航空部隊、憲兵海事部隊、憲兵核生化國家小組等。
+他們做為共和國警衛隊還負責保護國家首腦和高級政府官員。他們甚至還保有騎兵部隊。
+
+
+
+在反恐或高風險行動中，憲兵可以在國內動員或部署到國外。法國國家憲兵干預組（GIGN）是專門負責解救人質、拘捕危險人物等任務的精銳部隊。
+
+
+\newpage 
+
+\section{法國兵役轉型：從社會役到公民服務}
+
+
+本章節將介紹法國在廢除徵兵制之後實施的社會改革以建立鞏固國家的公民意識。
+
+\subsection{義務兵役期間替代方案：社會(替代)役}
+
+社會役作為法國徵兵制至1997-2001年廢止前的替代方案，主要對象為良心拒服兵役者(Objecteurs de conscience)。法國轉為募兵制後，政府於2006年設立《社會志願服務》(Service civil volontaire)取代社會役\cite{loi_service_civil_volontaire}，並於2010年確立相關規定更名為公民服務(Service civique)\cite{loi_service_civique}。
+% 關於社會役轉型為社會服務的過程，我們將於?章解釋。
+
+\subsection{公民教育 Parcours Citoyen 和國防公民日 Journée Défense et Citoyenneté}
+
+1996年時任法國總統的賈克·席哈克Jacques Chirac認為兵源充足，可將軍人職業化。從1997年10月28日開始，法國暫停實施義務徵兵制。
+
+作為改革替代方案，義務徵兵制暫停實施後每位法國公民(不論性別)都需在16-18歲之間參加分為三個階段的公民教育 Parcours Citoyen 否則無法報考國家舉辦的考試（如高中會考，駕照…等）
+
+\par 
+公民教育分為三個階段：
+\begin{enumerate}
+	\item 國中四年級\footnote{法國學制小學為五年制(6 - 11歲)，初中為四年制(11 - 15歲)，高中為三年制(15 - 18歲)}及高中二年級時教授國防軍訓課程
+	\item \underline{公民登記 Recensement citoyen en mairie：}	
+
+		\begin{figure}[H]
+      \centering
+			\includegraphics[width=0.6\textwidth]{./fig/recensement_citoyen.jpg}
+			\caption{市政府公民登記證明}
+		\end{figure}
+    所有年滿16歲的法國公民都必須於居住地的市政府或領事館申辦公民登記。辦理完畢後市府會於18歲之前寄發登記證明用以參加第三階段的國防公民日。
+%		Le recensement citoyen est obligatoire pour tous les jeunes Français âgés d'au moins 16 ans. Ce recensement s'effectue auprès de la mairie du domicile du jeune ou bien du consulat. Une attestation de recensement est remise au jeune, celle-ci est valable jusqu'à la participation à la journée défense et citoyenneté et au maximum jusqu'à l'âge de 18 ans.
+
+	\item \underline{國防公民日 Journée Défense et Citoyenneté：}
+		\begin{figure}[H]
+      \centering
+			\includegraphics[width=0.46\textwidth]{./fig/certificat_JAPD.jpg}
+			\includegraphics[width=0.46\textwidth]{./fig/certificat_JDC.jpg}
+			\caption{左：JAPD 結訓證書、右：JDC結訓證書}
+		\end{figure}
+
+	2011年前稱為國防預備召集日(Journée d'Appel de Préparation à la Défense 簡稱JAPD)
+		為時八小時半，當日會提供法國年輕公民各種資訊及諮詢管道：
+\begin{itemize}
+	\item 國防以及歐盟安全當前面臨的挑戰以及目標。
+	\item 各種社福及軍事的參與管道，尤其是公民志願服務、志願從軍、國防後備軍等。
+	\item 法國公民享有的權利以及義務。
+	\item 交通法規及安全。
+\end{itemize}
+
+%    les enjeux et les objectifs généraux de la défense nationale et européenne,
+%    les différentes formes d’engagement, en particulier le volontariat de service civique, le volontariat dans les armées, les métiers civils et militaires de la défense,
+%    le civisme : sur les bases de la charte des droits et devoirs du citoyen français,
+%    la sécurité routière.
+
+被召集的年輕人當日同時也需要參加法語相關基本常識考試：由教育部設計的五個測驗，分別為兩個單字測驗，兩個閱讀測驗跟反應測驗。
+
+%Un test d'évaluation des acquis fondamentaux de la langue française est proposé aux appelés. Ce test conçu par le Ministère de l'Éducation nationale comporte cinq épreuves : deux épreuves de vocabulaire, deux épreuves de compréhension de texte et une épreuve de rapidité.
+\end{enumerate}
+
+
+%    Pendant la pandémie Covid-19, la JDC a d'abord été reportée (premier confinement mars 2020), puis proposée en ligne (second confinement, sessions novembre et décembre 2020). Renseignements auprès du Centre du Service National et de la Jeunesse (CSNJ) de votre département.
+
+%Après la JDC
+\par 
+通過國防公民日的測驗後會頒發參加證書，持有證書可於25歲前參加國家公務員考試或是會考如：專業能力認證(CAP, Certificat d'aptitude professionnelle)、高中會考(BAC)、高等學院入學考(Concours d'entrée aux grandes écoles)以及駕照(Permis de conduire)；亦可用於申請從軍或是志願服務。
+
+%L’attestation de participation à la JDC vous permet, jusqu’à votre 25ème anniversaire :
+%
+%    d'accéder aux examens et concours d’Etat : CAP, Bac, permis de conduire
+%    de vous engager dans une forme de volontariat, militaire ou civil.
+
+
+
+\subsection{公民服務 Service civique}\label{subsection:service_civique}
+
+
+\begin{figure}[H]
+	\centering
+  \includegraphics[width=\textwidth]{fig/transition_service_national.tikz}
+\caption{法國徵兵制廢除後轉型替代方案}
+\label{fig:transition_service_national}
+\end{figure}
+
+% 2010年時任青年團委員的Martin Hirsch提出志願公民服務，由內政部舉辦：
+% \begin{itemize}
+% \item 參加資格：16-25歲（30歲，如有身心障礙）的法國籍青年，歐盟國家旅法僑民，或合法居留法國滿一年的其他國籍者皆可報名，只看參加者意願無學經歷限制。
+% \item 六到十二個月，每週工時應介於24-48小時之間，最多6天。
+% \item 每月580歐元
+% \item 公民服務的工作範圍包括：健康、文化及娛樂、教育、環境，推廣國際人道援助, 社會共融, 運動, 歷史追憶及公民意識, 緊急救援。
+% \end{itemize}
+
+\begin{wrapfigure}[]{r}{0.53\textwidth}
+  \centering
+    \includegraphics[width=0.5\textwidth]{fig/service_civique_logo.png}
+  \caption{公民服務 Logo}
+\end{wrapfigure}
+
+創立於2010年，由當時的青年團委員Martin Hirsch 所創辦的 「公民服務」是一個對象為16至25歲年輕人的政策（如為身心障礙者，則為30歲)。可以報名公民服務的對象為本國年輕人、歐盟旅法僑民或是於法國合法居留滿一年的外國人，只看其參與意願
+且不受學歷條件限制。志願者在非營利組織或公共機構（如協會、基金會、地方政府、公共機構等）中進行公民服務。
+
+共有十個相關服務領域可供選擇：團結互助、健康、文化和休閒、教育普及、運動、環境、歷史追憶及公民意識、國際發展和人道行動、緊急救援、歐洲公民意識。公民志願服務的期限為6至12個月，可選擇兼職（24小時）或全職（35小時），在國內或國外進行。另外志願服務期間將提供每月580歐元的津貼（全職或兼職均相同）。
+
+% 	% Education, solidarité, santé, culture et loisirs, environnement, développement international et humanitaire, mémoire et citoyenneté, sports, intervention d'urgence en cas de crise.
+
+%
+%Offrir à tout volontaire « l’opportunité de servir les valeurs de la République et de s’engager en faveur d’un projet collectif en effectuant une mission d’intérêt général ». C’est de cette manière qu’est définit le Service civique sur son site officiel.
+%
+%Créé en 2010 par Martin Hirsch – alors Haut-commissaire à la Jeunesse dans le gouvernement Fillon -, le Service civique est un engagement ouvert aux jeunes âgés de 16 à 25 ans (30 ans pour les jeunes en situation de handicap), sans condition de diplôme. Les volontaires effectuent leur service civique dans des organismes à but non lucratif ou de droit public (associations, fondations, collectivités territoriales, établissements publics, etc).
+%
+%Dix domaines d’action sont proposés : solidarité, santé, culture et loisirs, éducation pour tous, sport, environnement, mémoire et citoyenneté, développement international et action humanitaire, intervention d’urgence, citoyenneté européenne. Les missions durent de 6 à 12 mois, en temps partiel (24 heures) ou en temps plein (35 heures), sur le territoire national ou à l’étranger. Des indemnités, d’un montant de 580€, sont prévues le temps du volontariat (identique pour un temps plein ou un temps partiel).
+
+
+\newpage 
+
+\section{國民義務役 Service National Universel}
+
+
+\subsection{起源及背景}
+2015年11月13日與14日法國巴黎及其北部郊區聖丹尼Saint-Denis發生恐怖攻擊事件，法國社會瀰漫著恐慌及不信任的氛圍。
+2017年3月18號，當時參選法國總統候選人艾曼紐·馬克宏Emmanuel Macron認為需要促進法國人的團結及國家認同感\cite{service_militaire_parisien_2018}並於政見中承諾當選總統後推行某種形式的國民義務, 作為2002年徵兵制暫停實施後的替代方案，最初國民義務役對象為每位法國18-21歲的年輕人，後來因龐大預算問題(國會初估需每年花費20-100億歐元\cite{snu_franceinfo_budget}），而後下修至15-17歲不論男女國中畢業的年輕人。2019時任總理的愛德華·菲力普Edouard Phillipe開始發布計畫推行國民役(Service National Universel，簡稱SNU)，旨在培養年輕人共同合作的經驗，並親身理解法國的核心價值。
+
+%2017. Emmanuel Macron en campagne annonce vouloir rétablir un service naitonal universel. Le 26 juin dernier, la création d'un service national obligatoire d'un mois à 16 as (dans le milieu sanitaire, associatif, civique ou militaire) est confirmée pour 2019.
+
+\paragraph{宗旨}
+
+
+% \begin{wrapfigure}[10]{r}{5cm}
+% 	\centering
+% 	\includegraphics[height=5cm]{./fig/logo_snu.jpg}
+%   \caption{SNU 國民役 Logo}
+% \end{wrapfigure}
+
+\begin{itemize}
+	\item 活絡共和國價值 % la transmissiond'un socle républicain
+	\item 促進社會團結 % le renforcement de la cohésion nationale - qui s'appuie sur l'expérience de la mixité sociale et territoriale comme sur la valorisation des territoires - 
+	\item  發展志工文化，陪伴社會化與職業融入 % le développement d'une culture de l'engagement et l'accompagnement de l'insertion sociale et professionnelle.
+\end{itemize}
+
+% \begin{wrapfigure}[10]{l}{5cm}
+% 	\centering
+% 	\includegraphics[height=5cm]{./fig/depliant_snu_2022-1.pdf}
+% 	\caption{2022年國民役簡章封面}
+% \end{wrapfigure}
+
+\begin{figure}[H]
+	\centering
+\includegraphics[width=0.7\textwidth]{./fig/logo_snu-2.png}
+	\caption{SNU 國民役官方 Logo}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{./fig/depliant_snu_2022-1.pdf}
+	\caption{2022年國民役簡章封面}
+\end{figure}
+
+
+
+\paragraph{參加對象：}
+
+%Le Service National Universel est un dispositif prévu pour les jeunes âgés de 15 à 17 ans, filles ou garçons, après le collège (la classe de 3e). À l'heure actuelle, l'inscription au SNU se base sur le volontariat des jeunes. Dans les prochaines années, il devrait devenir obligatoire.
+
+SNU 國民役目前的實施對象為國中畢業後15-17歲之法國青少年及青少女。現階段國民役採取自願報名參加並計畫在2026年後改為國民義務並取代國防公民日。
+
+
+\subsection{SNU 國民役內容及大綱}
+
+由法國教育部主辦及規劃，2019年開始招募志願者試辦，法國政府計畫在2026年之前成為國民義務。
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{fig/plan_snu.tikz}
+  \caption{SNU國民役分為三階段完成}
+  \label{fig:plan_snu}
+\end{figure}
+
+\begin{enumerate}
+  \item 第一階段 -- \textbf{團結營隊} Séjour de cohésion : 
+		在居住省之外的公營住宿中心 度過為期兩個禮拜的的團體生活，學習生活規範以及通過小組形式一起執行任務解決難題。
+  \item 第二階段 -- \textbf{公益任務} Mission d'intérêt général :
+		84小時以上可分次或集中執行並於居住地附近的機構執行任務。
+  \item 第三階段 -- \textbf{志願服務} Engagement volontaire : 16-25歲(如為身心障礙者，則為30歲)，三個月以上，是服務內容領有津貼(全職或兼職)。 
+\end{enumerate}
+
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}[font=\small]
+		\draw [rounded corners] (-1.25, 1) rectangle ++ (2.1, -2) ;
+\draw (-0.2, 0) node[above] {1798-1997} node[below] {義務兵役} ; 
+\draw [dashed] (-0.2, -1.2) -- (-0.2, -2);
+\draw [rounded corners](-1.2, -2.2) rectangle ++ (2, -1);
+\draw (-0.2, -2.7) node {替代役} ; 
+\draw [->, > = latex] (1.2, 0) -- (3.2, 0) node[midway, above] {1997 暫停實施} ;
+\draw (2.2, 0) node[below] {2002 正式停召} ;
+\draw [rounded corners](3.3, 2.3) rectangle ++(2.2, -1.5);
+\draw [rounded corners](3.4, -0.75) rectangle ++(2, -1.5);
+\draw (4.4, 1.5) node[above] {2002} node[below] {國防公民日};
+\draw (4.4, -1.5) node[above] {2010} node[below] {公民服務};
+\draw [->, dashed, > = latex] (5.6, -2) -- ++(5, 0) node[midway, sloped, above] {} node[midway, sloped, below] {可作為第三階段};
+\draw [->, > = latex] (5.6, 1.5) -- ++(1.8, -1) node[midway, sloped, above] {擴展};
+\draw [rounded corners](7.5, 1) rectangle ++(2.2, -2);
+\draw (8.6, 0) node[above] {2019 SNU} node[below] {國民義務役} ;
+\draw [->, > =  latex] (9.8, 0) -- (10.8, 0);
+\draw [->, > =  latex] (10.3, 0) -- (10.3, 1.5) -- (10.8, 1.5);
+\draw [->, > =  latex] (10.3, 0) -- (10.3, -1.5) -- (10.8, -1.5);
+\draw (11, 1.5) node[right] {\circled{1} 團結營隊 (2周)} ;
+\draw (11, 0) node[right] {\circled{2} 公益任務 (84h+)}; 
+\draw [color=red, rounded corners] (10.9, 2) rectangle ++ (4.2, -2.5);
+\draw (11, -1.5) node[right] {\circled{3}  志願服務：} ;
+\draw (11, -2) node[right] {公民服務、};
+\draw (11, -2.5) node[right] {後備役、警消…};
+\draw (11, -3) node[right] {3 - 12個月};
+\end{tikzpicture}
+\caption{法國義務役制度演變}
+\label{fig:service_national_universel}
+\end{figure}
+
+
+\paragraph{SNU 國民役預算}
+
+ 2022年國民役預算為1.1億歐元，2023年編列預算為1.4億歐元, 教育暨青年部國務秘書的 Sarah El Haïry 表示國民役平均於每位學員的花費為2114歐元\cite{20minutes_221006}；另外公民服務預算相較前年增加2千萬歐元，總額來到5.19億歐元。\cite{projet_loi_finances}
+
+\subsection{第一階段：團結營隊 Séjour de cohésion}
+
+
+\paragraph{目的：}
+
+%     Le SNU est une opportunité de vie collective pour créer des liens nouveaux et développer sa culture de l’engagement et ainsi affirmer sa place dans la société. Le SNU offre à chaque jeune l’occasion de découvrir un autre territoire
+
+
+\par
+第一階段為為期兩週的團體住宿營隊，在參加學員\textbf{居住省份以外的國民役活動中心}進行。團結營隊為培養青少年適應團體生活並傳授基於共同生活、責任和保衛家園的共和國精神。
+活動宗旨圍繞在以下四個核心精神：
+
+%un séjour de cohésion de deux semaines visant à transmettre un socle républicain fondé sur la vie collective, la responsabilité et l’esprit de défense. Ce séjour est réalisé en hébergement collectif, dans un département autre que celui de résidence du volontaire. Au cours de ce séjour, les jeunes volontaires participent à des activités collectives variées et bénéficient de bilans individuels (illettrisme, compétences notamment numériques) ;
+
+\begin{itemize}
+    \item 通過發展志工文化來提昇國家的凝聚力及韌性
+	    %accroître la cohésion et la résilience de la Nation en développant une culture de l’engagement ;
+    \item 協助年輕人探索自我社會定位 %garantir un brassage social et territorial de l’ensemble d’une classe d’âge ;
+    \item 加強對年輕人個人和職業生涯規劃的引導和支持 
+	    %renforcer l’orientation et l’accompagnement des jeunes dans la construction de leur parcours personnel et professionnel ;
+    \item 弘揚地方的特色，活力以及文化和自然遺產
+	   
+	    %valoriser les territoires, leurs dynamiques et leur patrimoine culturel et naturel.
+\end{itemize}
+
+活動期間，年輕學員參與各種團體活動，並接受個人評估測驗(例如文盲測試、特別是電腦 資訊相關技能)。
+
+%\par 
+
+\paragraph{團結營隊指導人員}
+
+每個國民役中心均配有一名中心負責人, 一名教學助理，一名管理助理以及一位醫護人員。
+\begin{itemize}
+	\item 中心負責人(Chef de Centre) 負責領導所有參加團結營隊的學員及工作人員。
+	\item 教學助理(Adjoint éducatif) 負責活動規劃。
+	\item 管理助理(Adjoint encadrement) 負責指揮及協調各級指導人員的工作。
+	\item 醫護人員(Infirmier)。
+\end{itemize}
+
+\par 
+% 最後每一個小家由一位助教引導，助教確保學員確實遵守中心生活規定；協助行動不便或有健康問題的學員參與活動；從平日生活工作及訓練活動中促進小家學員之間的凝聚力及歸屬感。
+% Chaque maisonnée est animée par un tuteur, chargé de l’encadrement de proximité des volontaires. Placé sous l’autorité du cadre de compagnie, il fait vivre le règlement intérieur, mobilise les volontaires en vue des activités prévues et des services confiés à leur maisonnée, et s’assure de la bonne participation au quotidien des volontaires en situation de handicap ou présentant des problèmes de santé. Le tuteur crée les conditions propices à l’objectif de brassage et de cohésion, il veille à susciter un esprit d’appartenance, par exemple au travers de signes de reconnaissance de la maisonnée, qui peuvent faire l’objet d’activités dédiées.
+
+一個國民役中心接待200名學員以及30多位工作人員，學員通常剛從國中畢業，年齡介於15-17歲。學員依據性別會被分至10至15人的 《小組》 (maisonnée)，小組的所有成員將在第一階段期間互相合作、共同生活。每一個小組配有一位導師。導師確保學員確實遵守中心的生活規定、負責小組的共同生活事務、
+從平日生活工作及訓練活動中促進小組的團隊凝聚力和歸屬感以及組織和主持《小組會議》。
+若小組裡有行動不便或有慢性疾病的學員，中心也會有相應的配套措施讓小組導師協助他們參與團結營隊的生活事項。
+% 對於殘障青少年或患有慢性疾病的青少年，可以進行相應的調整，以保障他們參與國民服務團的適宜性。
+%Un centre SNU accueille environ 200 volontaires et une trentaine de cadres et de tuteurs. Les volontaires sont répartis en « maisonnées » de filles et en « maisonnées » de garçons.
+%
+%Les maisonnées, composées de 10 à 15 personnes, sont encadrées par un tuteur et constituent l’unité de vie courante.
+%
+%Pour les jeunes en situation de handicap ou porteurs d’une maladie chronique, des aménagements sont par ailleurs possibles pour leur bonne participation au SNU.
+%
+%Au sein de chaque maisonnée, un tuteur cadre de proximité, est chargé de la cohésion collective, du suivi des activités et de l’animation des « conseils de maisonnées ».
+
+% 一個國民服務團中心接待約200名志願者和約30名領袖和導師。志願者被分為女生和男生的“家庭”，每個“家庭”由10到15個人組成，由導師指導，是日常生活的單位。
+%
+% 在每個“家庭”內，一位負責近距離指導的導師負責集體凝聚、活動追蹤和“家庭會議”的組織。
+
+%Les maisonnées sont regroupées par 4 à 6 au sein d’une « compagnie », sous la direction d’un capitaine de compagnie et d’un adjoint. Si les maisonnées, unités de vie commune, ne sont pas mixtes, les compagnies le sont toujours et les activités sont autant que possible conduites dans ce cadre.
+\par 
+4到6個小組組成一個連隊(compagnie)，一個連隊由一名連長及副連長負責指揮。儘管同一個小組的學員均為同一性別，但是一個連隊組成為男女混合並且連隊活動也會在男女混合的框架下進行。
+
+連隊(Compagnie) 由一名連隊隊長及副連長(capitaine et son adjoint)主要負責：
+\begin{itemize}
+	\item 確保平日訓練活動的執行
+	\item 指揮小組導師
+	\item 平日連隊的紀律
+\end{itemize}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\textwidth]{./fig/snu_phase1_structure.png}
+	\caption{SNU 第一階段連隊結構示意圖（法）}
+\end{figure}
+
+
+\paragraph{團結營隊活動主題}
+
+營隊期間學員於早上六點半起床、晚上十點半就寢\cite{info-jeunes-snu}，並有升旗典禮及唱法國國歌藉以傳達學員法蘭西共和國的核心精神。
+每天上午及下午，學員進行團體活動和訓練課程，這些訓練活動課程圍繞在七個主題：
+\begin{itemize}
+	\item 體能和團隊運動
+		    %activités physiques, sportives et de cohésion ;
+	\item 自主獨立、公民法權和法律知識 (如交通法規初論 Initiation au Code de la route)
+%    autonomie, connaissance des services publics et accès aux droits ;
+	\item  公民身份以及認識國家和歐盟機構 %    citoyenneté et institutions nationales et européennes ;
+	\item 文化遺產    %culture et patrimoine ;
+	\item 志工體驗 %    découverte de l’engagement ;
+	\item 國家安全及國民防衛 %    défense, sécurité et résilience nationales ;
+\item 環境保護及永續發展 %    développement durable et transition écologique.
+\end{itemize}
+
+其中根據法國國防部\cite{army_snu}，國安及國防課程包含三個部份：
+\begin{enumerate}
+	\item 防衛模組 （3小時）：
+		由軍職人員主持，透過國防決策桌遊讓學員一同制定各種軍事防衛決策以及認識不同類型的軍事行動。
+
+		藉由課程給予年輕人與軍職人員交流及了解其職務內容的機會。
+
+		此外，防衛模組也包含資安工坊，讓年輕人意識到網路風險以及網路安全的重要性。
+%		1. Le module défense (3h00)
+%Le jeu de plateau décision défense, outil phare du module défense, est animé par des militaires pour permettre aux jeunes de construire ensemble une décision de défense et de découvrir les différents types d’engagement des armées.
+%
+%Le témoignage de l’animateur militaire, lors de la présentation des métiers de la défense, est l’occasion de répondre aux interrogations des jeunes et de favoriser les échanges.
+%
+%Un atelier cyber vient compléter la présentation pour sensibiliser les jeunes aux risques cyber.
+	\item 韌性模組（1.5小時）：
+    該模組旨在使年輕人在危機情況下，尤其是在面對困境時更具自主能力。這個模組是由國民役中心的助教負責準備和教授。模組包含兩個工坊，旨在教導年輕人以下技能：
+%2. Le module résilience (1h 30)
+%Il vise à rendre les jeunes plus autonomes en particulier face à une situation de crise. Ce module est préparé et dispensé par les cadres du centre SNU. Il est composé de deux ateliers pour apprendre aux jeunes à :
+%
+		\begin{itemize}
+			\item 
+        學習在複雜地形和陌生地區定位和導航：掌握基本地形學概念，練習雙腳間距法、識別定位標誌等
+%S’orienter et se repérer en zone difficile : maîtrise des notions de base de topographie, pratique du double-pas et identification de repères etc. ;
+			\item 在未知環境中保護自身並向他人發出警報。 
+%Se protéger et alerter un tiers en milieu inconnu.
+		\end{itemize}
+	通過這些工坊，年輕人將學會在困境中自我導航和保護自己，並向他人發出警報。這將增強他們的自主能力，使他們更能應對危機情況。	
+
+	\item 歷史追憶模組（1小時）：
+		由國家服務與青年事務處的人員主持，旨在提醒和緬懷歷史事件以引起社會共鳴及公民意識並同時介紹國民役第二階段與歷史追憶相關的公益任務。透過展示歷史追憶立體圖卡讓年輕人能夠模擬扮演不同的角色並更能融入追思儀式。
+		\begin{figure}[H]
+			\centering
+		\includegraphics[scale=0.35]{./fig/plateau_explique_moi_une_ceremonie.png}
+		%\caption{Explique-moi une cérémonie 立體圖卡（法）}
+		\caption{歷史追憶立體圖卡（法）}
+		\end{figure}
+    最後課程在年輕人跟現役軍職人員的對談中結束。除了讓他們意識到國防的重要性，也讓他們了解到國防部門的職業多樣性。藉由讓年輕人作為課程的主軸，以激發他們對國防或追憶相關公益任務（第二階段）的興趣。
+
+%3. Le module mémoire (1h)
+%Il est dispensé par des civils de la DSNJ. Il vise à rappeler que les enjeux mémoriels ont une résonnance aujourd’hui et à présenter les missions d’intérêt général (MIG) mémorielles. Le diorama Explique-moi une cérémonie permet aux jeunes d’incarner des rôles et de se sentir davantage impliqués dans une cérémonie.
+%
+%La JDM est un moment de rencontre privilégié entre les jeunes et les armées pour les sensibiliser aux enjeux de défense et leur faire découvrir la diversité des métiers du ministère. Le jeune est acteur de sa journée (pédagogie active) pour susciter en lui l’envie de réaliser une MIG défense ou mémorielle (phase 2).
+\end{enumerate}
+
+\par 
+團結營隊課程還包含初級緊急救護訓練，讓學員於課程結束後能夠取得
+\textbf{初級緊急救護證書PSC1} (Prévention et Secours Critique de Niveau 1)：
+
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=0.7\textwidth]{fig/certificat_psc1.jpg}
+  \end{center}
+  \caption{初級緊急救護證書PSC1}
+  \label{fig:certificat_psc1}
+\end{figure}
+
+初級緊急救護PSC1(Premiers Secours Civiques de niveau 1)是法國的一個基本急救訓練課程，旨在教授參與者基本的急救技能。
+以下是初級緊急救護的詳細內容：
+\begin{itemize}
+  \item 
+課程內容主題：
+\begin{enumerate}
+  \item 不適和求救
+\item 傷口和保護
+\item 燒傷處理
+\item 創傷處理
+\item 出血處置
+\item 呼吸道阻塞
+\item 失去知覺
+\item 心跳停止
+\item 公眾警報
+\end{enumerate}
+
+%   \item Le PSC1 en détail
+% Contenu de la formation
+% 1) Malaise et Alerte
+% 2) Plaies et la protection
+% 3) Brûlures
+% 4) Traumatismes
+% 5) Hémorragies
+% 6) Obstruction des voies aériennes
+% 7) Perte de connaissance
+% 8) Arrêt cardiaque
+% 9) Alerte aux populations
+%
+\item 參加資格：
+無需預先具備任何相關知識，
+10歲以上即可報名參加（未成年人需經家長同意）。
+
+% Pré-requis
+% Aucun prérequis nécessaire.
+%
+% Formation accessible dès 10 ans (autorisation parentale nécessaire pour les mineurs).
+%
+
+\item 受訓時數：
+  每位講師最多帶領10名學員，以現場面對面教學實做，為期7小時。
+
+\item 合格證書受國家機構的承認。
+
+% Durée
+% 7h de face à face pédagogique.
+% Maximum 10 participants / formateur.
+%
+% Validation
+% Un certificat de compétences est délivré, suivant l’arrêté du 16 novembre 2011, aux personnes ayant participé activement à l’ensemble de cette session.
+%
+% Ce certificat est reconnu par les services de l’Etat.
+
+\end{itemize}
+
+
+\par
+另外營隊期間有各種學員的個人鑑測(Bilans personnels)如下：
+\begin{itemize}
+	\item 健康檢查 (Bilan de santé);
+	\item 文盲測驗 (Bilan illettrisme);
+	\item 其他能力評量 (Points sur les compétences) 尤其是電腦資訊相關的。
+\end{itemize}
+
+\par
+
+團結營隊期間每天舉行具備國家精神及象徵的團體活動，包括升旗典禮和唱法國國歌。
+此外導師藉由平日組織小組會議使學員體驗團體生活及累積公民經驗。學員在營隊期間參與日常的飲食準備，清潔打掃及垃圾分類的工作。同時也盡可能地讓學員能夠參與活動規劃統籌和接待講師。
+%Le séjour est ponctué par la manifestation régulière des symboles de la République et de la Nation, au premier rang desquels le lever des couleurs et le chant de l’hymne national. La vie collective permet de faire l’expérience d’une citoyenneté active, notamment au travers des conseils de maisonnées, organisés quotidiennement par les tuteurs. Une cérémonie de clôture, présidée par les autorités locales est organisée en fin de séjour.
+
+%Les volontaires participent aux tâches quotidiennes liées aux repas, au nettoyage et à la gestion des déchets courants. Les services comprennent également, autant que possible, une participation à l’organisation des activités ou à la réception des intervenants.
+\par 
+\begin{wrapfigure}[]{r}{0.6\textwidth}
+  \centering
+	\includegraphics[width=0.55\textwidth]{./fig/snu_tenu.jpg}
+\caption{兩名學員穿著國民役制服。來源：AFP/François Guillot}
+\end{wrapfigure}
+服裝部份\footnote{SNU國民役服裝包含2件polo衫、2件T恤、1件風衣、2件長褲、1件短褲、1件連衣帽、1條腰帶、1個背包、1頂鴨舌帽}，學員必須每天穿著中心根據季節配給的夏季或冬季制服及外套。營隊期間學員也能夠洗滌他們的衣褲。學員能在第一階段結束後繼續保留公發的衣物。
+
+
+%Les volontaires sont dotés d’une tenue commune dédiée, adaptée au climat local et disposent de la possibilité de l’entretenir pendant toute la durée du séjour.
+
+\par 每個小組學員皆需要遵守國民役中心內部的生活規定\cite{snu_officiel}，內務生活規定均會事先告知學員及監護人。另外日間嚴格禁止使用手機\cite{info-jeunes-snu}。國民役中心的生活規定會確保參加學員的宗教信仰自由，在住宿區域規劃特定空間以供個人使用(如冥想、祈禱、每日禮拜等)。
+%Les centres sont dotés d’un règlement intérieur, porté à la connaissance des participants et de leurs représentants légaux, et disponible pour chacune des maisonnées du centre. L’usage des téléphones portables est strictement limité.
+
+% Le règlement intérieur des centres garantit le respect du principe de laïcité par les volontaires. Des espaces spécifiques peuvent être aménagés dans les centres d’hébergement pour permettre le recueillement individuel.
+\par 
+營隊結束時學員參加於市政府由地方長官主持的閉幕典禮並頒發\textbf{團體營隊結訓證書}。
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=0.95\textwidth]{fig/certificat_sejour_de_cohesion.jpg}
+  \end{center}
+  \caption{第一階段團結營隊結訓證書}
+  \label{fig:certificat_1e_phase}
+\end{figure}
+
+\paragraph{第一階段團結營隊實例：}
+
+
+本節我們介紹之前法國於各地已經舉辦過的國民役團結營隊紀錄，透過影片和照片了解團結營隊的內容及精神，點擊粉色標題以觀看影片：
+
+\begin{itemize}
+
+	\item \href{https://www.youtube.com/watch?v=fKXpSj1DoSQ}{2019年6月17號於法國北部Nord省首次舉辦第一階段團結營隊}
+	
+	\begin{figure}[H]
+    \centering
+		\includegraphics[width=0.48\textwidth]{./fig/snu_gabriel_attal.png.png}
+		\includegraphics[width=0.48\textwidth]{./fig/nord-1.png}
+		\caption{時任教育暨青年部國務秘書的Gabriel Attal於開幕典禮勉勵學員}
+	\end{figure}
+
+	\begin{figure}[H]
+    \centering
+		\includegraphics[width=0.7\textwidth]{./fig/snu_nord-1.png}
+    \caption{團結營隊升旗典禮}
+	\end{figure}
+	時任教育暨青年部國務秘書的Gabriel Attal 感謝首批志願參與SNU國民役的年輕人，強調第一階段目標是藉由參與者透過各種活動及訓練課程，鼓勵年輕人發展自主能力和技能並與他人建立連結，從過程中探索未來職業前景和工作機會。
+
+	\begin{figure}[H]
+    \centering
+		\includegraphics[width=0.7\textwidth]{./fig/nord-2.png}
+    \caption{電腦個人自我探索鑑測}
+	\end{figure}
+
+	% \item \href{https://www.youtube.com/watch?v=MXaLeqHpA90}{Haute-Loire省}
+
+	\item \href{https://www.youtube.com/watch?v=4k2csnrQBPA}{2019 六月在Morbihan的團結營隊}
+
+% Le lundi 17 juin 2019, le Service National Universel (SNU) a été officiellement lancé. 2000 jeunes filles et garçons, âgés de 15 à 16 ans se sont portés volontaires pour participer à la première phase de cohésion, dans les 13 départements pilotes dont le Morbihan qui a accueilli 100 jeunes durant deux semaines au mois de juin 2019.
+
+% Les jeunes volontaires sélectionnés pour cette phase de préfiguration constituaient un panel représentatif de la diversité de chaque département (lycéens, décrocheurs, apprentis, etc.). 
+
+% Pour assurer le brassage territorial et la mixité sociale, ils ont effectué leur SNU en dehors de leur département de résidence. Cette opportunité de vie en collectivité a permis à chaque jeune volontaire de créer des liens nouveaux, d'apprendre la vie en communauté, de développer sa culture de l'engagement et ainsi d'affirmer sa place dans la société.
+
+
+2019年6月17日 SNU 國民役於Morbihan舉辦了團結營隊，參加的年輕人來自13個不同的省，共計100名學員。
+參與者參與了各種活動並學習重要的課程，這些活動讓他們體驗到不同領域的挑戰和工作。
+     通過解決問題和團隊合作，年輕人學習如何應對困難並為社會作出貢獻。
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{fig/morbihan-2.png}
+    \includegraphics[width=0.48\textwidth]{fig/morbihan-3.png}
+    \includegraphics[width=0.48\textwidth]{fig/morbihan-6.png}
+    \includegraphics[width=0.48\textwidth]{fig/morbihan-10.png}
+  \end{center}
+  \caption{學員體驗新事物，例如自由格鬥和搭乘輕艇}
+\end{figure}
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.48\textwidth]{fig/morbihan-4.png}
+    \includegraphics[width=0.48\textwidth]{fig/morbihan-5.png}
+    \caption{學員通過障礙訓練課程挑戰個人極限以及學習如何與不同背景和能力的人合作。}
+  \end{figure}
+
+% 探索新領域和實踐社會責任
+%
+%
+% 強調環境保護和個人成長
+%
+%     計畫特別強調環境保護和個人成長的重要性。
+%     參與者學習如何保護環境並培養可持續發展的價值觀。
+%
+% 未來展望
+%
+% 「國家服務計畫」將繼續為年輕人提供寶貴的機會，這個計畫將不斷發展，以應對社會的變化和挑戰。通過這個計畫，年輕人將成為未來的領袖和社會的中堅力量，為建設更美好的世界做出貢獻。
+
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{fig/morbihan-7.png}
+    \includegraphics[width=0.48\textwidth]{fig/morbihan-13.png}
+  \end{center}
+  \caption{其中一項課程聚焦於性別平等，提供學員之間辯論和交流的機會，並培養他們的公民意識和社會責任感。}
+\end{figure}
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{fig/morbihan-11.png}
+    \includegraphics[width=0.48\textwidth]{fig/morbihan-8.png}
+    \\
+    \vspace{0.1cm}
+    \includegraphics[width=0.48\textwidth]{fig/morbihan-12.png}
+    \includegraphics[width=0.48\textwidth]{fig/morbihan-9.png}
+  \end{center}
+  \caption{位於Morbihan的國民役中心宿舍(左)、小組學員合作準備食膳以及打飯過水(右)}
+\end{figure}
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{fig/morbihan-14.png}
+    % \includegraphics[width=0.48\textwidth]{fig/morbihan-15.png}
+    % \\    \vspace{0.1cm}
+    \includegraphics[width=0.48\textwidth]{fig/morbihan-16.png}
+    \\    \vspace{0.1cm}
+    \includegraphics[width=0.8\textwidth]{fig/morbihan-15.png}
+    \includegraphics[width=0.8\textwidth]{fig/morbihan-17.png}
+  \end{center}
+  \caption{學員於初級緊急救護課程學習處理各種急難狀況}
+\end{figure}
+
+% 心肺復蘇的重要性
+
+    % 學習心肺復蘇是非常重要的生活技能，它可以在緊急情況下挽救生命。
+    學員學習心肺復甦術
+    可以在等待急救人員到達之前維持心臟供血，從而增加生存機會 。
+    在進行心肺復甦時，需要保持冷靜和堅定，並按照正確的步驟執行急救操作。
+
+
+  \item \href{https://www.youtube.com/watch?v=0cG4PWgDZ5Q}{2022年2月於Rochefort冬季舉辦的團結營隊}
+
+    \begin{figure}[H]
+      \begin{center}
+        \includegraphics[width={0.95}\textwidth]{fig/rochefort-1.png}
+      \end{center}
+      \caption{學員於Rochefort省團結營隊穿著冬季制服}
+    \end{figure}
+
+在2022年2月，近70名年輕人參加了在Rochefort省 Charente-Maritime 地區舉辦的團結營隊。
+這次營隊活動涵蓋以下主題：體育活動、工坊討論、參觀景點、與專業人士交流、團體生活、文化活動、共和國典禮儀式、永續發展、公民意識、國防安全、歷史追憶、文化遺產等。
+    
+    \begin{figure}[H]
+      \centering
+        \includegraphics[width={0.48}\textwidth]{fig/rochefort-3.png}
+        \includegraphics[width={0.48}\textwidth]{fig/rochefort-17.png}
+        \\ \vspace{0.1cm}
+        \includegraphics[width={0.48}\textwidth]{fig/rochefort-18.png}
+        \includegraphics[width={0.48}\textwidth]{fig/rochefort-7.png}
+      \caption{防衛模組(左)、韌性模組(右)}
+    \end{figure}
+
+    \begin{figure}[H]
+      \centering
+        % \includegraphics[width={0.45}\textwidth]{fig/rochefort-4.png}
+        \includegraphics[width={0.48}\textwidth]{fig/rochefort-5.png}
+        \includegraphics[width={0.48}\textwidth]{fig/rochefort-6.png}
+      \caption{歷史追憶模組}
+    \end{figure}
+
+    \begin{figure}[H]
+      \centering
+        \includegraphics[width={0.8}\textwidth]{fig/rochefort-9.png}
+      \caption{年輕人透過蘇格蘭投票權議題舉行公民辯論}
+    \end{figure}
+
+這次在Rochefort的公民意識活動中，針對蘇格蘭16歲在近7年來為獨立公投引入了16歲的選舉權議題，學員們在導師的主持下舉行了一場辯論。
+這份16歲投票權的決議案在蘇格蘭取得了巨大成功，讓當時16到18歲的年輕人政治參與度提昇至90\%。
+通過理性辯論和討論，年輕人可以學會表達自己的觀點，並學習尊重他人的意見。
+
+% 蘇格蘭的16歲選舉權
+
+% 近年來，蘇格蘭實施了16歲的選舉權，特別是在獨立公投時，這一舉措取得了巨大的成功。據報導，當時有90％的16至18歲年輕人參與了投票。
+% 雖然無法確定他們是否真正選擇了正確的人選，或者他們是否受到他人的影響，但如果16歲的年輕人有選舉權，我相信將會有更多的年輕人對政治感興趣。這樣的討論是非常有價值的，
+% 例如在晚上的討論中，我們與導師和其他人進行了多次辯論。透過這樣的辯論，我們可以更好地了解不同的觀點，而不僅僅是在危險的邊緣徘徊。這是一個不錯的方法，我們可以在這個過程中看到各種觀點。
+
+
+% 在這次會議中，我們討論了關於蘇格蘭16歲選舉權的動議，他們。實際上，這次經驗非常成功，讓16歲的人有選舉權可能會吸引更多年輕人對政治感興趣。
+
+
+
+% 青年參與政治的意義
+
+    % 在蘇格蘭，他們已經實行了16歲的選舉權，並取得了巨大的成功。這使得年輕人對政治更感興趣，並積極參與討論和辯論。
+    % 16歲的選舉權可以激發年輕人對政治的興趣，並培養他們的公民意識。
+
+    \begin{figure}[H]
+      \centering
+        \includegraphics[width={0.48}\textwidth]{fig/rochefort-2.png}
+        \includegraphics[width={0.48}\textwidth]{fig/rochefort-8.png}
+        \includegraphics[width={0.48}\textwidth]{fig/rochefort-10.png}
+        \includegraphics[width={0.48}\textwidth]{fig/rochefort-11.png}
+        % \includegraphics[width={0.48}\textwidth]{fig/rochefort-12.png}
+       \caption{團體生活}
+    \end{figure}
+
+  團結營隊旨在提供一個獨特的體驗，同時結合了國民服務和夏令營的元素。通過這個計劃，年輕人可以學會共同生活、尊重他人並發展他們的文化素養。此外，課程中的討論可以激發年輕人對政治的興趣，讓他們更積極地參與社會議題的討論和辯論，藉以培養年輕人的公民意識和社會責任感，為他們的未來發展打下了堅實的基礎。
+
+    % 這個計劃的核心是培養凝聚力和尊重的價值觀，同時讓年輕人學會在共同生活和學習中建立新的友誼。
+    % 青年國家服務旨在豐富年輕人的文化素養，通過各種活動和與羅什福爾市的互動來實現這一目標。
+
+
+% 青年服務制度的意義
+
+% 青年服務制度的凝聚力營不僅是國家服務，也不是一個度假營。它是兩者的結合，可以說是兩者的最佳結合。它是最好的國家服務，因為共和國的價值觀、國旗和制服讓每一個年輕人都處於同等的地位，這些價值觀在凝聚力營中非常重要。同時，它也是最好的度假營，因為年輕人在這個共同生活的過程中學會了尊重，建立了新的友誼，並參加了一些平時難以體驗的活動。
+% 它的目標是通過在羅切福特市及其周邊地區進行多種活動，拓寬他們的視野，讓他們學會在共同體中生活，並將嚴謹帶入他們的日常行為中。
+% 結語
+
+    \begin{figure}[H]
+      \centering
+        \includegraphics[width={0.48}\textwidth]{fig/rochefort-19.png}
+        \includegraphics[width={0.48}\textwidth]{fig/rochefort-20.png}
+      \caption{警察示範警犬如何定位違禁品}
+    \end{figure}
+
+    \begin{figure}[H]
+      \centering
+        \includegraphics[width={0.8}\textwidth]{fig/rochefort-13.png}
+        \includegraphics[width={0.8}\textwidth]{fig/rochefort-15.png}
+        \\ \vspace{0.1cm}
+        \includegraphics[width={0.48}\textwidth]{fig/rochefort-14.png}
+        \includegraphics[width={0.48}\textwidth]{fig/rochefort-16.png}
+      \caption{學員參訪Rochefort人工溼地和認識地區生態}
+    \end{figure}
+    % \begin{figure}[H]
+    %   \centering
+    %     \includegraphics[width={0.45}\textwidth]{fig/rochefort-21.png}
+    %   \caption{潮間帶}
+    % \end{figure}
+
+
+
+
+% 標題: "二月份在夏朗德馬利地區的全國性大學服務計劃之旅（長版本）"
+% 摘要:
+
+% 全國性大學服務計劃是針對15至17歲的年輕人提供的一個機會，無論他們對參與有任何意願。這個計劃的主要部分是著名的12天團結之旅，期間約有一百名年輕人一起生活、共同體驗他們的參與，同時互相了解並圍繞團結和尊重的價值觀建立關係。
+% 這次團結之旅既不是全國性的，也不是度假營。它結合了兩者的優勢，既體現了共和國的價值觀，如國旗和制服，使所有年輕人平等對待，同時也讓他們共同生活、相互尊重、建立新的友誼，參加平時無法體驗到的活動，並養成日常生活中嚴謹的態度。
+% 參加者之一表示，他參加全國性大學服務計劃是為了體驗新事物、認識新人，建立團隊凝聚力，並了解一些他在家或學校無法體驗到的活動。另一位參與者受到朋友的推薦和參加公民集會的啟發而參加了這個計劃。
+% 這個計劃不僅讓年輕人體驗到團結之旅，還讓他們接觸到不同的集體生活方式、了解不同的職業，並拓寬他們的文化視野，同時教導他們在共同體中生活和貢獻時要有嚴
+
+
+% 提案：青年服務制度的重要性與個人見證
+% 概述
+
+% 青年服務制度是針對15至17歲的年輕人提出的一項建議，無論他們的參與意願是什麼，都可以有機會體驗這種參與。這主要是指著名的12天凝聚力營期，在這期間約有100名年輕人一起生活、共同體驗，並在彼此之間尋求凝聚力和尊重的價值觀。
+
+%
+% 我為什麼選擇參加青年服務制度
+%
+% 我選擇參加青年服務制度，首先是因為這是一個實踐和體驗的機會。通過參加這個活動，我可以認識到更多的人，並體驗到團隊合作的重要性。此外，我也希望通過參加這個活動，了解一些在我們日常生活中或學校裡不常遇到的活動。我選擇參加青年服務制度，因為我希望將來能成為共和國的守護者。我有一些朋友參加過這個活動，他們給了我很好的建議，並對此感到非常滿意。我也參加了一次公民集會，當時有人向我介紹了青年服務制度，我對這個概念感到興奮。而且，這個活動的一個好處是學習心肺復蘇術，這是一種能夠挽救生命的技能。當心臟停止跳動時，進行心肺復蘇術可以讓患者恢復生機，對於救命的過程更加困難。
+
+% 青年服務制度的意義
+%
+% 青年服務制度的凝聚力營不僅是國家服務，也不是一個度假營。它是兩者的結合，可以說是兩者的最佳結合。它是最好的國家服務，因為共和國的價值觀、國旗和制服讓每一個年輕人都處於同等的地位，這些價值觀在凝聚力營中非常重要。同時，它也是最好的度假營，因為年輕人在這個共同生活的過程中學會了尊重，建立了新的友誼，並參加了一些平時難以體驗的活動。它的目標是通過在羅切福特市及其周邊地區進行多種活動，拓寬他們的視野，讓他們學會在共同體中生活，並將嚴謹帶入他們的日常行為中。
+% 結語
+
+% 青年服務制度對於年輕人的成長和發展至關重要。通過參與這樣的活動，年輕人可以體驗到團隊合作、尊重和價值觀的重要性。此外，他們還可以擴展自己的視野，學習新的技能，並建立新的友誼。這樣的體驗對於他們未來的人生道路非常有價值，無論他們最終選擇從事什麼職業。因此，我們應該支持並鼓勵年輕人參加青年服務制度，讓他們從中獲得寶貴的經驗和教訓，成為更加優秀和負責任的公民。
+
+% 08:17 - 17:01
+% 青年服務制度：培養自信、開拓視野、践行價值觀
+% 簡介
+
+% 青年服務制度（SMU）是一個讓年輕人參與的國家服務計劃。通過參與這個計劃，年輕人可以參加集體生活、探索不同的職業和參與多樣的活動。這個計劃提供了一個機會，讓年輕人擺脫他們的社會環境，體驗真實的生活。同時，這個計劃也旨在培養年輕人的自信心、開拓他們的職業前景，並教導他們共和國的價值觀。
+
+% 培養自信
+%
+% 參與青年服務制度的年輕人能夠建立自信。自信是個人和職業成功的重要因素。在過去的兩年中，年輕人可能面臨了一些挑戰，對自信心產生了一些不確定性。而參加青年服務制度的集體生活經驗可以幫助他們建立自信，為個人和職業的成功打下基礎。
+% 開拓視野
+
+% 青年服務制度還提供了一個機會，讓年輕人開拓視野，探索新的職業機會。通過參與這個計劃，他們可以接觸到各種不同的職業，了解新的職業前景，甚至可能發現自己的職業志向。這樣的機會對於年輕人來說非常寶貴，可以幫助他們做出明智的職業選擇。
+% 践行價值觀
+
+% 青年服務制度的第三個目標是教導年輕人共和國的價值觀。年輕人在這個計劃中學習並實踐共和國的價值觀，了解這些價值觀的重要性和作用。這些價值觀包括公民責任、自由和平等。通過践行這些價值觀，年輕人可以成為堅定的公民，為社會的發展做出貢獻。
+
+% 青年國家服務：培養承諾與社會凝聚力的機會
+% 簡介
+
+% 本文探討了青年國家服務的重要性以及對年輕人的影響。青年國家服務是一個面向15至17歲年輕人的計劃，無論他們的承諾是什麼，都可以通過這個計劃來體驗和實踐。其中最重要的一部分是12天的團結旅程，年輕人將在這段時間裡一起生活、學習和發展他們的承諾。
+
+
+% 心肺復蘇的重要性
+%
+%     學習心肺復蘇是非常重要的生活技能，它可以在緊急情況下挽救生命。
+%     心肺復蘇可以在等待急救人員到達之前維持心臟供血，從而增加生存機會。
+%     在進行心肺復蘇時，需要保持冷靜和堅定，並按照正確的步驟執行急救操作。
+
+% 青年國家服務的目標與內容
+
+
+% 青年國家服務的意義
+%
+%     青年國家服務既不是傳統的國家服務，也不是傳統的夏令營。它是兩者的結合，將兩者的優勢發揮到極致。
+%     通過青年國家服務，年輕人可以學會共同生活、互相尊重和建立友誼，同時培養對共和國價值觀的認同。
+%     青年國家服務還可以豐富年輕人的生活經歷，讓他們體驗到平時難以接觸到的活動和經歷。
+
+% 結語
+
+
+% 無論年輕人的承諾是什麼，青年國家服務都是一個值得參與的重要計劃。
+
+% 青年服務制度是一個重要的國家服務計劃，它為年輕人這個計劃不僅培養了年輕人的自信心，也開拓了他們的視野，同時教導他們共和國的價值觀。通過參與這個計劃，年輕人可以成為更加自信、有遠見和負責任的公民，為社會的進步做出積極的貢獻。
+
+% 國民服務是一個既不是國家服役也不是暑期營的活動，它將兩者的最佳元素結合起來。它以共和國的價值觀、旗幟和制服作為共同點，使年輕人平等對待；同時也讓他們體驗共同生活、建立新的友誼並參與平時難以體驗的活動。
+% 參與國民服務的年輕人獲得了自信心、探索新機會和職業前景的能力，並學會了珍惜並實踐共和國的價值觀。
+% 這次國民服務之旅讓年輕人經歷了一個密集而充實的過程，他們之間建立了牢固的聯繫，並將這段經歷帶入未來的人際關係中。
+
+\end{itemize}
+
+
+
+\paragraph{第一階段參訓學員數量及2023年營隊梯次：}
+
+2019年至2022年，SNU 國民役每年定額開放年輕人志願參加第一階段團結營隊。往年參訓學員數量如下：
+
+\begin{center}
+\begin{tabularx}{0.8\textwidth}{| c | X |}
+  \hline
+  2019年 & 共計2000多名年輕人參加。
+  \\ 
+  \hline
+  2020年 & 因為Covid-19疫情關係而暫停舉辦。
+  \\ 
+  \hline 
+  2021年 & 參訓學員擴增至1萬5千名。%15K
+  \\ 
+  \hline 
+  2022年 & SNU再擴增至3萬2千名學員，%32K
+		並同時於二月、六月及七月舉辦三梯的團結營隊Séjour de cohésion。
+    \\ 
+    \hline
+  2023年 &
+	 2022年10月6號，時任教育暨青年部國務秘書的Sarah El Haïry宣布2023年因應預算增加至1.4億歐元，SNU將不再限制試辦人員名額並將在四月學生放假期間也舉辦團結營隊~\cite{20minutes_221006}。
+   \\ \hline
+\end{tabularx}
+\end{center}
+
+		2023年團結營隊日期\cite{snu_officiel}如下：
+		\begin{itemize}
+      \item 第一梯日期 ：C區\footnote{教育部將法國分為A、B、C三個區分散假期間觀光地區及冬季活動的壓力和延長其時程，見圖\ref{fig:zones_de_vacances_scolaires}。}：02/19 - 03/03；A區：04/09 - 04/21；B區：04/16 - 04/28
+			\item 第二梯日期 ：06/11 - 06/23
+			\item 第三梯日期 ：07/04 - 07/16
+		\end{itemize}
+		
+%		En 2023, trois séjours de cohésion seront proposés :
+
+%    un premier séjour
+%    du 19 février au 3 mars pour la zone C
+%    du 9 au 21 avril pour la zone A
+%    du 16 au 28 avril pour la zone B
+%
+%    un deuxième séjour
+%    du 11 au 23 juin pour toutes les zones
+%
+%    un troisième séjour
+%    du 4 au 16 juillet pour toutes les zones
+
+    \begin{figure}[H]
+		\centering
+		\includegraphics[height=10cm]{./fig/zones_de_vacances_scolaires.jpg}
+    \caption{法國放假分為三個學區，來源：\href{https://www.vacances-scolaires-education.fr}{法國學校假期網}}
+		\label{fig:zones_de_vacances_scolaires}
+  	\end{figure}
+\subsection{第二階段：公益任務 Mission d'intérêt général}\label{subsection:mig}
+%une mission d’intérêt général visant à développer une culture de l’engagement et à favoriser l’insertion des jeunes dans la société. 
+
+在完成第一階段團結營隊後，學員必須在\underline{居住地附近}參加第二階段的\underline{公益任務}，
+每個任務時程至少$\mathbf{84}$\textbf{小時}或是為期至少\textbf{兩週}，且公益任務內容必須符合以下九個主題之一：
+
+\begin{itemize}
+  \item 國防及歷史緬懷
+    défense et mémoire 、
+  \item 社會安全
+    sécurité 、
+  \item 運動
+    sport 、
+  \item 醫療衛生
+    santé 、
+  \item 教育
+    éducation 、
+  \item 文化
+    culture 、
+  \item 社會共融
+    solidarité 、
+  \item 環境與永續發展
+    environnement et développement durable 、
+  \item 公民責任
+    citoyenneté 。
+\end{itemize}
+
+這些任務根據內容及執行方式，可以選擇在短期內或全年分散進行，讓年輕人有機會為國家提供服務。根據每位學員的情況，他們還可以個別獲得職業相關的指導和協助。
+
+第二階段公益任務做為SNU國民役計劃中的一個關鍵階段，除了強化對年輕人的訓練及指導之外，亦延續第一階段團結營隊之後教育資源和團體凝聚力。
+
+% Chaque mission doit correspondre à un engagement minimum de 84 heures répartie au cours de l'année suivant le séjour de cohésion. Elle doit s’inscrire dans une des neuf thématiques suivantes :
+% Fondées sur des modalités de réalisation variées, 84 heures effectuées sur une période courte ou répartie tout au long de l’année, ces missions placent les jeunes en situation de rendre un service à la Nation. Au cours de cette mission d’intérêt général, en fonction de leur situation, les volontaires peuvent également être accompagnés dans la construction de leur projet personnel et professionnel ;
+%
+% La mission d’intérêt général constitue une étape déterminante du dispositif pour renforcer le suivi et l’accompagnement des jeunes. Sa préparation commence dès le séjour de cohésion, dont elle prolonge les apports pédagogiques et les dynamiques collectives.
+
+各類公益任務時常透過第一階段團結營隊期間組織的「公民參與論壇」介紹給學員。由符合資格的機關團體及機構於團結營隊提出允許年輕學員在第一階段團結營隊後於居住地附近的機構執行公益任務。其中公民服務或後備役相關的公益任務，特別仰賴年輕志願者的參與。
+因此，團結營隊期間學員就能認識並選擇有意願執行的任務並獲得相關資訊，以便每個人都能帶著計畫回去，為接下來第二階段的公益任務做好萬全準備。
+
+%
+% Les missions sont notamment présentées dans le cadre de la mise en œuvre de la thématique « découverte de l’engagement ». Cette préparation peut également s’appuyer sur des « forums de l’engagement », organisés pendant le séjour de cohésion, ainsi que sur l’intervention de jeunes bénévoles et volontaires, notamment en service civique ou réservistes. Elle peut également se traduire par des actions en faveur de l’intérêt général notamment portées par le monde associatif auxquelles participeraient les volontaires pendant le séjour de cohésion. Elle se poursuit après le séjour de cohésion au travers d’événements dédiés organisés par les départements de résidence des volontaires.
+%
+% A noter que dès la phase 1 (le séjour de cohésion), les missions possibles sont présentées et préparées avec les volontaires pour que chacun et chacune repartent avec un projet en main pour accomplir au mieux cette 2nde phase d’intérêt général.
+
+\par 
+具備提供公益任務給SNU學員資格的機關團體與公民服務的機構雷同。以下機構能夠提供公益任務：
+
+\begin{itemize}
+\item 為公共利益提供服務的法定民間協會
+\item 公共法人：國家機構、地方政府、公共機構
+\item 私立非營利性醫療機構
+\item 公共和醫療社會服務機構，如養老院等
+\item 軍隊、警察、憲兵和民事安全部門
+\item 經核准的社會公益企業
+\end{itemize}
+
+%\par 
+%Cette mission d’intérêt général peut être effectuée auprès d’associations, de corps en uniforme (pompiers, gendarmes, etc.), de collectivités territoriales ou des services publics.
+%
+%
+% Les structures d’accueil pouvant proposer des missions sont, pour partie, identiques aux organismes éligibles à l’accueil de volontaires en service civique. Ainsi, peuvent proposer des missions :
+%
+%    les associations loi 1901 proposant des missions au service de l’intérêt général sur les thématiques définies ;
+%    les personnes morales de droit public : les services de l’État, les collectivités territoriales, les établissements publics ;
+%    les établissements de santé privés d’intérêt collectif ;
+%    les établissements et services sociaux et médico-sociaux (ESSMS) publics et associatifs ;
+%    les Armées, les services de police, de gendarmerie et de sécurité civile ;
+%    les entreprises solidaires d'utilité sociale agréée.
+
+\par
+
+第二階段公益任務執行內容及形式可以分成4大類：
+
+\begin{figure}[H]
+	\centering
+  \begin{tikzpicture}
+    \draw [color=red] (0, 0) circle (2.5) ;
+    \draw (0, 0) node {\huge {\textbf{公益任務}}} ; 
+    \draw (2, 1.5) -- ++  (1, 0.75) ;
+    \draw (-2, 1.5) -- ++ (-1, 0.75) ;
+    \draw (-2, -1.5) -- ++ (-1, -0.75) ;
+    \draw (2, -1.5) -- ++ (1, -0.75) ;
+    \draw [color=brown] (4, 3) circle (1.25) node {\color{black}\large \textbf{常規任務}} ;
+    \draw [color=brown] (4, -3) circle (1.25) node {\color{black}\large \textbf{單一任務}} ;
+    \draw [color=brown] (-4, -3) circle (1.25) node {\color{black}\large \textbf{集體專案}} ;
+    \draw [color=brown] (-4, 3) circle (1.25) node {\color{black}\large \textbf{志工培訓}};
+\end{tikzpicture}
+\caption{第二階段公益任務}
+\label{fig:structure_mig}
+\end{figure}
+
+
+\begin{itemize}
+	\item 常規任務 Mission perlée：學員單獨或與其他志願學員定期為當地的公共服務機構提供協助，如：體育社團、休閒中心、消防部門、安養院等。學員參與機構日常活動並可以將其在社群媒體上加以宣傳。
+%    mission perlée: un ou plusieurs volontaires apportent leur concours régulier à une structure locale chargée de service au public, comme les clubs sportifs, les services de pompiers, les EPHAD, etc. ;
+
+
+% La mission régulière: Seul ou avec d'autres volontaires, vous apportez un soutien régulier à une structure locale chargée de service au public: club sportif, centre de loisirs, caserne de pompiers, EHPAD... Vous participez aux activités courantes et pouvez en faire la promotion sur les réseaux sociaux.
+
+%    La mission perlée : le jeune apporte son aide de manière régulière à une structure
+
+	\item
+%    mission ponctuelle : un ou plusieurs volontaires apportent leur concours à un projet d’intérêt général existant et ponctuel comme l’organisation d’événements culturels ou sportifs, des chantiers de restauration du patrimoine, des missions en faveur de l’environnement, auprès de personnes démunies, etc. ;
+
+
+%    La mission ponctuelle : le jeune apporte son aide à un projet d’intérêt général existant et ponctuel (événements sportifs, chantiers de restauration du patrimoine…)
+		% les jeunes participent à un nouveau projet qu'ils ont eux-mêmes fait émerger et mis sur pieds, permettant d'apporter un service substantiel à la société.
+
+    單一任務 Mission ponctuelle：一名或多名志願者參加協助現有的單項公益任務，例如文化或運動活動的組織、文化遺產修復工程、環境保護任務、幫助弱勢群體等。
+
+
+	\item
+    %共同計畫 Projet Collectif：單個或複數個學員決定參加由中間機構，如全國青年協會(RNJA)、(FMDL)等，承辦之自主性質的公益任務。
+
+    集體專案 Projet collectif：參與專案的多名志願者在中介組織的協助下，聯合進行自主性的公益任務，例如全國青年協會（RNJA）、高中生聯合協會（FMDL）\footnote{高中生聯合協會時常發起團結集資活動，協助提供公衛用品(口罩、洗手酒精等)、參加環境清潔行動、創建文藝社團……旨在讓同伴意識到即將(或已經)面臨的社會議題。}等。
+		% les jeunes décident de poursuivre à plusieurs un projet autonome d'intérêt général, accompagnés par une structure d'intermédiation spécialisée, comme par exemple le Réseau national des juniors associations (RNJA), la Fédération des Maisons des lycéens (FMDL), etc.
+%    projet collectif : un ou plusieurs volontaires poursuivent un projet autonome d’intérêt général accompagnés par une structure d’intermédiation spécialisée. Les volontaires réalisant un projet collectif seront accompagnés par une structure identifiée.
+
+%    Le projet collectif : le jeune se lie à d’autres volontaires pour créer un projet d’intérêt général, accompagnés par une structure nationale comme la fédération des maisons des lycéens (FMDL) par exemple
+
+%	\item SNU項目 Projet SNU：學員執行自己提出的公益計畫，讓其提供社會服務。
+
+%    Le projet SNU : le jeune apporte son aide à un projet monté de toutes pièces avec d’autres appelés pendant la phase de cohésion
+	\item 為第三階段志願服務培訓 Préparation en vue d'un Engagement volontaire en Phase 3：
+
+    部分第三階段志願服務需要進行事前準備和訓練，特別是涉及公共安全領域或弱勢群體的任務。
+
+    %    préparation et formation en vue d’un engagement volontaire en phase 3 : certaines missions nécessitent un temps de formation, par exemple les missions dans le domaine de la sécurité civile ou auprès de publics vulnérables.
+%    préparation et formation en vue d’un engagement volontaire en phase 3 : certaines missions nécessitent un temps de formation, par exemple les missions dans le domaine de la sécurité civile ou auprès de publics vulnérables.
+\end{itemize}
+
+
+第二階段結訓後服勤機構會在市政府舉行典禮頒發學員證書，學員並能夠免費獲得交通法規網線上課程及享有初次報考道路交通法規考試免費優惠\cite{info-jeunes-snu}。
+
+%Une fois sa mission accomplie, la structure d’accueil remet un certificat au volontaire lors d’une cérémonie en préfecture. En guise de gratification, les jeunes reçoivent également un accès à des cours de Code de la route en ligne et, au terme de la mission, une première inscription offerte à l’examen du Code.
+\paragraph{第二階段公益任務實例：}
+
+法國政府透過其\href{https://www.youtube.com/@gouvernementfr}{Youtube官方頻道}發布數個參加國民役第二階段年輕人的經驗訪談，以下介紹幾個公益任務實例內容，點擊粉紅色標題以觀看影片。
+
+\subparagraph{\href{https://www.youtube.com/watch?v=rsCuBOxb814}{患有自閉症的 Augustin 參加文化古蹟保護：}}
+		\begin{figure}[H]
+		\centering
+		\includegraphics[width=\textwidth*4/5]{./fig/augustin-1.png}
+    \caption{Augustin 於Maubeuge消防隊}
+		\end{figure}
+
+Augustin於第二階段加入於Maubeuge的消防隊期間學習如何保護文化遺產。
+法國政府在巴黎聖母院火災後，為了保護重要文化文物，為消防員製作了小卡片，讓他們在緊急情況下能夠更好地了解物品的位置和特點。Augustin協助消防員繪製古蹟結構圖及圖示，幫助他們更清楚了解歷史建築的佈局，確保知道哪些文物需要優先保護。
+
+		\begin{figure}[H]
+		\centering
+		 \includegraphics[width=0.7\textwidth]{./fig/augustin-3.png}
+     \\ \vspace{0.1cm}
+		 \includegraphics[width=0.7\textwidth]{./fig/augustin-2.png}
+    \caption{Augustin 認識當地文物並學習繪製古蹟圖}
+		\end{figure}
+
+Augustin雖患有自閉症，但他的母親認為他在國民役前兩個階段的過程中，獲得了更多知識和技能，逐漸擺脫了社交障礙，能夠如一般人一樣自然地與人交流和互動。
+
+
+    \subparagraph{\href{https://www.youtube.com/watch?v=VbjJIwIVGB4}{Célia 在第68非洲砲兵聯隊於Valbonne營區受訓：}}
+
+    \begin{figure}[H]
+		\centering
+		\includegraphics[width=\textwidth*4/5]{./fig/celia_snu.jpg}
+    \caption{Célia 於第68砲兵連隊}
+		\end{figure}
+
+		Célia 決定跳出舒適圈，國民役第二階段於第68砲兵連隊位於法國東南部Valcuse的營地受訓。
+在這兩週間，Célia 參與了一系列體能活動，包括長達500公尺的障礙賽，需要用到四肢爬行、平衡和慢跑等不同的能力。活動中除測試了她的體能之外也需要她和小組成員合作。
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.45\textwidth]{./fig/celia-1.png}
+  \includegraphics[width=0.45\textwidth]{./fig/celia-2.png}
+  \\ \vspace{0.1cm}
+  \includegraphics[width=0.45\textwidth]{./fig/celia-3.png}
+  \includegraphics[width=0.45\textwidth]{./fig/celia-4.png}
+  \caption{各種體能測驗}
+\end{figure}
+
+
+他們還有海上救難訓練模組，模擬船難發生後的救援活動，她認為這次活動讓她體驗到團隊凝聚力的重要性。
+
+\begin{figure}[H]
+  \centering
+  % \includegraphics[width=0.45\textwidth]{./fig/celia-10.png}
+  % \includegraphics[width=0.45\textwidth]{./fig/celia-5.png}
+  \includegraphics[width=0.7\textwidth]{./fig/celia-5.png}
+  \caption{學習於海上輸送營救傷員}
+\end{figure}
+
+期間Célia 也學到各種野外求生技能和學習使用軍事裝備，例如紅外線望遠鏡和雷達等的訓練。
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.45\textwidth]{./fig/celia-6.png}
+  \includegraphics[width=0.45\textwidth]{./fig/snu_celia_ration.png}
+  \\ \vspace{0.1cm}
+  \includegraphics[width=0.45\textwidth]{./fig/celia-7.png}
+  \includegraphics[width=0.45\textwidth]{./fig/celia-8.png}
+  \caption{學習夜間求生技能、食用軍糧}
+  \label{fig:life_skill}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{./fig/celia_snu.png}
+  \\ \vspace{0.1cm}
+  \includegraphics[width=0.8\textwidth]{./fig/celia-9.png}
+  \\ \vspace{0.1cm}
+    \includegraphics[width=0.45\textwidth]{./fig/celia-12.png}
+  %\includegraphics[width=0.45\textwidth]{./fig/celia-14.png}
+  \includegraphics[width=0.45\textwidth]{./fig/celia-13.png}
+  \caption{Célia 學習使用無線電、JIM LR2 多功能紅外線望遠鏡和觀看雷達}
+\end{figure}
+
+% 主要是透過參加各種體能和團隊建立的活動，讓她感受到團隊凝聚力的重要性。
+% 國家服務的目的是要建立團隊凝聚力和同袍情誼，讓成員們能夠更好地合作和完成任務。
+
+Célia也透過這段經歷，更加了解自己並建立了自己的身分認同。
+她對這次活動感到非常開心和滿意，她認為，對於未成年的青少年而言，參加SNU是一個很好的體驗和成長機會，可以讓他們更深入了解公民的義務和責任。
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.45\textwidth]{./fig/celia-11.png}
+    \includegraphics[width=0.45\textwidth]{./fig/celia-15.png}
+  \\ \vspace{0.1cm}
+    \includegraphics[width=0.45\textwidth]{./fig/celia-17.png}
+    \includegraphics[width=0.45\textwidth]{./fig/celia-16.png}
+%		\includegraphics[width=0.45\textwidth]{./fig/snu_celia_ration-3.png}
+		\caption{學員於營火堆旁進食分享心得}
+\end{figure}
+
+\subparagraph{多樣化的公益任務：}
+
+\begin{itemize}
+  \item \href{https://www.youtube.com/watch?v=ABboKKTpFp4}{Irvin 於愛心食堂救濟生活有困難的人}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.45\textwidth]{./fig/irvin-1.png}
+    \includegraphics[width=0.45\textwidth]{./fig/irvin.png}
+    \caption{Irvin 在愛心食堂做公益任務}
+\end{figure}
+Irvin於第二階段在位於Evreux愛心食堂(Resto du Coeur)為需要幫助的人們提供食物、床墊和毛毯。Irvin接觸到生活中真正處於困境中的人們，並在過程中學習到舉手之勞可以對他人的生活產生巨大影響。
+\item \href{https://www.youtube.com/watch?v=3mOpBhQCeV4}{Alban 協助防疫公衛行政}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.30\textwidth]{./fig/alban-1.png}
+    \includegraphics[width=0.30\textwidth]{./fig/alban-2.png}
+    \includegraphics[width=0.30\textwidth]{./fig/alban-3.png}
+    \caption{Alban 為Covid-19防疫貢獻心力}
+    \label{fig:alban_snu}
+\end{figure}
+    16歲的Alban決定幫助在Covid-19疫情下受到重創的社區。他在位於Mayenne的移動式篩檢站負責處理行政事務，並檢查醫療急救箱裡的必要物品是否齊全。Alban對於在疫情期間能為國家做出貢獻感到充實及滿足。
+  \item \href{https://www.youtube.com/watch?v=GJaVtazMRgI}{Juliette 於養老院}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.45\textwidth]{./fig/juliette-1.png}
+    \includegraphics[width=0.45\textwidth]{./fig/juliette-2.png}
+    \\ \vspace{0.1cm}
+    \includegraphics[width=0.9\textwidth]{./fig/juliette-3.png}
+    \caption{Juliette 接待訪客並協助照顧養老院老人}
+    \label{fig:juliette_snu}
+\end{figure}
+
+    Juliette 第二階段選擇在Nancy的養老院(EPHAD)服勤。
+她的任務是接待來養老院探訪的客人。Juliette解釋到，因為疫情關係，願意來到養老院的看護人員銳減，養老院急需年輕志願者的幫助。除此之外，Juliette也學會踏出舒適圈，陪伴並協助於養老院長居沒有訪客的長者。
+
+\end{itemize}
+
+
+
+
+\subsection{第三階段：志願服務 Engagement volontaire}
+
+
+% 有可能進行至少3個月的志願服務，旨在讓那些願意為共同利益做出更持久和個人化的承諾。這種承諾主要圍繞現有的志願服務形式展開，包括公民服務、軍隊和國家憲兵的備役部隊、志願消防員、歐洲志願服務等。這種志願服務可以在16至30歲之間進行。
+
+%la possibilité d’un engagement volontaire d’au moins 3 mois, visant à permettre à ceux qui le souhaitent de s’engager de façon plus pérenne et personnelle pour le bien commun. Cet engagement s’articule principalement autour des formes de volontariat existantes : service civique, réserves opérationnelles des Armées et de la gendarmerie nationale, sapeurs-pompiers volontaires, service volontaire européen, etc. Cet engagement volontaire peut être réalisé entre 16 et 30 ans.
+%\paragraph{BRTF}
+完成SNU國民役第一階段及第二階段之後，年滿16至25歲(如為身心障礙者，則為30歲)的年輕人，可依意願加入法國現有志工制度，在國內或海外進行為期3個月到1年的第三階段\textbf{志願服務}，例如公民服務，義勇消防員，後備役，陸海空三軍後備部隊及警察志願士兵等。相關服勤機制包括資格，特遇，權利義務，服務範圍等，依法國內政部，國防部，公民服務署(Agence du Service Civique)，海外志工署(France Volontaire)等各種志願服務機關依現行有關規定辦理。
+
+
+% 在完成公益任務後，每位志願者可以繼續參與並積極參與建設一個兄弟般的社會，尤其是參與SNU的第三階段。這種志願服務適用於16至25歲的年輕人，持續時間為3個月至1年。
+
+第三階段志願服務涵蓋了許多形式的參與方式，涉及諸多公益相關的主題如：文化、團結、公民意識、教育、健康、運動、國際行動、國防、安全等。志願服務制度盡可能提供年輕人的參與機會和形式，特別是：
+
+%A l’issue de la mission d’intérêt général, chaque volontaire peut poursuivre son engagement et sa participation à la création d’une société fraternelle, notamment en réalisant la phase 3 du SNU. Cet engagement volontaire s’adresse aux jeunes de 16 ans à 25 ans, et dure de 3 mois à 1 an.
+%
+%La phase 3 rassemble de nombreuses formes d’engagement et concerne l’ensemble des thématiques en faveur de l’intérêt général : la culture, la solidarité, la citoyenneté, l’éducation, la santé, le sport, l’action internationale, la défense, la sécurité etc.
+%
+%Elle reconnait et valorise l’ensemble des dispositifs et formes d’engagement proposés aux jeunes, et notamment :
+%
+%    le service civique, qui offre la possibilité aux jeunes de 16 à 25 ans de s'engager pour une durée de 6 à 12 mois dans une mission d'intérêt général dans 9 domaines d’action qualifiés comme « prioritaires pour la Nation » ;
+%    la réserve civique et ses réserves thématiques, qui permettent à toute personne de plus de 16 ans de s’engager à servir les valeurs de la République en participant à des missions d'intérêt général, à titre bénévole et occasionnel. Elles concourent au renforcement du lien social en favorisant la mixité sociale ;
+%    le dispositif des jeunes sapeurs-pompiers, pour les jeunes de 11 à 18 ans, qui leur permet, en quatre cycles de formation successifs, de découvrir les matériels, les comportements qui sauvent et l’engagement citoyen puis de mettre en œuvre procédure et matériels dans des contextes de plus en plus proches de la réalité opérationnelle ;
+%    les différentes réserves des Armées, qui regroupent des Français de plus de 17 ans désireux de contribuer à la sécurité de leur pays en consacrant une partie de leur temps à la défense de la France, notamment en participant à des missions de protection de la population ;
+%    la réserve de la Gendarmerie nationale, ouverte aux jeunes majeurs, pour leur permettre de participer au service quotidien des unités (patrouille de surveillance, contact avec la population, aide, conseil et secours), à la sécurité de manifestations sportives ou culturelles, à des dispositifs de recherches, à des missions de sécurité publique ou de lutte contre la délinquance, à l'encadrement des sessions de JDC ou de formation des réservistes ;
+%    la réserve civile de la police nationale, ouverte aux jeunes de plus de 18 ans, qui leur permet d’apporter un soutien à l’activité opérationnelle et administrative de la police ou une expertise (interprètes, juristes, informaticiens…) ;
+%    le corps européen de solidarité, qui donne aux jeunes de plus de 18 ans la possibilité de se porter volontaires dans des projets organisés dans leur pays ou à l’étranger et destinés à aider des communautés et des personnes dans toute l’Europe. Les projets ont une durée de deux à douze mois ;
+%    les différentes formes de volontariat à l’international, et notamment le volontariat de solidarité internationale ou le service civique à l’international ;
+
+\begin{center}
+  \begin{tabularx}{\textwidth}{ | c | X |}
+	\hline
+  \textbf{類別} &  \multicolumn{1}{c|}{\textbf{參加資格及內容}}
+	\\ \hline
+	青少年消防員計劃 & 
+	學員與專業或志願消防人員一起接受有關救援設備和行為的培訓
+    針對11至18歲的青少年，與專業或志願消防人員教導下接受四個階段的培訓，藉此了解救援設備使用、救生知識和民眾協助，並在接近實際操作情境的環境中實踐這些學習成果。
+		%Le jeune sapeur-pompier est un bénévole qui montre de l’intérêt pour les services de secours. Il s’initie en compagnie de pompiers professionnels ou volontaires aux matériel et comportements qui sauvent. Ensuite, il peut mettre œuvre ces apprentissages dans des contextes proches de la réalité opérationnelle.
+	\\ \hline
+	陸海空後備軍人 & 參加者需年滿17歲並有意願為法國的安全做出貢獻，尤其是參與保護人民的任務。
+		%La réserve opérationnelle dans les armées (armée de Terre, armée de l'Air, Marine nationale, etc.)
+		%Les réserves des Armées regroupent des Français désireux de contribuer à la sécurité de leur pays et à la protection de la population. Dès 17 ans.
+	\\ \hline
+	國際志願服務  %Le volontariat à l'international  
+			  & 
+			  學員能參與多種國外計畫如國際團結志願服務(VSI)或國際公民服務。僅適用於年滿18歲的年輕人。
+		 %Il existe plusieurs façons de prolonger son engagement à l’étranger comme le Volontariat de Solidarité Internationale (VSI) ou le Service Civique à l’international. Cela concerne les jeunes majeurs uniquement.
+	\\ \hline
+	志願從軍計畫(SMV) 
+	%Le service militaire volontaire
+			  &     適用對象為年齡介於18至25歲之間，就業困難的年輕人。
+		% Le service militaire volontaire est un dispositif innovant pour l’insertion socioprofessionnelle des jeunes françaises et français. Il s’adresse aux 18 – 25 ans, en difficulté et éloignés de l’emploi.
+	\\ \hline
+	海外軍事計畫(SMA)
+%	Le service militaire adapté 
+			  & 
+       對象為16至25歲失業青年，居住在海外領地、協助其融入社會的軍事計劃。
+		% Service militaire adapté est un dispositif militaire d’insertion socioprofessionnelle au profit des jeunes de 16 à 25 ans éloignés de l’emploi et résidant dans les territoires d’outre-mer.
+	\\ \hline
+	公民服務 %Le Service Civique 
+			  &
+        公民服務是一個公民參與計劃，對象為16至25歲的法國年輕人(如為身心障礙者，則可延長至30歲)。為期6至12個月，並領有津貼，詳見~\ref{subsection:service_civique}。
+			  % Le Service Civique est un dispositif d’engagement citoyen pour les jeunes français de 16 à 25 ans et jusqu’à 30 ans pour les personnes en situation de handicap. Il dure de 6 à 12 mois et est indemnisé.
+	\\ \hline
+  儲備公民 % Réserve Civique 
+        & 
+%		La réserve civique met à disposition la plateforme JeVeuxAider.gouv.fr qui permet de trouver des missions de bénévolat dans des associations, organisations publiques ou communes partout en France, sur le terrain ou à distance.
+  透過JeVeuxAider.gouv.fr平台協助人們自願參加全法國的非營利組織、公共機構或市政當局的志願服務項目，以無償和機動的方式體現共和國的精神，達到加強社會聯繫，促進社會多樣性的目的。
+	\\ \hline 
+	儲備警察
+	%La réserve opérationnelle de la Police nationale 
+			   &
+		%Ouverte aux personnes majeures, cette réserve opérationnelle permet d’apporter un soutien à l’activité opérationnelle et administrative de la police.
+         開放給18歲以上的年輕人參加，讓他們能夠支援警察的操作和行政活動，提供專業知識如翻譯、法律專業、資訊技術等。
+	\\ \hline 
+	歐盟志工團 % Le Corps européen de solidarité 
+			   & 為18歲以上的年輕人提供在本國或國外參與協助歐洲各地社區和個人的志工機會，為期2至12個月。
+		% Ce programme de l’Union européenne offre la possibilité aux jeunes de s’engager sur une activité de solidarité en France et en Europe. De 2 à 12 mois.
+
+	\\ \hline 
+	參與社群團體 % Engagement associatif
+			   & 提供公民在社團中進行無償投入的機會，為公共利益做出貢獻。
+		%Ouvert à tous les citoyens, cet engagement permet de s’investir bénévolement en faveur de l’intérêt général au sein d’une association.
+	\\ \hline 
+	儲備國家憲兵 % La réserve de la Gendarmerie nationale 
+		&
+%		Elle permet aux français âgés de 17 ans et plus de renforcer temporairement les unités de gendarmerie proches de leur domicile et de participer au service quotidien des unités (patrouille de surveillance, contact avec la population, aide, conseil et secours).
+    17歲以上參加的公民加強其居住地附近的警察單位，並參與單位的日常服務(如監視巡邏、提供民眾諮詢 、援助和救援等事宜)。
+    對象為年滿法定成年人年齡的年輕人，使他們能夠在其居住地附近協助國家憲兵參與日常單位服務（如監視巡邏、提供諮詢、提供民眾幫助、建議和救援等）、參與體育或文化活動的安全工作、參與搜索行動、公共安全任務或打擊犯罪活動，以及指導國防公民日或儲備人員培訓等
+	\\ \hline 
+\end{tabularx}
+\end{center}
+
+
+% TODO
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=0.45\textwidth]{fig/smv_logo.png}
+    \includegraphics[width=0.45\textwidth]{fig/sma_logo.jpg}
+    \includegraphics[width=0.45\textwidth]{fig/service_civique_logo.png}
+    \includegraphics[width=0.45\textwidth]{fig/corps_europeen_solidarite_logo.png}
+  \end{center}
+  \caption{第三階段提供各種志願服務項目}
+\end{figure}
+
+
+\subsection{2018年SNU國民役研究小組}\label{subsection:snu_gdt}
+
+% Le groupe de travail sur la mise en place du service national universel s'est réuni régulièrement et a produit de nombreuses auditions et déplacements pour rencontrer une grande variété d'acteurs potentiels du projet. Le rapport présente de manière pratique l'ensemble des éléments clés nécessaires à la mise en place d'un service national universel et trace le chemin qui pourrait conduire à ce déploiement.
+
+自法國於1997年廢止徵兵制度以來，法國社會於近幾年掀起希望重新建立新的國民義務制度的聲音，用以促進公民參與和社會凝聚力。
+2018年行政院設立SNU國民役研究小組定期開會討論，舉辦許多聽證會和走訪，與各種潛在的項目參與者進行了會面。
+2018年4月26日國民役研究小組報告人兼少將Daniel Menaouine撰寫一份研究報告。
+
+% 該報告中主要介紹推行國民役所需的關鍵要素，並提出了如何實施的可能方法和程序，同時探討法國施行國民役制度會面臨的相關問題。
+
+研究小組在報告中提出了以下幾點建議：
+
+\begin{enumerate}
+  \item 
+建立一個全民國家服務制度(後稱國民役)，涵蓋所有18歲的公民和永久居民。
+內容大綱分為兩個部份：第一部份為期一個月的\textbf{義務服役}和第二部份自願性質的\textbf{長期服務}，見圖~\ref{fig:snu_plan}。
+\item 
+服役期限為一個月至三個月， 可以在國內或海外進行。服役時程應盡可能保持彈性。
+\item 
+服務內容包括軍事訓練、社會服務和文化活動等多種領域，並具建設性，讓參訓年輕人得到適當的培訓和協助。
+\item 
+為了確保服務的平等性和普及性，政府應該提供必要的資源和支持。
+\item 
+為了推行這個計畫，政府需要與各方合作，包括學校、企業、民間組織等。
+\end{enumerate}
+
+研究小組對於建立國家服務所需的成本進行嚴格的評估，以確定所需的資源和預算。包括服務期間的薪酬、設施和設備、培訓和監督人員等方面。此外，政府還需要考慮資金來源，例如稅收、公共預算、企業捐贈等。
+為確保在未來幾年內能夠順利推行國民役。報告中小組建議政府應該盡快採取必要措施並開始進行相關工作，包括制定相關法律和規章、建立必要的基礎設施、培訓人員等。
+最後報告中預期國民役第一部份最快可在2019年下半年開始實施。
+
+% 報告中強調了確保財政可持續性和公平性的重要性。
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{./fig/gdt_snu_plan.png}
+  \caption{2018年 國民役研討會初步計畫時程（法）來源： Groupe de Travail SNU \cite{gdt_snu_2018}}
+  \label{fig:snu_plan}
+\end{figure}
+
+\subsection{SNU 國民役面臨的社會批評及法律問題}\label{subsection:snu_debat}
+
+\begin{enumerate}
+	\item 有人反應第一階段團結營隊像是\underline{夏令營}，對於在短短2個禮拜是否能有效傳達團結、社會融合及協助青少年職涯發展感到質疑。% (réf wiki 22)。
+	\item 部份人擔憂第一階段的軍事色彩過重。2019年，一百多名學員在Evreux曝曬於大太陽之下，導致29人出現中暑且其中一人需要送醫。
+	\item 除了質疑活動的成效之外，也有人批評推行國民役的成本過高。時任國會議員的Régis Juanico 批評除了政府編列的三千萬歐元之外，其他給予教育暨青年部的相關補助也不夠透明。
+
+    作為回應，2019年時任教育暨青年部國務秘書的Gabriel Attal強調SNU活動試辦很成功，預計於2024年開始變成所有2008年後出生的公民義務，且正式實行每年預算介於10至15億歐元，佔青年預算的1.5\%。\cite{budget_attal}
+	\item 如果要讓SNU變成國民義務，法國國會勢必需要修憲，因為法國憲法第34條禁止國家強制指派公民執行非國防以外的事務。另外由於SNU涉及到未成年，義務性的SNU會與青少年的父母親權互相衝突。最後由於歐盟人權法院禁止歐盟成員對公民強制勞動，如果SNU被判定與國防沒有關聯，法院可能會懲處。
+	\item 第一階段的施行過程及營隊飲食是否能夠確保學員的信仰自由以及世俗化亦受到挑戰。
+\end{enumerate}
+
+
+
+
+\subsection{SNU 官方網站以及社群媒體}
+SNU 國民役由法國國民教育青年暨體育部主導規劃，法國國防部提供訓練人員。SNU報名方式以及最新消息可以至其\href{www.snu.gouv.fr}{官方網站}獲得相關資訊。
+\begin{itemize}
+  \item 
+電子信箱：\url{contact@snu.gouv.fr}
+\item 
+聯絡地址： 
+\begin{center}
+法國國民教育、青年暨體育部
+\\ Ministère de l’éducation nationale et de la Jeunesse et de Sports
+\\  110 rue de Grenelle 75007 – Paris
+\end{center}
+\item 
+另外SNU國民役亦於 Instagram 設有官方頻道  : \href{https://www.instagram.com/snujemengage/?hl=fr}{@snujemengage}
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=0.4\textwidth]{fig/snu_official.png}
+    \includegraphics[width=0.5\textwidth]{fig/snu_ig.png}
+  \end{center}
+  \caption{國民役官網首頁（左）、IG 官方頻道（右）}
+\end{figure}
+
+\item 2023年國民役宣傳單及說明：
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=0.31\textwidth]{fig/affiche_snu_2023.pdf}
+    \includegraphics[width=0.31\textwidth]{fig/flyer_snu_2023-1.pdf}
+    \includegraphics[width=0.31\textwidth]{fig/flyer_snu_2023-2.pdf}
+  \end{center}
+  \caption{2023年國民役宣傳單（左）、2023國民役流程簡章（中、右）}
+\end{figure}
+\end{itemize}
+
+
+\newpage
+
+
+\section{與台灣中華民國役政制度對照}
+
+
+孫子曰：兵者，國之大事，死生之地，存亡之道，不可不察也。兵役制度是國防建軍的基本制度，兵役行政是國家安全的首要行政、是國防戰備的基礎，也是厚植軍備力量的首要工作。
+
+去年開始至今未果的烏俄戰爭，烏克蘭大動作動員後備戰力以支援國家和維持國土安定，讓世界其他許多國家紛紛對國防議題掀起了討論。長年於北歐保持軍事中立的瑞典與芬蘭重新審視國際國防戰略，放棄數十年來的中立政策，於近期申請加入北約。即便在兵源充足實施募兵制的國家如德國、法國，也均調整或設立相關役政制度鼓勵年輕人成為國防後備人員或是參與社會公眾事物。
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[height=0.5\textheight]{fig/55屆社會役.jpg}
+  \end{center}
+  \caption{民國八十七年第八期役政特刊中專論探討當時歐洲「社會役」於本國實施的可能性}
+\end{figure}
+
+在兩岸關係瞬息萬變的今日，役政制度對台灣的重要性舉足輕重。我國現代兵役行政制度自民國32年以來行使已有八十年，兵役制度在順應時代潮流及社會各界的期望下，應不斷創新精進。在本章節我們嘗試探討將法國國民役的部份概念納入我國兵役制度的可能性，做為未來役政革新的雛型。
+有關於我國的役政制度沿革以及現行實施概況可以參考
+沈哲芳署長的碩士論文 「當前役政組織之變革與評估」(見\cite{shen_master_thesis})。
+% TODO
+% 如沈哲芳署長的碩士論文 「當前役政組織之變革與評估」(見\cite{shen_master_thesis})
+\par 
+
+如國民役研究小組(詳見\ref{subsection:snu_gdt})一般，本章節我們設想在將法國國民役的框架納入我國兵役制度的假設下，可能會面臨的社會反彈聲浪及問題。
+
+\subsection{我國基於法國國民役可能的改革方向}
+
+% TODO
+
+作者為替代役役男目前於內政部役政署秘書室研考科服勤，於法國旅居十餘載期間與不同年齡層的法國人討論和了解法國實施過的兵役制度以及社會期待。私以為雖然SNU法國國民役最初是在前幾年因恐攻及各種社會事件的背景下誕生以防止人民分裂、促進國民團結，但是國民役的機制及架構使政府能夠彈性地鼓勵青少年及青少女支援當下社會所需的人力及資源，並在過程中增進其社會經驗：如之前因應新冠肺炎，國民役在公益任務提供許多與公衛相關的項目讓年輕人協助全民防疫以減輕疫情擴散(如Alban於篩檢站跟Juliette於養老院，見圖\ref{fig:alban_snu} 和 圖\ref{fig:juliette_snu})
+；日前為面對烏俄戰爭帶來的影響及省思，法國政府即透過第一階段大量宣導陸軍，憲兵及警察等國防單位，鼓勵年輕人於第二階段體驗軍事生活(如Célia於第68砲兵聯隊體驗，見~\ref{subsection:mig})以期能在未來從軍保衛國家。
+
+\par 
+
+我國役政制度可以汲取國民役的部份如下：\footnote{此章節論述均為作者個人意見，不代表本署立場。}
+
+\begin{enumerate}
+  \item 受訓地點：目前無論是常備役或是替代役，我國役男皆需至新訓中心受訓。若效法法國國民役使用多種公家機構(如文化中心、公教渡假中心、運動中心、城堡及學校等)做為受訓地點，則可有效分散人員壓力，並提昇每一梯次可受訓人數量能。
+  \item 彈性服勤機構：因應國內外時事和當下社會需求來調整服勤機構開缺，如遇國際情勢緊張，則於新訓期間大幅增加國防機構的宣導，鼓勵學員於軍事單位服役並催化其未來從軍意願；如遇防疫急難，則於第二階段安排大量公衛機構。
+  \item 合作計畫：設立役男和中介組織在入營前提出專案計畫的平台，在評估計畫合理可行後允許其做為服役期間的自主性公益任務。
+  \item 社會融入：與現有的志工制度結合，盡可能讓年輕人能夠依自身專長及興趣申請服勤單位，有效減少人力浪費並能激發年輕人的公民意識，縮短其在服役期滿後銜接社會職場的空窗期。
+  \item 役期分段：分段式的服勤內容，讓役男的生涯規劃更具彈性，除減輕服役對未來職涯造成的負面衝擊之外，亦能有效提昇役男提前入伍的意願。
+\end{enumerate}
+
+
+
+\subsection{可能面臨的社會壓力及法律問題}
+
+將國民役的架構和概念納入台灣役政制度可能會產生的問題應與法國現行實施國民役面臨的狀況大致雷同(見\ref{subsection:snu_debat})：
+
+\begin{itemize}
+  \item 預算： 法國總統馬克宏最初設立的國民役草案對象為21歲以上的青年，然評估所需預算跟人力資源過於龐大，最終國民役參加對象改為針對15-17歲的年輕人。根據教育部國務秘書Sarah El Haïry，現行每一名國民役參訓學員於一個月的預算為2114歐元。
+若我國兵役制度欲施行類似法國國民役三階段的模式，應審慎評估所需預算以及制度變革所帶來的利弊與衝擊。
+\par
+    我國目前為募徵併行制，另考量於民國89年開始施行的替代役制度，因此在役男的徵集和分發機制若欲仿效法國國民役，應只消些微調整即可沿用，故分發作業的相關預算及所需人員應不至於有過大變動。
+
+  \item 女性服役：我國在實質層面上尚無要求女性公民履行義務兵役的情況。國民役模式應可有效減少要求女性服役所造成的社會反彈聲浪，因學員在第二階段公益任務或是第三階段志願服務的內容均可最大限度依本人意願去申請及選擇服勤單位。
+
+以下列出至2018年實施女性義務兵役的國家\footnote{附表為前秘書室研考科役男陳政煥、葉迺青於2018年8月22日整理}：
+
+\begin{center}
+  \begin{tabularx}{\textwidth}{| X | X | X | X | X |}
+   \hline
+   \multicolumn{5}{|c|}{\textbf{2018年世界主要國家實施女性義務役制度概況比較表 (一)}}
+ \\ \hline
+  \textbf{國名} & \textbf{挪威} & \textbf{瑞典} & \textbf{以色列} & \textbf{北韓} 
+  \\ \hline
+  位置 & 北歐 & 北歐 & 西亞 & 東亞 
+  \\
+  \hline
+  面積($\mathrm{km}^2$) & 38.5萬 & 45 萬 & 22萬 & 12萬 
+  \\ 
+  \hline
+  人口 & 530萬 & 1000 萬 & 890 萬 & \parbox{3cm}{2540萬\\ (2016年)}
+  \\ \hline
+  \parbox{2.7cm}{人均  GDP \\ (美元)} & 8.3萬& 5.3萬& 4.2萬 & \parbox{3cm}{1千 \\(2015年)}
+  \\ \hline
+  \parbox{2.7cm}{國防預算 \\(占總GDP) \\ (美元)} & \parbox{3cm}{72億 (1.6\%)\\(2014年)} & 57億 (1.2\%) & \parbox{3cm}{186億(6.2\%) \\ (2015年)} & \parbox{3cm}{$\sim$100億 \\ ($\sim$25\%) }
+  \\ \hline
+  制度 & 常備役 & \parbox{3cm}{常備役/ \\ 替代役} & 常備役 & 常備役 
+  \\ \hline
+  役期 & 19個月 & 12個月 & \parbox{3cm}{24個月 \\(女性)} & 7年 (女性) 
+  \\ \hline 
+  總兵力 & 2.3萬 & 2.3萬 & 17.7萬 & \parbox{3cm}{$\sim$107萬\\ (2012年)}
+  \\ \hline 
+  每年可徵召女性 & 3萬 & 5.6萬 & 6萬 & 20.5萬 
+  \\ \hline
+  兵源占人口比 & 0.43\% & 0.22\% & 2\% & 4.2\%
+  \\ \hline 
+  後備兵力 & 4.5萬 & 3.5萬 & 44.5萬 & 60萬 
+   \\ \hline
+\end{tabularx}
+\end{center}
+
+\underline{備註 ：} \textbf{挪威、瑞典}每年符合徵兵年齡身體健康的人數大於國家軍隊每年需要新兵入伍的人數，實際上並不是每一名符合資格的女性都需要從軍。
+
+\begin{center}
+\begin{tabularx}{0.95\textwidth}{| p{2.7cm} | X | X | X | X |}
+   \hline
+   \multicolumn{5}{|c|}{\textbf{2018年世界主要國家實施女性義務役制度概況比較表 (二)}}
+ \\ \hline
+  \textbf{國名} & \textbf{古巴} & \textbf{玻利維亞} & \textbf{突尼西亞} & \textbf{厄利垂亞} 
+  \\ \hline
+  位置 & 中美 & 南美 & 北非 & 東非
+  \\
+  \hline
+  面積($\mathrm{km}^2$) & 11萬 & 110 萬 & 16萬 & 12萬 
+  \\ 
+  \hline
+  人口 & \parbox{3cm}{ 1100萬 \\ (2017年)} & 1122萬 & \parbox{3cm}{ 1130萬 \\ (2016年)} & \parbox{3cm}{495萬\\ (2016年)}
+  \\ \hline
+  \parbox{2.7cm}{人均  GDP \\ (美元)} & \parbox{3cm}{7815 \\ (2016年)} & 4千 & 4千 & 1千
+  \\ \hline
+  \parbox{2.7cm}{國防預算 \\(占總GDP) \\ (美元)} & \parbox{3cm}{$\sim$1.2億 \\(3.8\%)\\(2016年)}  & \parbox{3cm}{6.6億\\(1.76\%) \\ (2017年)} & \parbox{3cm}{8.4億 \\ (2.1\%) \\ (2017年)} & \parbox{3cm}{0.22億 \\ (20.9\%) \\ (2009年)}
+  \\ \hline
+  制度 & \parbox{3cm}{常備役/ \\ 替代役} &  常備役 & 常備役 &  \parbox{3cm}{常備役/ \\ 替代役} 
+  \\ \hline
+  役期 & 24個月 & 12個月 & 12個月 & \parbox{3cm}{18個月 \\(女性)}
+  \\ \hline 
+  總兵力 & 9萬 & 5.6萬 & 7萬 & 32萬
+  \\ \hline 
+  每年可徵召女性 & N/A & 4.3萬 & N/A & N/A
+  \\ \hline
+  兵源占人口比 & 0.82\% & 0.5\% & 0.22\% & 6.5\%
+  \\ \hline 
+  後備兵力 & 150萬 & 3.5萬 & 1.2萬 & 25萬 
+   \\ \hline
+\end{tabularx}
+\end{center}
+
+  \item 法律層面： 
+    中華民國憲法第20條明定： 人民有依法律服兵役之義務，為憲法第二十條所明定。 
+    然憲法本身並無明文規定人民如何履行兵役義務，有關人民服役之事項及規定，則於《兵役法》中明定。
+    另一方面，法國第34條憲法明文禁止國家強制指派公民執行非國防以外的事務\footnote{ L'article 34 de la Constitution interdit la sujétion des citoyens pour autre chose que la défense nationale.}，國民役的內容大綱不盡是國防相關，因此儘管法國朝野各勢力均於大方向上贊同恢復有別於徵兵制的國民義務制度，如須將國民役列為國民義務依然需要進行修憲。故跟法國役政制度相比，我國在法律上改革役政制度相較之下更有彈性。
+
+\end{itemize}
+
+
+
+\section{銘謝}
+
+筆者有緣自2022年八月初加入內政部役政署，於秘書室研考科服替代役。
+長年於法國的旅居生活及學術研究經驗，讓我對其役政制度充滿熱情及興趣，特別是近年開始推行實施的法國國民役(Service National Universel)。另外適逢民國112年第80屆兵役節，亦讓我有機會能夠參閱往年役政史料及文獻，用以協助統整兵役節由來及歷史沿革。透過閱讀、蒐集和研究兩國役政制度的文獻及相關資料，允許我用不一樣的角度去審視、比較兩者的同異。
+
+感謝內政部役政署給予我機會讓我能夠以替代役男的身份去親身理解替代兵役制度，並從中嘗試發覺新的可能性。
+最後，我很幸運能夠遇見研考科茝蘋科長，我由衷地感謝科長在我服役期間無私地給予我許多支持和指導，讓我在這一年能夠心無旁鶩、怡然自得地完成這份報告，為我的替代役生活劃下值得回味的句點。
+% 及同仁姊姊們，繁忙之餘撥冗耐心指導和協助我各項勤務，。
+
+
+\newpage 
+
+\section{專有名詞翻譯及解釋}
+
+在這個章節我們附上本報告使用到的中文專有名詞翻譯，我們另外附上原文和其定義以利後續查詢和跟外文比對。
+
+\subsection{法國役政轉型相關}
+\begin{itemize}
+	\item 國家義務兵役： Service national，前身為 Service militaire。
+	\item 公民教育：Parcours citoyen，作為義務兵役廢除後的轉型方案。
+	\item 國防公民日：Journée Défense et Citoyenneté，簡稱 JDC。
+	\item 國防預備召集日：Journée d'Appel de Préparation à la Défense 簡稱 JAPD，為國防公民日舊稱。
+	\item 公民服務：Service civique
+	% \item Service civil volontaire : 國民志願服務制
+\end{itemize}
+
+\subsection{國民役專有名詞}\label{subsec:snu_term}
+\begin{itemize}
+	\item 國民義務役：或做國民役 Service National Universel，簡稱 SNU。
+    %普遍國民/公民役，社會義務役，義務社會役, 國家服務 (注意： 社會役 可能會跟徵兵制時的替代役方案搞混), 全體國民役, 國家義務役 (國防情勢特刊), 全民國家服務，社會義務役，全面國家服務
+  \item 國民役分為三個階段，其中前兩個階段計畫為國民義務，第三階段不具強制性質並可以在25歲前(如為身心障礙者，則可至30歲)參加：
+    \begin{itemize}
+      \item 
+            團結營隊：Séjour de cohésion，國民役第一階段 
+    \begin{itemize}
+      \item 小組：Maisonnée，小組成員於團結營隊過團體生活、共同執行日常勤務及互相幫助。
+    \end{itemize}
+  \item 
+    公益任務：Mission d'intérêt général，國民役第二階段
+  \item 
+     志願服務：Engagement volontaire，國民役第三階段 
+    \end{itemize}
+\end{itemize}
+
+
+\newpage 
+
+\bibliographystyle{abbrv}
+\bibliography{SNU.bib}
+
+\end{document}
