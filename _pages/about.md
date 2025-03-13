@@ -13,6 +13,13 @@ I am currently a postdoctoral researcher at [Institut Elie Cartan de Lorrane](ht
 <!--I finished my mandatory military and civil service in July 2023. I am currently open to research-driven positions in Data Science/Machine Learning or Quantitative Research.-->
 
 
+Research Interest
+======
+* Analysis of PDEs
+* Calculus of variations
+* Scientific Machine Learning (PINNs, NODES, etc) and Control Theory
+
+
 Publications
 ======
 * Chih-Kang Huang. [**Questions of approximation and compactness for geometric variational problems**](https://theses.hal.science/tel-03584255), Thesis, Université de Lyon, 2021
@@ -30,7 +37,6 @@ Transversal Projects in Machine Learning
 
 Hard Skills
 ======
-
 * **Mathematics :** Analysis of PDEs, Numerical Simulations, Optimization, Calculus of Variations, Geometric Analysis 
 * **Programming :** Python (Numpy, Pytorch, JAX, etc), MatLab
 * **Tools :** Latex, Git, Docker, Slurm (HPC)
