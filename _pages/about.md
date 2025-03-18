@@ -24,7 +24,7 @@ Publications
 ======
 * Chih-Kang Huang. [**Questions of approximation and compactness for geometric variational problems**](https://theses.hal.science/tel-03584255), Thesis, Université de Lyon, 2021
 * [**A thickness-aware Allen-Cahn equation for the mean curvature flow of thin structures**](https://arxiv.org/abs/2310.10272), with E. Bretin and S. Masnou
-* Asymptotic Analysis of embedded Willmore spheres in 3-dimensional manifolds, with N. Marque, in preparation.
+* [Asymptotic Analysis of embedded Willmore spheres in 3-dimensional manifolds](https://arxiv.org/abs/1710.08732), with N. Marque, in preparation.
 * Neural network approximation of a phase-field model for dendritic growth, with B. Appolaire, L. Gagnon and M. Zaloznik, in preparation.
 * Null controllability of Allen-Cahn eqaution, with L. Gagnon, in preparation.
 
