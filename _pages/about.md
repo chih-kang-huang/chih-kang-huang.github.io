@@ -16,11 +16,11 @@ I am currently a postdoctoral researcher at [Institut Elie Cartan de Lorrane](ht
 Research Interest
 ======
 * Analysis of PDEs
-* Calculus of variations
+* Calculus of variations and Optimization
 * Scientific Machine Learning (PINNs, NODES, etc) and Control Theory
 
 
-Publications
+Scientific Works
 ======
 * Chih-Kang Huang. [**Questions of approximation and compactness for geometric variational problems**](https://theses.hal.science/tel-03584255), Thesis, Université de Lyon, 2021
 * [**A thickness-aware Allen-Cahn equation for the mean curvature flow of thin structures**](https://arxiv.org/abs/2310.10272), with E. Bretin and S. Masnou
@@ -28,9 +28,9 @@ Publications
 * Neural network approximation of a phase-field model for dendritic growth, with B. Appolaire, L. Gagnon and M. Zaloznik, in preparation.
 * Null controllability of Allen-Cahn eqaution, with L. Gagnon, in preparation.
 
-Transversal Projects in Machine Learning
+Transversal Projects
 ======
-* [Chatbot for automated meal order collection](https://github.com/CheesyPicodon/nca-linebot)
+* [Chatbot for automated meal order collection](https://github.com/CheesyPicodon/nca-linebot), a chatbot written in python to collect automatically meal orders during my mandatory civil service in Taiwan
 * [CENTURI Hackathon 2024 for Quantitative Biology](https://github.com/CENTURI-Hackathon-2024), Deep single molecule unfolding detection, *First Price*, at Marseille 
 <!--* [Physic-Informed Neural Networks to solve PDEs](/portfolio/portfolio-2)-->
 <!--* [How to determinate if two real estates correspond to the same](/portfolio/portfolio-1)-->
