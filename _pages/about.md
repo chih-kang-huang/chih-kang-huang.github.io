@@ -39,7 +39,7 @@ Hard Skills
 ======
 * **Mathematics :** Analysis of PDEs, Numerical Simulations, Optimization, Calculus of Variations, Geometric Analysis 
 * **Programming :** Python (Numpy, Pytorch, JAX, etc), MatLab
-* **Tools :** Latex, Git, Docker, Slurm (HPC)
+* **Tools :** Latex, Git, Docker, Slurm (HPC), Jupyter
 * **OS :** Linux, Windows, macOS  
 
 
