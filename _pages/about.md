@@ -17,21 +17,22 @@ Research Interest
 ======
 * Analysis of PDEs
 * Calculus of variations and Optimization
-* Scientific Machine Learning (PINNs, NODES, etc) and Control Theory
+* Scientific Machine Learning (PINNs, NODES, etc.) and Control Theory
 
 
 Scientific Works
 ======
-* Chih-Kang Huang. [**Questions of approximation and compactness for geometric variational problems**](https://theses.hal.science/tel-03584255), Thesis, Université de Lyon, 2021
-* [**A thickness-aware Allen-Cahn equation for the mean curvature flow of thin structures**](https://arxiv.org/abs/2310.10272), with E. Bretin and S. Masnou
-* [Asymptotic Analysis of embedded Willmore spheres in 3-dimensional manifolds](https://arxiv.org/abs/1710.08732), with N. Marque, in preparation.
-* Neural network approximation of a phase-field model for dendritic growth, with B. Appolaire, L. Gagnon and M. Zaloznik, in preparation.
-* Null controllability of Allen-Cahn eqaution, with L. Gagnon, in preparation.
+* *C-K. Huang*. [**Questions of approximation and compactness for geometric variational problems**](https://theses.hal.science/tel-03584255), Thesis, Université de Lyon, 2021
+* E.Bretin, *C-K. Huang*, S. Masnou.[**A thickness-aware Allen-Cahn equation for the mean curvature flow of thin structures**](https://arxiv.org/abs/2310.10272), accepted.
+* *C-K. Huang*, L. Gagnon, B. Appolaire, M. Zaloznik. [**Neural network approximation of a phase-field model for dendritic growth**](), in preparation.
+* L. Gagnon, *C-K. Huang*. Null controllability of Allen-Cahn eqaution, in preparation.
+* *C-K. Huang*, N. Marque. [Asymptotic Analysis of embedded Willmore spheres in 3-dimensional manifolds](https://arxiv.org/abs/1710.08732), in preparation.
 
-Transversal Projects
+Transversal Projects and Hackathons
 ======
-* [Chatbot for automated meal order collection](https://github.com/CheesyPicodon/nca-linebot), a chatbot written in python to collect automatically meal orders during my mandatory civil service in Taiwan
-* [CENTURI Hackathon 2024 for Quantitative Biology](https://github.com/CENTURI-Hackathon-2024), Deep single molecule unfolding detection, *First Price*, at Marseille 
+* [CENTURI Hackathon 2024 for Quantitative Biology](https://github.com/CENTURI-Hackathon-2024), Deep single molecule unfolding detection, *First Price*. 
+* [G-Research Paris Quant Challenge 2024](https://www.gresearch.com/events/paris-quant-challenge/)
+* [Chatbot for automated meal order collection](https://github.com/CheesyPicodon/nca-linebot), a chatbot to collect automatically meal orders during my mandatory civil service in Taiwan
 <!--* [Physic-Informed Neural Networks to solve PDEs](/portfolio/portfolio-2)-->
 <!--* [How to determinate if two real estates correspond to the same](/portfolio/portfolio-1)-->
 
