@@ -22,15 +22,15 @@ Research Interest
 
 Scientific Works
 ======
-* *C-K. Huang*. [**Questions of approximation and compactness for geometric variational problems**](https://theses.hal.science/tel-03584255), Thesis, Université de Lyon, 2021
-* E.Bretin, *C-K. Huang*, S. Masnou.[**A thickness-aware Allen-Cahn equation for the mean curvature flow of thin structures**](https://arxiv.org/abs/2310.10272), accepted.
-* *C-K. Huang*, L. Gagnon, B. Appolaire, M. Zaloznik. [**Neural network approximation of a phase-field model for dendritic growth**](), in preparation.
-* L. Gagnon, *C-K. Huang*. Null controllability of Allen-Cahn eqaution, in preparation.
-* *C-K. Huang*, N. Marque. [Asymptotic Analysis of embedded Willmore spheres in 3-dimensional manifolds](https://arxiv.org/abs/1710.08732), in preparation.
+* **C-K. Huang**. [**Questions of approximation and compactness for geometric variational problems**](https://theses.hal.science/tel-03584255), Thesis, Université de Lyon, 2021
+* E.Bretin, **C-K. Huang**, S. Masnou.[**A thickness-aware Allen-Cahn equation for the mean curvature flow of thin structures**](https://arxiv.org/abs/2310.10272), accepted.
+* **C-K. Huang*, L. Gagnon, B. Appolaire, M. Zaloznik. [**Neural network approximation of a phase-field model for dendritic growth**](), in preparation.
+* L. Gagnon, **C-K. Huang**. Null controllability of Allen-Cahn eqaution, in preparation.
+* **C-K. Huang**, N. Marque. [Asymptotic Analysis of embedded Willmore spheres in 3-dimensional manifolds](https://arxiv.org/abs/1710.08732), in preparation.
 
 Transversal Projects and Hackathons
 ======
-* [CENTURI Hackathon 2024 for Quantitative Biology](https://github.com/CENTURI-Hackathon-2024), Deep single molecule unfolding detection, *First Price*. 
+* [CENTURI Hackathon 2024 for Quantitative Biology](https://github.com/CENTURI-Hackathon-2024), Deep single molecule unfolding detection, **First Price**. 
 * [G-Research Paris Quant Challenge 2024](https://www.gresearch.com/events/paris-quant-challenge/), Introductory session on cointegration for pairs trading.
 * [Chatbot for automated meal order collection](https://github.com/CheesyPicodon/nca-linebot), a chatbot to collect automatically meal orders during my mandatory civil service in Taiwan
 <!--* [Physic-Informed Neural Networks to solve PDEs](/portfolio/portfolio-2)-->
@@ -39,8 +39,12 @@ Transversal Projects and Hackathons
 Hard Skills
 ======
 * **Mathematics :** Analysis of PDEs, Numerical Simulations, Optimization, Calculus of Variations, Geometric Analysis 
-* **Programming :** Python (Numpy, Pytorch, JAX, etc), MatLab
+* **Programming :** Python (Numpy, Pytorch, JAX, etc), MatLab, Caml
 * **Tools :** Latex, Git, Docker, Slurm (HPC), Jupyter, Linux
+
+
+
+
 <!-- * **OS :** Linux, Windows, macOS   -->
 
 
