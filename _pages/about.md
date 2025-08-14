@@ -12,6 +12,12 @@ I am currently a postdoctoral researcher at [Institut Elie Cartan de Lorrane](ht
 
 <!--I finished my mandatory military and civil service in July 2023. I am currently open to research-driven positions in Data Science/Machine Learning or Quantitative Research.-->
 
+News
+======
+* [07/2025] Currently working on the Thales project "Quantum Group Convolution for PDEs" at [**CEMRACS**](https://https://cemracs2025.math.cnrs.fr/en/hackathon/projets/)
+* [07/2025] **Invited talk** of our [work]() at [**TMS2026**](https://www.tms.org/TMS2026)!
+* [06/2025] Presentation of our work on [NN for dendritic growth]() at [**ICASP-7**](https://icasp2025.org/)
+
 
 Research Interest
 ======
