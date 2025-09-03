@@ -8,7 +8,9 @@ redirect_from:
   - /about.html
 ---
 
-I am currently a postdoctoral researcher at [Institut Elie Cartan de Lorrane](https://iecl.univ-lorraine.fr) and [Institut Jean Lamour](https://ijl.univ-lorraine.fr), Université de Lorraine. Previously, I received my Ph.D. in Applied Mathematics at [Institut Camille Jordan](https://math.univ-lyon1.fr/icj/), University of Lyon. My manuscript can be found [here](https://theses.hal.science/tel-03584255). 
+I am a postdoctoral researcher specializing in physics-informed machine learning and control theory of PDEs at [Institut Elie Cartan de Lorrane](https://iecl.univ-lorraine.fr) and [Institut Jean Lamour](https://ijl.univ-lorraine.fr), Université de Lorraine. My current work focuses on modeling, simulation, and optimization in materials science, with keen interests in quantum computing and quantitative finance.
+
+Previously, I received my Ph.D. in Applied Mathematics at [Institut Camille Jordan](https://math.univ-lyon1.fr/icj/), University of Lyon. My manuscript can be found [here](https://theses.hal.science/tel-03584255). 
 
 <!--I finished my mandatory military and civil service in July 2023. I am currently open to research-driven positions in Data Science/Machine Learning or Quantitative Research.-->
 
