@@ -25,7 +25,7 @@ News
 Research Interest
 ======
 * Scientific Machine Learning (PINNs, NODEs, etc.) and Control Theory
-* Application of Deep Learning to solidification and microstructual problems
+* Application of Deep Learning to solidification and microstructures
 * Analysis of PDEs
 * Calculus of variations and Optimization
 
