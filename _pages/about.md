@@ -26,8 +26,7 @@ Research Interest
 ======
 * Scientific Machine Learning (PINNs, NODEs, etc.) and Control Theory
 * Application of neural networks to solidification and microstructures
-* Analysis of PDEs
-* Calculus of variations and Optimization
+* Analysis of PDEs and Calculus of variations
 
 
 Scientific Works
