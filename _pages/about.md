@@ -48,7 +48,7 @@ Transversal Projects and Hackathons
 Hard Skills
 ======
 * **Mathematics :** Analysis of PDEs, Numerical Simulations, Optimization, Calculus of Variations, Geometric Analysis 
-* **Programming :** Python (Pandas, JAX, Pytorch, Qiskit, etc.), MatLab
+* **Programming :** Python (Pandas, scikit-learn, JAX, Pytorch, Qiskit, etc.), MatLab
 * **Tools :** Latex, Git, Docker, Slurm (HPC), Jupyter, Linux, Office
 
 
