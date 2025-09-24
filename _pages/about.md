@@ -16,10 +16,11 @@ Previously, I received my Ph.D. in Applied Mathematics at [Institut Camille Jord
 
 News
 ======
+* [10/2025] Participation to the [**Quantum Computing Hackathon**](https://www.theglobalcity.uk/insights/quantum-computing-hackathon), organized by The City of London Corporation, IBM Quantum and NayaOne.
 * [08/2025] Gave an introductory course and hands-on session on PINNs at [**International DIADEM summer school**](https://ecolediadem.sciencesconf.org/)
 * [07/2025] Research project "Quantum Group Convolution for PDEs" supported by THALES at [**CEMRACS**](https://https://cemracs2025.math.cnrs.fr/en/hackathon/projets/)
 * [07/2025] **Invited talk** of our [work](https://www.programmaster.org/PM/PM.nsf/ApprovedAbstracts/FBC91110162EE9C785258CC5008257E0?OpenDocument) at [**TMS2026**](https://www.tms.org/TMS2026)!
-* [06/2025] Presentation of our work on [NN for dendritic growth]() at [**ICASP-7**](https://icasp2025.org/)
+<!-- * [06/2025] Presentation of our work on [NN for dendritic growth]() at [**ICASP-7**](https://icasp2025.org/) -->
 
 
 Research Interest
