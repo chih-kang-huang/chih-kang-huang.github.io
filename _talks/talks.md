@@ -1,4 +1,13 @@
 
+---
+title: "Conference Proceeding talk 3 on Relevant Topic in Your Field"
+collection: talks
+type: "Conference proceedings talk"
+permalink: /talks/2014-03-01-talk-3
+venue: "Testing Institute of America 2014 Annual Conference"
+date: 2014-03-01
+location: "Los Angeles, CA, USA"
+---
 
 - [2021/06] Presentation at SMAI2021, la Grande-Motte
 - [2019/10] Invited talk at Journée d'équipe EDPA, ICJ, Lyon
