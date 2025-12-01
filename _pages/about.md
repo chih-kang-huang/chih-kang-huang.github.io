@@ -12,15 +12,9 @@ I am a postdoctoral researcher specializing in physics-informed machine learning
 
 Previously, I received my Ph.D. in Applied Mathematics at [Institut Camille Jordan](https://math.univ-lyon1.fr/icj/), University of Lyon. My manuscript can be found [here](https://theses.hal.science/tel-03584255). 
 
-<!--I finished my mandatory military and civil service in July 2023. I am currently open to research-driven positions in Data Science/Machine Learning or Quantitative Research.-->
-
 News
 ======
-* [10/2025] Participation to the [**Quantum Computing Hackathon**](https://www.theglobalcity.uk/insights/quantum-computing-hackathon), organized by The City of London Corporation, IBM Quantum and NayaOne.
-* [08/2025] Gave an introductory course and hands-on session on PINNs at [**International DIADEM summer school**](https://ecolediadem.sciencesconf.org/)
-* [07/2025] Research project "Quantum Group Convolution for PDEs" supported by THALES at [**CEMRACS**](https://https://cemracs2025.math.cnrs.fr/en/hackathon/projets/)
 * [07/2025] **Invited talk** of our [work](https://www.programmaster.org/PM/PM.nsf/ApprovedAbstracts/FBC91110162EE9C785258CC5008257E0?OpenDocument) at [**TMS2026**](https://www.tms.org/TMS2026)!
-<!-- * [06/2025] Presentation of our work on [NN for dendritic growth]() at [**ICASP-7**](https://icasp2025.org/) -->
 
 
 Research Interest
@@ -38,18 +32,19 @@ Scientific Works
 * L. Gagnon, **C-K. Huang**. Null controllability of Allen-Cahn eqaution, in preparation.
 * **C-K. Huang**, N. Marque. [Asymptotic Analysis of embedded Willmore spheres in 3-dimensional manifolds](https://arxiv.org/abs/1710.08732), in preparation.
 
-Transversal Projects and Hackathons
+Projects in Machine Learning and Quantum Computing
 ======
+* Contributions to [Variational Quantum Brushes](https://github.com/mothorchids/Luminists-Quantum-Brushes) using VQE and quantum control, Quantinuum Hackathon, Bradford 2025
+* [IBM Quantum Computing Hackathon](https://www.theglobalcity.uk/insights/quantum-computing-hackathon), Quantum framework for dynamic portfolio optimization, London 2025
+* Delivered lectures on \emph{Physics-Informed Machine Learning} at the \href{https://ecolediadem.sciencesconf.org/resource/page/id/3}{International PEPR DIADEM Summer School}, Paris 2025 
 * [CENTURI Hackathon 2024 for Quantitative Biology](https://github.com/CENTURI-Hackathon-2024), Deep single molecule unfolding detection, **First Price**. 
 * [G-Research Paris Quant Challenge 2024](https://www.gresearch.com/events/paris-quant-challenge/), Introductory session on cointegration for pairs trading.
 * [Chatbot for automated meal order collection](https://github.com/CheesyPicodon/nca-linebot), a chatbot to collect automatically meal orders during my mandatory civil service in Taiwan
-<!--* [Physic-Informed Neural Networks to solve PDEs](/portfolio/portfolio-2)-->
-<!--* [How to determinate if two real estates correspond to the same](/portfolio/portfolio-1)-->
 
 Hard Skills
 ======
-* **Mathematics :** Analysis of PDEs, Numerical Simulations, Optimization, Calculus of Variations, Geometric Analysis 
-* **Programming :** Python (Pandas, scikit-learn, JAX, Pytorch, Qiskit, etc.), MatLab
+* **Mathematics :** Analysis of PDEs, Numerical Simulations, Calculus of Variations, Control theory of Machine Learning
+* **Programming :** Python (Pandas, scikit-learn, JAX, Pytorch, etc.), MatLab
 * **Tools :** Latex, Git, Docker, Slurm (HPC), Jupyter, Linux, Office
 
 
