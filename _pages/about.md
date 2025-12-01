@@ -34,12 +34,12 @@ Scientific Works
 
 Projects in Machine Learning and Quantum Computing
 ======
-* Contributions to [Variational Quantum Brushes](https://github.com/mothorchids/Luminists-Quantum-Brushes) using VQE and quantum control, Quantinuum Hackathon, Bradford 2025
+* Contributions to [Variational Quantum Brushes](https://github.com/moth-quantum/QuantumBrush) using VQE and quantum control, Quantinuum Hackathon, Bradford 2025
 * [IBM Quantum Computing Hackathon](https://www.theglobalcity.uk/insights/quantum-computing-hackathon), Quantum framework for dynamic portfolio optimization, London 2025
-* Delivered lectures on \emph{Physics-Informed Machine Learning} at the \href{https://ecolediadem.sciencesconf.org/resource/page/id/3}{International PEPR DIADEM Summer School}, Paris 2025 
+* Delivered lectures on ***Physics-Informed Machine Learning*** at the [International PEPR DIADEM Summer School](https://ecolediadem.sciencesconf.org/resource/page/id/3), Paris 2025 
 * [CENTURI Hackathon 2024 for Quantitative Biology](https://github.com/CENTURI-Hackathon-2024), Deep single molecule unfolding detection, **First Price**. 
 * [G-Research Paris Quant Challenge 2024](https://www.gresearch.com/events/paris-quant-challenge/), Introductory session on cointegration for pairs trading.
-* [Chatbot for automated meal order collection](https://github.com/CheesyPicodon/nca-linebot), a chatbot to collect automatically meal orders during my mandatory civil service in Taiwan
+* [Chatbot for automated meal order collection](https://github.com/chih-kang-huang/nca-linebot), a chatbot to collect automatically meal orders during my mandatory civil service in Taiwan
 
 Hard Skills
 ======
@@ -47,7 +47,10 @@ Hard Skills
 * **Programming :** Python (Pandas, scikit-learn, JAX, Pytorch, etc.), MatLab
 * **Tools :** Latex, Git, Docker, Slurm (HPC), Jupyter, Linux, Office
 
-
+Miscellaneous 
+======
+In my spare time, i enjoy studying and playing [Bridge](https://en.wikipedia.org/wiki/Contract_bridge), a probailistic trick-taking card game. 
+My system based on Precision Clubs and Symmetric Relay can be found [here](https://github.com/chih-kang-huang/bridge).
 
 
 <!-- * **OS :** Linux, Windows, macOS   -->
