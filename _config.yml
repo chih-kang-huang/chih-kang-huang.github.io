@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default"
-title                    : "Chih-Kang Huang" # "Your Name / Site Title"
+title                    : "Chih-Kang Huang, PhD" # "Your Name / Site Title"
 title_separator          : "-"
 name                     : &name "Chih-Kang Huang"
 description              : &description "Personal page of Chih-Kang Huang"
@@ -23,7 +23,7 @@ repository               : "chih-kang-huang.github.io"
 author:
   # Biographic information
   avatar           : "ckhuang.jpg"
-  name             : "Chih-Kang Huang"
+  name             : "Chih-Kang Huang, PhD"
   pronouns         : # example: "she/her"  
   bio              : ""
   location         : "Nancy, France"
