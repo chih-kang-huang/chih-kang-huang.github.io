@@ -19,18 +19,18 @@ News
 
 Research Interest
 ======
-* Scientific Machine Learning (PINNs, NODEs, etc.) and Control Theory
+* Physics-Informed Machine Learning and Control Theory
 * Application of neural networks to solidification and microstructures
 * Analysis of PDEs and Calculus of variations
 
 
 Scientific Works
 ======
+* **C-K. Huang**, L. Gagnon, B. Appolaire, M. Zaloznik. [**Neural network approximation of a phase-field model for dendritic growth**](https://www.programmaster.org/PM/PM.nsf/ApprovedAbstracts/FBC91110162EE9C785258CC5008257E0?OpenDocument).
+* E.Bretin, **C-K. Huang**, S. Masnou. [**A thickness-aware Allen-Cahn equation for the mean curvature flow of thin structures**](https://arxiv.org/abs/2310.10272)
 * **C-K. Huang**. [**Questions of approximation and compactness for geometric variational problems**](https://theses.hal.science/tel-03584255), Thesis, Université de Lyon, 2021
-* E.Bretin, **C-K. Huang**, S. Masnou.[**A thickness-aware Allen-Cahn equation for the mean curvature flow of thin structures**](https://arxiv.org/abs/2310.10272)
-* **C-K. Huang**, L. Gagnon, B. Appolaire, M. Zaloznik. [**Neural network approximation of a phase-field model for dendritic growth**](), in preparation.
+* **C-K. Huang** [Asymptotic Analysis of embedded Willmore spheres in 3-dimensional manifolds](https://arxiv.org/abs/1710.08732)
 * L. Gagnon, **C-K. Huang**. Null controllability of Allen-Cahn eqaution, in preparation.
-* **C-K. Huang**, N. Marque. [Asymptotic Analysis of embedded Willmore spheres in 3-dimensional manifolds](https://arxiv.org/abs/1710.08732), in preparation.
 
 Projects in Machine Learning and Quantum Computing
 ======
@@ -43,8 +43,8 @@ Projects in Machine Learning and Quantum Computing
 
 Hard Skills
 ======
-* **Mathematics :** Analysis of PDEs, Numerical Simulations, Calculus of Variations, Control theory of Machine Learning
 * **Programming :** Python (Pandas, scikit-learn, JAX, Pytorch, etc.), MatLab
+* **Mathematics :** Analysis of PDEs, Numerical Simulations, Calculus of Variations, Control theory of Machine Learning
 * **Tools :** Latex, Git, Docker, Slurm (HPC), Jupyter, Linux, Office
 
 Miscellaneous 
