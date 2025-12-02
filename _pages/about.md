@@ -29,7 +29,7 @@ Scientific Works
 * **C-K. Huang**, L. Gagnon, B. Appolaire, M. Zaloznik. [**Neural network approximation of a phase-field model for dendritic growth**](https://www.programmaster.org/PM/PM.nsf/ApprovedAbstracts/FBC91110162EE9C785258CC5008257E0?OpenDocument).
 * E.Bretin, **C-K. Huang**, S. Masnou. [**A thickness-aware Allen-Cahn equation for the mean curvature flow of thin structures**](https://arxiv.org/abs/2310.10272)
 * **C-K. Huang**. [**Questions of approximation and compactness for geometric variational problems**](https://theses.hal.science/tel-03584255), Thesis, Université de Lyon, 2021
-* **C-K. Huang** [Asymptotic Analysis of embedded Willmore spheres in 3-dimensional manifolds](https://arxiv.org/abs/1710.08732)
+* **C-K. Huang** [**Asymptotic Analysis of embedded Willmore spheres in 3-dimensional manifolds**](https://arxiv.org/abs/1710.08732)
 * L. Gagnon, **C-K. Huang**. Null controllability of Allen-Cahn eqaution, in preparation.
 
 Projects in Machine Learning and Quantum Computing
