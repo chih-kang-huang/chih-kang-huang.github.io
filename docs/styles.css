@@ -145,3 +145,48 @@ footer {
     color: var(--ef-yellow) !important;
     border-color: var(--ef-yellow) !important;
 }
+
+/* --- EVERFOREST LIGHT THEME OVERRIDES --- */
+
+/* Define Everforest Light Colors (Soft Palette used here) */
+:root {
+  --efl-bg: #f8f0d8; /* Light Background */
+  --efl-fg: #5a647e; /* Light Foreground */
+  --efl-red: #f85552;
+  --efl-green: #67a22f;
+  --efl-yellow: #a2734c;
+  --efl-blue: #47959b;
+}
+
+/* Base body/background styles for Light Theme */
+.quarto-light .content {
+  background-color: var(--efl-bg) !important;
+  color: var(--efl-fg) !important;
+}
+
+/* Headings in Light Theme */
+.quarto-light h1, .quarto-light h2, .quarto-light h3, .quarto-light h4, .quarto-light h5, .quarto-light h6 {
+  color: var(--efl-yellow) !important;
+}
+
+/* Links in Light Theme */
+.quarto-light a {
+  color: var(--efl-blue) !important;
+}
+.quarto-light a:hover {
+  color: var(--efl-fg) !important;
+}
+
+/* Ensure buttons and other elements use the light colors when active */
+.quarto-light .btn-outline-primary {
+    color: var(--efl-blue) !important;
+    border-color: var(--efl-blue) !important;
+}
+
+/* Apply the hover effect for the Light Theme buttons */
+.button-container a:hover.quarto-light:hover {
+    /* Background becomes light blue */
+    background-color: var(--efl-blue) !important; 
+    /* Text becomes the light background color for contrast */
+    color: var(--efl-bg) !important; 
+}
