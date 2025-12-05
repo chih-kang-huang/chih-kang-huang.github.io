@@ -1,6 +1,7 @@
 /* Custom CSS for Everforest Dark Theme */
 
 
+
 /* Define Everforest Dark Colors */
 :root {
   /* Everforest Color Variables (Dark Hard) */
@@ -13,10 +14,16 @@
 }
 
 /* Base body/background styles for Dark Theme */
+.quarto-dark {
+  background-color: var(--ef-bg) !important;
+  color: var(--ef-fg) !important;
+}
+
 .quarto-dark .content {
   background-color: var(--ef-bg) !important;
   color: var(--ef-fg) !important;
 }
+
 
 /* Headings in Dark Theme */
 .quarto-dark h1, .quarto-dark h2, .quarto-dark h3, .quarto-dark h4, .quarto-dark h5, .quarto-dark h6 {
@@ -159,6 +166,10 @@ footer {
 }
 
 /* Base body/background styles for Light Theme */
+.quarto-light {
+  background-color: var(--efl-bg) !important;
+  color: var(--efl-fg) !important;
+}
 .quarto-light .content {
   background-color: var(--efl-bg) !important;
   color: var(--efl-fg) !important;

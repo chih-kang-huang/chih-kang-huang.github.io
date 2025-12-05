@@ -5,12 +5,14 @@ format:
     css: styles.css
     theme:
       dark: darkly
+      light: cosmo
     page-layout: full
     toc: false
     smooth-scroll: true
+    theme-toggle-spec: [light, dark] 
     default-theme: dark
-include-in-header: 
-  - header_includes.html # <-- FIXED LINE: Instructs Quarto to include the file content
+    include-in-header: 
+      - header_includes.html 
 ---
 
 ## 👋 About Me {id="about"}
