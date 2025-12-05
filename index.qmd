@@ -1,0 +1,152 @@
+---
+title: "Chih-Kang Huang, PhD"
+format:
+  html:
+    css: styles.css
+    theme:
+      light: cosmo
+      dark: darkly
+    page-layout: full
+    toc: false
+    smooth-scroll: true
+theme-toggle-spec: [light, dark]
+default-theme: dark
+include-in-header: 
+  - header_includes.html # <-- FIXED LINE: Instructs Quarto to include the file content
+---
+
+## 👋 About Me {id="about"}
+
+<div class="about-header">
+
+<div class="about-photo">
+  ![](images/ckhuang.jpg){width=150} 
+</div>
+
+<div class="about-text">
+  <p class="tagline">
+    **[Postdoctoral Researcher | PhD in Applied Maths | ENS Lyon]**
+  </p>
+  
+  <p>
+    I am a postdoctoral researcher specializing in physics-informed machine learning and control theory of PDEs at [Institut Elie Cartan de Lorrane](https://iecl.univ-lorraine.fr) and [Institut Jean Lamour](https://ijl.univ-lorraine.fr). My current work focuses on modeling, simulation, and optimization in materials science, with keen interests in quantum computing and quantitative finance.
+
+    Previously, I received my Ph.D. in Applied Mathematics at [Institut Camille Jordan](https://math.univ-lyon1.fr/icj/), University of Lyon. My manuscript can be found [here](https://theses.hal.science/tel-03584255). 
+  </p>
+  
+  <p class="social-links">
+    [<i class="fa-brands fa-github"></i> GitHub](https://github.com/chih-kang-huang) &bull;
+    [<i class="fa-brands fa-linkedin"></i> LinkedIn](https://linkedin.com/in/chih-kang-huang/) &bull;
+    [<i class="fa-solid fa-envelope"></i> Email](mailto:chih-kang.huang@hotmail.com)
+  </p>
+</div>
+
+</div>
+
+
+<div class="button-container">
+  <a href="#research" class="btn btn-outline-primary">Research</a>
+  <a href="#works" class="btn btn-outline-primary">Scientific Works</a>
+  <a href="#projects" class="btn btn-outline-primary">Projects</a>
+  <a href="#misc" class="btn btn-outline-primary">Misc</a>
+</div>
+
+#### News 
+* [07/2025] **Invited talk** of our [work](https://www.programmaster.org/PM/PM.nsf/ApprovedAbstracts/FBC91110162EE9C785258CC5008257E0?OpenDocument) at [**TMS2026**](https://www.tms.org/TMS2026)!
+
+
+
+---
+
+## 🔬 Research {id="research"}
+
+<!--- Summarize your main research interests, affiliations, and any ongoing projects.
+--->
+
+* Control Theory of Deep learning
+* Analysis of PDEs and Calculus of variations
+* Application of AI to Materials Science
+* Quantum Simulations and Control
+
+<!---
+* **Topic 2:** Description of your work in this area.
+--->
+
+### Skills
+<!---* **Mathematics :** Analysis of PDEs, Numerical Simulations, Calculus of Variations, Control theory of Machine Learning
+--->
+* **Programming :** Python (Pandas, scikit-learn, JAX, Pytorch), MatLab
+* **Tools :** Linux, Latex, Git, Docker, Slurm (HPC), JupyterLab
+
+---
+
+## 📜 Scientific Works {id="works"}
+
+<!---
+List your publications, talks, and presentations.
+--->
+
+### Publications
+
+<!---
+1.  **"Title of Paper 1"** (Year). *Journal Name*. [Link to PDF/arXiv]
+2.  **"Title of Paper 2"** (Year). *Conference Proceedings*.
+--->
+
+1. **C-K. Huang**, L. Gagnon, B. Appolaire, M. Zaloznik. [**Neural network approximation of a phase-field model for dendritic growth**](https://www.programmaster.org/PM/PM.nsf/ApprovedAbstracts/FBC91110162EE9C785258CC5008257E0?OpenDocument).
+2. E.Bretin, **C-K. Huang**, S. Masnou. [**A thickness-aware Allen-Cahn equation for the mean curvature flow of thin structures**](https://arxiv.org/abs/2310.10272), accepted.
+3. **C-K. Huang**. [**Questions of approximation and compactness for geometric variational problems**](https://theses.hal.science/tel-03584255), Thesis, Université de Lyon, 2021
+4. **C-K. Huang**. [Asymptotic Analysis of embedded Willmore spheres in 3-dimensional manifolds](https://arxiv.org/abs/1710.08732).
+5. L. Gagnon, **C-K. Huang**. Null controllability of Allen-Cahn eqaution, in preparation.
+
+
+<details> 
+  <summary><h3 style="display: inline;">Presentations</h3></summary>
+  <ul>
+  Under construction
+  <!---
+    <li>[Talk Title] at [Event Name] (Year) - [Link to Slides]</li>
+    <li>[Another Talk Title] at [Another Event] (Year)</li>
+  --->
+  </ul>
+</details>
+
+---
+
+## 🔨 Projects {id="projects"}
+
+<!---
+Detail any coding projects, side projects, or open-source contributions.
+
+### Project Alpha
+
+A brief description of Project Alpha, what it does, and what technologies you used.
+
+* **Technologies:** Python, TensorFlow, Flask
+* [Link to GitHub Repo] | [Link to Live Demo]
+--->
+* Contributions to [Variational Quantum Brushes](https://github.com/moth-quantum/QuantumBrush) using VQE and quantum control, Quantinuum Hackathon, Bradford 2025
+* [IBM Quantum Computing Hackathon](https://www.theglobalcity.uk/insights/quantum-computing-hackathon), Quantum framework for dynamic portfolio optimization, London 2025
+* Delivered lectures on ***Physics-Informed Machine Learning*** at the [International PEPR DIADEM Summer School](https://ecolediadem.sciencesconf.org/resource/page/id/3), Paris 2025 
+* [CENTURI Hackathon 2024 for Quantitative Biology](https://github.com/CENTURI-Hackathon-2024), Deep single molecule unfolding detection, **First Price**. 
+* [G-Research Paris Quant Challenge 2024](https://www.gresearch.com/events/paris-quant-challenge/), Introductory session on cointegration for pairs trading.
+* [Chatbot for automated meal order collection](https://github.com/chih-kang-huang/nca-linebot), a chatbot to collect automatically meal orders during my mandatory civil service in Taiwan
+
+
+---
+
+## 📚 Misc {id="misc"}
+<!---
+Include anything else relevant, like teaching experience, hobbies, or blog links.
+
+* **Teaching:** Teaching Assistant for [Course Name] (Semester)
+* **Skills:** [List of relevant skills, e.g., C++, R, LaTeX, Docker]
+--->
+In my spare time, i enjoy studying and playing [Bridge](https://en.wikipedia.org/wiki/Contract_bridge), a probabilistic trick-taking card game. 
+My system based on Precision Club and Symmetric Relay can be found [here](https://github.com/chih-kang-huang/bridge).
+
+---
+
+<footer>
+  <p>&copy; 2025 Chih-Kang Huang. All rights reserved.</p>
+</footer>

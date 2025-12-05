@@ -1,0 +1,115 @@
+/* --- Everforest theme --- */
+:root {
+  --bg: #2b3339;
+  --fg: #d3c6aa;
+  --accent: #a7c080;
+}
+
+[data-theme='light'] {
+  --bg: #fdf6e3;
+  --fg: #5c6a72;
+  --accent: #8da101;
+}
+
+html, body {
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+/* --- Floating left menu --- */
+.floating-menu {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  z-index: 15;
+}
+
+/* Profile photo */
+.profile-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+/* Menu links */
+.floating-menu a {
+  text-decoration: none;
+  color: var(--fg);
+  font-weight: bold;
+  border-left: 3px solid transparent;
+  padding-left: 0.5rem;
+  transition: all 0.2s;
+  width: 100%;
+  text-align: left;
+}
+
+.floating-menu a:hover {
+  color: var(--accent);
+  border-left: 3px solid var(--accent);
+}
+
+/* --- Top-right theme toggle --- */
+.topbar {
+  position: fixed;
+  top: 1rem;
+  right: 2rem;
+  z-index: 20;
+}
+
+#theme-toggle {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* --- Sections --- */
+section {
+  margin: 6rem 2rem 2rem 2rem;
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 1rem;
+}
+
+h2 {
+  color: var(--accent);
+  margin-top: 2rem;
+}
+
+/* --- Copyright --- */
+.copyright {
+  margin: 2rem 2rem 4rem 2rem;
+  font-size: 0.85rem;
+  color: var(--fg);
+  text-align: center;
+  border-top: 1px solid var(--accent);
+  padding-top: 0.5rem;
+}
+
+/* --- Responsive --- */
+@media (max-width: 700px) {
+  .floating-menu {
+    flex-direction: row;
+    bottom: 2rem;
+    top: auto;
+    left: 1rem;
+    gap: 1rem;
+  }
+  .profile-photo {
+    display: none;
+  }
+  .topbar {
+    right: 1rem;
+  }
+}
+

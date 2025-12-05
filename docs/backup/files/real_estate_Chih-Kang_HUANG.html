@@ -1,0 +1,1856 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.23">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Test technique Yanport du 21 Août 2023</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-1fe81d0376b2c50856e68e651e390326.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-4ef0f1363b75998700568ccfc25f984f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+</head>
+
+<body class="fullcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Test technique Yanport du 21 Août 2023</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Chih-Kang HUANG</p>
+<section id="objectif" class="level2">
+<h2 class="anchored" data-anchor-id="objectif">Objectif :</h2>
+<p>Nous vous proposons de regrouper les annonces immobilières portant sur un même bien immobilier. En effet, plusieurs professionnels (voire particuliers) publient sur plusieurs portails immobiliers des annonces portant sur le même bien immobilier et il y a un intérêt fort de les dédoublonner pour rendre la recherche plus efficace mais aussi pour avoir des statistiques plus pertinentes.</p>
+<p>La stratégie repose sur une méthode hybride, combinant des comparaisons classiques et une analyse de texte de base à l’aide d’un modèle de langage.</p>
+<p><strong>Hypothèse</strong> : Dans ce document, nous supposons qu’il n’y a ni de fausses saisies ni de fausses annonces. Nous aborderons ce point de vue à la conclusion de ce document et proposerons quelques pistes d’amélioration éventuelles.</p>
+<p>Les étapes clés sont les suivantes :</p>
+<ol type="1">
+<li><p>Après avoir minutieusement analysé et nettoyé nos données, nous commençons par identifier les caractéristiques essentielles qui permettent de déterminer si deux annonces sont très probablement identiques ou différentes. Nous classifions principalement ces caractéristiques en trois catégories : liens, catégoriques et numériques.</p></li>
+<li><p>Nous exploitons un modèle de langage avancé sur la colonne “DESCRIPTION” afin de quantifier les similitudes entre deux textes.</p></li>
+<li><p>Enfin, en utilisant les fonctions de critères que nous avons élaborées précédemment, nous créons un nouveau DataFrame avec une colonne de clés d’identification. Cette clé nous permettra de regrouper facilement les annonces décrivant le même bien immobilier.</p></li>
+</ol>
+<div id="cell-4" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">## Only for google Colab </span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">#!pip install huggingface_hub</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">#!pip install transformers sentencepiece protobuf tokenizer</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">#from google.colab import drive</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">#drive.mount('/content/drive'</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">#======================================================</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Chargement des biliothèques dont nous aurions besoin :</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co"># helpful modules</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> json <span class="co"># change string to list/dictionnary</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns <span class="co"># data visualization</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co"># CrossEncoder pour le traitement automatique du langage</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sentence_transformers <span class="im">import</span> CrossEncoder</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co"># import fuzzywuzzy</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co"># from fuzzywuzzy import process</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="co"># import charset_normalizer</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Zero-shot Classification</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="co"># from transformers import pipeline</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="co"># from huggingface_hub import notebook_login</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="co"># notebook_login()</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="co"># classifier = pipeline("zero-shot-classification",</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="co">#                       model="joeddav/xlm-roberta-large-xnli")</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="co">#classifier = pipeline("zero-shot-classification",</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="co">#                      model="joeddav/xlm-roberta-large-xnli", device=0) # GPU</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Lors du chargement d’un fichier CSV en tant que DataFrame à l’aide de <em>Pandas</em>, il est essentiel de prendre en compte les problèmes potentiels liés à l’encodage. Cela se produit fréquemment dans les pays où les langues utilisées ne sont pas basées sur l’alphabet standard :</p>
+<div id="cell-6" class="cell" data-execution_count="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>data_path <span class="op">=</span> <span class="st">"./Dataset - Ads _ Levallois-Perret - 2019-08 - export-ads-levallois-perret-2019-08-27.csv"</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(data_path, encoding<span class="op">=</span><span class="st">"utf-8"</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>df.head(<span class="dv">10</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="2">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">ID</th>
+<th data-quarto-table-cell-role="th">URL</th>
+<th data-quarto-table-cell-role="th">CRAWL_SOURCE</th>
+<th data-quarto-table-cell-role="th">PROPERTY_TYPE</th>
+<th data-quarto-table-cell-role="th">NEW_BUILD</th>
+<th data-quarto-table-cell-role="th">DESCRIPTION</th>
+<th data-quarto-table-cell-role="th">IMAGES</th>
+<th data-quarto-table-cell-role="th">SURFACE</th>
+<th data-quarto-table-cell-role="th">LAND_SURFACE</th>
+<th data-quarto-table-cell-role="th">BALCONY_SURFACE</th>
+<th data-quarto-table-cell-role="th">...</th>
+<th data-quarto-table-cell-role="th">DEALER_NAME</th>
+<th data-quarto-table-cell-role="th">DEALER_TYPE</th>
+<th data-quarto-table-cell-role="th">CITY_ID</th>
+<th data-quarto-table-cell-role="th">CITY</th>
+<th data-quarto-table-cell-role="th">ZIP_CODE</th>
+<th data-quarto-table-cell-role="th">DEPT_CODE</th>
+<th data-quarto-table-cell-role="th">PUBLICATION_START_DATE</th>
+<th data-quarto-table-cell-role="th">PUBLICATION_END_DATE</th>
+<th data-quarto-table-cell-role="th">LAST_CRAWL_DATE</th>
+<th data-quarto-table-cell-role="th">LAST_PRICE_DECREASE_DATE</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">0</th>
+<td>22c05930-0eb5-11e7-b53d-bbead8ba43fe</td>
+<td>http://www.avendrealouer.fr/location/levallois...</td>
+<td>A_VENDRE_A_LOUER</td>
+<td>APARTMENT</td>
+<td>False</td>
+<td>Au rez de chaussée d'un bel immeuble récent,ap...</td>
+<td>["https://cf-medias.avendrealouer.fr/image/_87...</td>
+<td>72.00</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>...</td>
+<td>Lamirand Et Associes</td>
+<td>AGENCY</td>
+<td>54178039</td>
+<td>Levallois-Perret</td>
+<td>92300.0</td>
+<td>92</td>
+<td>2017-03-22T04:07:56.095</td>
+<td>NaN</td>
+<td>2017-04-21T18:52:35.733</td>
+<td>NaN</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">1</th>
+<td>8d092fa0-bb99-11e8-a7c9-852783b5a69d</td>
+<td>https://www.bienici.com/annonce/ag440414-16547...</td>
+<td>BIEN_ICI</td>
+<td>APARTMENT</td>
+<td>False</td>
+<td>Je vous propose un appartement dans la rue Col...</td>
+<td>["http://photos.ubiflow.net/440414/165474561/p...</td>
+<td>48.00</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>...</td>
+<td>Proprietes Privees</td>
+<td>MANDATARY</td>
+<td>54178039</td>
+<td>Levallois-Perret</td>
+<td>92300.0</td>
+<td>92</td>
+<td>2018-09-18T11:04:44.461</td>
+<td>NaN</td>
+<td>2019-06-06T10:08:10.89</td>
+<td>2018-09-25</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2</th>
+<td>44b6a5c0-3466-11e9-8213-25cc7d9bf5fc</td>
+<td>https://www.bellesdemeures.com/annonces/vente/...</td>
+<td>BELLES_DEMEURES</td>
+<td>APARTMENT</td>
+<td>False</td>
+<td>Dans un cadre arboré, calme et fleuri, un pent...</td>
+<td>["https://v.seloger.com/s/width/965/visuels/0/...</td>
+<td>267.00</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>...</td>
+<td>Propriétés Parisiennes</td>
+<td>AGENCY</td>
+<td>54178039</td>
+<td>Levallois-Perret</td>
+<td>92300.0</td>
+<td>92</td>
+<td>2019-02-19T16:49:03.547</td>
+<td>NaN</td>
+<td>2019-06-13T08:22:14.314</td>
+<td>NaN</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">3</th>
+<td>e9e07ed0-812f-11e8-82aa-61eacebe4584</td>
+<td>https://www.seloger.com/annonces/locations/bur...</td>
+<td>SE_LOGER</td>
+<td>PREMISES</td>
+<td>False</td>
+<td>"Le meilleur coworking flexible de la ville, 5...</td>
+<td>["https://pix.yanport.com/ads/e9e07ed0-812f-11...</td>
+<td>50.00</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>...</td>
+<td>Iwg</td>
+<td>AGENCY</td>
+<td>54178039</td>
+<td>Levallois-Perret</td>
+<td>92300.0</td>
+<td>92</td>
+<td>2018-07-06T15:18:59.805</td>
+<td>NaN</td>
+<td>2019-06-18T10:40:07.405</td>
+<td>NaN</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">4</th>
+<td>872302b0-5a21-11e9-950c-510fefc1ed35</td>
+<td>https://www.bellesdemeures.com/annonces/vente/...</td>
+<td>BELLES_DEMEURES</td>
+<td>HOUSE</td>
+<td>False</td>
+<td>Levallois - Parc de la Planchette A toute prox...</td>
+<td>["https://v.seloger.com/s/width/966/visuels/0/...</td>
+<td>330.00</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>...</td>
+<td>Daniel Feau Neuilly</td>
+<td>AGENCY</td>
+<td>54178039</td>
+<td>Levallois-Perret</td>
+<td>92300.0</td>
+<td>92</td>
+<td>2019-04-08T17:12:20.123</td>
+<td>NaN</td>
+<td>2019-06-14T15:02:18.155</td>
+<td>2019-06-14</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">5</th>
+<td>de04afa0-2e5f-11e8-bda5-3334b193df7f</td>
+<td>https://immobilier.lefigaro.fr/annonces/annonc...</td>
+<td>EXPLORIMMO</td>
+<td>APARTMENT</td>
+<td>False</td>
+<td>LEVALLOIS - FRONT DE SEINE - 5-6 PIECES Appart...</td>
+<td>["http://photo3.pericles.fr/photo_get.php?S1=3...</td>
+<td>142.76</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>...</td>
+<td>Building Partners</td>
+<td>AGENCY</td>
+<td>54178039</td>
+<td>Levallois-Perret</td>
+<td>92300.0</td>
+<td>92</td>
+<td>2018-03-23T06:03:10.963</td>
+<td>NaN</td>
+<td>2019-07-10T15:06:39.615</td>
+<td>NaN</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">6</th>
+<td>530c7ac0-36a5-11e7-a435-b3bf21527190</td>
+<td>https://www.seloger.com/annonces/locations/bur...</td>
+<td>SE_LOGER</td>
+<td>PREMISES</td>
+<td>False</td>
+<td>LEVALLOIS, Paul Vaillant Couturier, près gare ...</td>
+<td>["https://v.seloger.com/s/cdn/x/visuels/2/2/r/...</td>
+<td>63.00</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>...</td>
+<td>Cabinet De L''ouest Parisien</td>
+<td>AGENCY</td>
+<td>54178039</td>
+<td>Levallois-Perret</td>
+<td>92300.0</td>
+<td>92</td>
+<td>2017-04-27T01:35:00.674</td>
+<td>NaN</td>
+<td>2019-07-10T15:06:17.12</td>
+<td>2019-07-10</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">7</th>
+<td>5135e0a0-62dd-11e8-91b3-8d7b603ef3b8</td>
+<td>https://immobilier.lefigaro.fr/annonces/annonc...</td>
+<td>EXPLORIMMO</td>
+<td>PARKING</td>
+<td>NaN</td>
+<td>Louez au mois un parking privé au 2 rue Mauric...</td>
+<td>["http://photos.ubiflow.net/751982/151820943/p...</td>
+<td>16.00</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>...</td>
+<td>Yespark</td>
+<td>AGENCY</td>
+<td>54178039</td>
+<td>Levallois-Perret</td>
+<td>92300.0</td>
+<td>92</td>
+<td>2018-05-29T01:12:11.485</td>
+<td>NaN</td>
+<td>2019-07-10T02:46:51.652</td>
+<td>NaN</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">8</th>
+<td>bc076370-45ec-11e9-a00a-897941d6ca9c</td>
+<td>https://www.leboncoin.fr/locations/1583612210.htm</td>
+<td>LE_BON_COIN</td>
+<td>PARKING</td>
+<td>NaN</td>
+<td>LOUE place de parking dans résidence de standi...</td>
+<td>["https://pix.yanport.com/ads/bc076370-45ec-11...</td>
+<td>11.00</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>...</td>
+<td>baudoin</td>
+<td>PRIVATE</td>
+<td>54178039</td>
+<td>Levallois-Perret</td>
+<td>92300.0</td>
+<td>92</td>
+<td>2019-03-14T00:04:24.651</td>
+<td>NaN</td>
+<td>2019-07-13T11:03:51.699</td>
+<td>NaN</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">9</th>
+<td>08491e50-8dfe-11e9-8a42-a16638394d93</td>
+<td>https://www.leboncoin.fr/ventes_immobilieres/1...</td>
+<td>LE_BON_COIN</td>
+<td>APARTMENT</td>
+<td>False</td>
+<td>A VENDRE APPARTEMENT DE 2 PIÈCES MAIRIE DE LEV...</td>
+<td>["https://pix.yanport.com/ads/08491e50-8dfe-11...</td>
+<td>57.00</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>...</td>
+<td>Impact Immo</td>
+<td>AGENCY</td>
+<td>54178039</td>
+<td>Levallois-Perret</td>
+<td>92300.0</td>
+<td>92</td>
+<td>2019-06-13T17:09:20.737</td>
+<td>NaN</td>
+<td>2019-07-13T18:17:01.782</td>
+<td>2019-07-13</td>
+</tr>
+</tbody>
+</table>
+
+<p>10 rows × 57 columns</p>
+</div>
+</div>
+</div>
+<p>Nous observons dans le DataFrame que certaines cellules ne sont pas remplies, affichant plutôt la valeur NaN</p>
+<div id="cell-8" class="cell" data-execution_count="3">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>a, b  <span class="op">=</span> df.shape</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>missing_value_count <span class="op">=</span> df.isnull().<span class="bu">sum</span>()</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>nb_empty_cases <span class="op">=</span> missing_value_count.<span class="bu">sum</span>()<span class="op">/</span>(a<span class="op">*</span>b)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">"La taille des données est de"</span>, df.shape, <span class="st">"</span><span class="ch">\n</span><span class="st"> il y a </span><span class="sc">{}</span><span class="st"> de cellules non remplies"</span>.<span class="bu">format</span>(missing_value_count.<span class="bu">sum</span>()), <span class="st">", soit </span><span class="sc">{}% d</span><span class="st">es cases non remplis"</span>.<span class="bu">format</span>(<span class="dv">100</span><span class="op">*</span> nb_empty_cases))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>La taille des données est de (2164, 57) 
+ il y a 64386 de cellules non remplies , soit 52.19865745695107% des cases non remplis</code></pre>
+</div>
+</div>
+<div id="cell-9" class="cell" data-execution_count="4">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>df.dtypes.unique()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="4">
+<pre><code>array([dtype('O'), dtype('float64'), dtype('bool'), dtype('int64')],
+      dtype=object)</code></pre>
+</div>
+</div>
+<div id="cell-10" class="cell" data-execution_count="5">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>df.nunique()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="5">
+<pre><code>ID                            2164
+URL                           2164
+CRAWL_SOURCE                    13
+PROPERTY_TYPE                    5
+NEW_BUILD                        2
+DESCRIPTION                   1914
+IMAGES                        1947
+SURFACE                        454
+LAND_SURFACE                     2
+BALCONY_SURFACE                  0
+TERRACE_SURFACE                 18
+ROOM_COUNT                      11
+BEDROOM_COUNT                    7
+BATHROOM_COUNT                   0
+LUNCHROOM_COUNT                  0
+TOILET_COUNT                     0
+FURNISHED                        2
+FIREPLACE                        0
+AIR_CONDITIONING                 0
+GARDEN                           1
+SWIMMING_POOL                    1
+BALCONY                          0
+TERRACE                          1
+CELLAR                           0
+PARKING                          2
+PARKING_COUNT                    8
+HEATING_TYPES                    5
+HEATING_MODE                     3
+FLOOR                           12
+FLOOR_COUNT                     16
+CONSTRUCTION_YEAR               48
+ELEVATOR                         2
+CARETAKER                        2
+ENERGY_CONSUMPTION               0
+GREENHOUSE_GAS_CONSUMPTION       0
+MARKETING_TYPE                   2
+PRICE                          764
+PRICE_M2                       997
+PRICE_EVENTS                  1733
+RENTAL_EXPENSES                129
+RENTAL_EXPENSES_INCLUDED         2
+DEPOSIT                         44
+FEES                            71
+FEES_INCLUDED                    2
+EXCLUSIVE_MANDATE                2
+AGENCIES_UNWANTED                2
+OCCUPIED                         2
+DEALER_NAME                    553
+DEALER_TYPE                      3
+CITY_ID                          1
+CITY                             1
+ZIP_CODE                         1
+DEPT_CODE                        1
+PUBLICATION_START_DATE        2103
+PUBLICATION_END_DATE             0
+LAST_CRAWL_DATE               2164
+LAST_PRICE_DECREASE_DATE       145
+dtype: int64</code></pre>
+</div>
+</div>
+<div id="cell-11" class="cell" data-execution_count="6">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>df.shape</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="6">
+<pre><code>(2164, 57)</code></pre>
+</div>
+</div>
+</section>
+<section id="traitement-des-données" class="level2">
+<h2 class="anchored" data-anchor-id="traitement-des-données">Traitement des données</h2>
+<p>Commencer par les étapes essentielles du traitement des données (Data Processing), en procédant aux étapes suivantes :</p>
+<ol type="1">
+<li><p>Éliminer les colonnes non remplies ou ayant peu d’utilité.</p></li>
+<li><p>Identifier les colonnes de type liste/dictionnaire et les colonnes numériques.</p></li>
+<li><p>Remplir les valeurs manquantes (par exemple, FEES -&gt; FEES_INCLUDED, RENTAL -&gt; INCLUDED) et assurer la cohérence entre SURFACE, PRICE, PRICE_M2, PRICE_EVENT, et CRAWL_DATE.</p></li>
+<li><p>Compléter les valeurs manquantes dans la colonne DESCRIPTION.</p></li>
+</ol>
+<section id="élimination-des-colonnes-peu-utiles" class="level3">
+<h3 class="anchored" data-anchor-id="élimination-des-colonnes-peu-utiles">1. Élimination des colonnes peu utiles</h3>
+<p>Commençons par supprimer les colonnes qui ne contiennent aucune donnée :</p>
+<div id="cell-15" class="cell" data-execution_count="7">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>useless_cols <span class="op">=</span> [cname <span class="cf">for</span> cname <span class="kw">in</span> df.columns <span class="cf">if</span> df[cname].nunique() <span class="op">==</span><span class="dv">0</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>ainsi que la colonne “CRAWL_SOURCE” :</p>
+<div id="cell-17" class="cell" data-execution_count="8">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> df.copy().drop(useless_cols, axis <span class="op">=</span><span class="dv">1</span>).drop([<span class="st">"CRAWL_SOURCE"</span>], axis<span class="op">=</span><span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Les colonnes qui ne contiennent qu’une seule valeur, telles que CITY, CITY_ID, ZIP_CODE, sont généralement peu informatives. Le même constat s’applique aux autres colonnes qui affichent également une unique valeur :</p>
+<div id="cell-19" class="cell" data-execution_count="9">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>one_value_cols <span class="op">=</span> [cname <span class="cf">for</span> cname <span class="kw">in</span> X.columns <span class="cf">if</span> X[cname].nunique() <span class="op">==</span><span class="dv">1</span>]</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(one_value_cols)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>['GARDEN', 'SWIMMING_POOL', 'TERRACE', 'CITY_ID', 'CITY', 'ZIP_CODE', 'DEPT_CODE']</code></pre>
+</div>
+</div>
+<p><strong>Dans le cadre de notre étude</strong>, nous avons pris la décision de laisser de côté ces colonnes, même si certaines d’entre elles pourraient éventuellement être utiles en relation avec les colonnes images (bien que nous n’envisagions pas non plus de procéder à la visualisation des photos, comme cela sera expliqué ultérieurement).</p>
+<div id="cell-21" class="cell" data-execution_count="10">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> X.drop(one_value_cols, axis<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>X.shape</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="10">
+<pre><code>(2164, 38)</code></pre>
+</div>
+</div>
+</section>
+<section id="identification-des-colonnes-de-type-liste-et-rectification-des-types" class="level3">
+<h3 class="anchored" data-anchor-id="identification-des-colonnes-de-type-liste-et-rectification-des-types">2. Identification des colonnes de type liste et Rectification des types</h3>
+<p>Il n’y a pas beaucoup de colonnes de type liste, nous pouvons les extraire en utilisant le module <strong>json.loads</strong>. Elles comprennent :</p>
+<div id="cell-23" class="cell" data-execution_count="11">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>[<span class="st">"URL"</span>, <span class="st">"IMAGES"</span>, <span class="st">"HEATING_TYPE"</span>, <span class="st">"PRICE_EVENTS"</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="11">
+<pre><code>['URL', 'IMAGES', 'HEATING_TYPE', 'PRICE_EVENTS']</code></pre>
+</div>
+</div>
+<p>Certaines colonnes numériques, telles que “FLOOR”, “CONSTRUCTION_YEAR”, “PARKING_COUNT”, etc., sont en réalité plutôt catégoriques. Nous avons tendance à les traiter comme des chaînes de caractères au lieu de les modifier. Nous corrigeons donc leur type :</p>
+<div id="cell-25" class="cell" data-execution_count="12">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>X[<span class="st">"CONSTRUCTION_YEAR"</span>] <span class="op">=</span> X[<span class="st">"CONSTRUCTION_YEAR"</span>].astype(<span class="st">'object'</span>)</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>X[<span class="st">"FLOOR"</span>] <span class="op">=</span> X[<span class="st">"FLOOR"</span>].astype(<span class="st">'object'</span>)</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> cname <span class="kw">in</span> X.columns:</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="st">"COUNT"</span> <span class="kw">in</span> cname:</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>        X[cname] <span class="op">=</span> X[cname].astype(<span class="st">'object'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="cohérences-entre-certaines-colonnes" class="level3">
+<h3 class="anchored" data-anchor-id="cohérences-entre-certaines-colonnes">3. Cohérences entre certaines colonnes</h3>
+<ul>
+<li>RENTAL_EXPENSES, FEES</li>
+</ul>
+<p>Nous définissons “True” pour RENTAL_EXPENSES_INCLUDED et “FEES_INCLUDED” si le montant est effectivement indiqué dans les colonnes correspondantes :</p>
+<div id="cell-27" class="cell" data-execution_count="13">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> X.index :</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> pd.notnull(X.loc[i, <span class="st">"RENTAL_EXPENSES"</span>]):</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>        X.loc[i, <span class="st">"RENTAL_EXPENSES_INCLUDED"</span>] <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> pd.notnull(X.loc[i, <span class="st">"FEES"</span>]):</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>        X.loc[i, <span class="st">"FEES_INCLUDED"</span>] <span class="op">=</span> <span class="va">True</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Exemple : FEES_INCLUDED était à NaN alors que la valeur de FEES était bien renseignée pour l’annonce 115 :</p>
+<div id="cell-29" class="cell" data-execution_count="14">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>X.loc[<span class="dv">115</span>, <span class="st">"FEES"</span>], X.loc[<span class="dv">115</span>, <span class="st">"FEES_INCLUDED"</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="14">
+<pre><code>(823.5, True)</code></pre>
+</div>
+</div>
+<ul>
+<li>SURFACE, PRICE, PRICE_M2, PRICE_EVENTS et DATES</li>
+</ul>
+<p>Les colonnes “SURFACE”, “PRICE” et “PRICE_M2” de certaines entrées sont soit bien remplies, soit présentent un grand nombre de valeurs manquantes, ce qui rend leur restitution difficile :</p>
+<div id="cell-31" class="cell" data-execution_count="15">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> []</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> X.index:</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>    k <span class="op">=</span> pd.isnull(X.loc[i, <span class="st">"SURFACE"</span>])<span class="op">+</span> pd.isnull(X.loc[i, <span class="st">"PRICE"</span>]) <span class="op">+</span> pd.isnull(X.loc[i, <span class="st">"PRICE_M2"</span>])</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> k <span class="op">==</span> <span class="dv">1</span>:</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>        s.append(<span class="bu">str</span>(k))</span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(s)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[]</code></pre>
+</div>
+</div>
+<p>Heuresuement, les champs PRICE_EVENTS sont dûrement remplies :</p>
+<div id="cell-33" class="cell" data-execution_count="16">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>X[<span class="st">"PRICE_EVENTS"</span>].isnull().<span class="bu">any</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="16">
+<pre><code>False</code></pre>
+</div>
+</div>
+</section>
+<section id="cohérence-entre-price-et-price_events" class="level3">
+<h3 class="anchored" data-anchor-id="cohérence-entre-price-et-price_events">Cohérence entre PRICE et PRICE_EVENTS:</h3>
+<p>Les prix indiqués dans “PRICE” sont-ils correctement enregistrés dans “PRICE_EVENTS” ?</p>
+<div id="cell-35" class="cell" data-execution_count="17">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>X[<span class="st">"PRICE"</span>].isnull().<span class="bu">sum</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="17">
+<pre><code>60</code></pre>
+</div>
+</div>
+<p>Nous identifions les annonces dont les valeurs de “PRICE” ne sont pas enregistrées dans “PRICE_EVENTS”.</p>
+<div id="cell-37" class="cell" data-execution_count="18">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>price_not_in_event <span class="op">=</span> []</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>price_good <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> X.index:</span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>    price <span class="op">=</span> X.loc[i, <span class="st">"PRICE"</span>]</span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>    price_events <span class="op">=</span> json.loads(X.loc[i, <span class="st">"PRICE_EVENTS"</span>]) <span class="co"># list of dictionaries</span></span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>    price_list <span class="op">=</span> [k[<span class="st">"price"</span>] <span class="cf">for</span> k <span class="kw">in</span> price_events]</span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> pd.isnull(price) <span class="kw">or</span> (price <span class="kw">in</span> price_list):</span>
+<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">pass</span></span>
+<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a>      price_not_in_event.append(i)</span>
+<span id="cb29-11"><a href="#cb29-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(price_not_in_event)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[65, 1113, 1258]</code></pre>
+</div>
+</div>
+<p>Nous plaçons ici les prix dans “PRICE_EVENTS” en tenant compte de la “LAST_CRAWL_DATE”.</p>
+<div id="cell-39" class="cell" data-execution_count="19">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>X.loc[price_not_in_event, [<span class="st">"PRICE"</span>, <span class="st">"PRICE_EVENTS"</span>, ]]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="19">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">PRICE</th>
+<th data-quarto-table-cell-role="th">PRICE_EVENTS</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">65</th>
+<td>48893.0</td>
+<td>[{"price":48868.0,"date":"2019-07-25"}]</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">1113</th>
+<td>29269.0</td>
+<td>[{"price":72058.0,"date":"2018-01-11"},{"price...</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">1258</th>
+<td>1227200.0</td>
+<td>[{"price":1180000.0,"date":"2019-07-30"},{"pri...</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div id="cell-40" class="cell" data-execution_count="20">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>CRAWLDATE <span class="op">=</span> pd.to_datetime(X[<span class="st">"LAST_CRAWL_DATE"</span>], <span class="bu">format</span><span class="op">=</span><span class="st">'mixed'</span>).dt.date</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="cell-41" class="cell" data-execution_count="21">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>CRAWLDATE[<span class="dv">0</span>].strftime(<span class="st">"%Y-%m-</span><span class="sc">%d</span><span class="st">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="21">
+<pre><code>'2017-04-21'</code></pre>
+</div>
+</div>
+<div id="cell-42" class="cell" data-execution_count="22">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>correct_price_events <span class="op">=</span> []</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> price_not_in_event :</span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>    price <span class="op">=</span> X.loc[i, <span class="st">"PRICE"</span>]</span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>    crawl_date <span class="op">=</span> CRAWLDATE[i].strftime(<span class="st">"%Y-%m-</span><span class="sc">%d</span><span class="st">"</span>)</span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a>    price_dict <span class="op">=</span> {<span class="st">"price"</span>: price,<span class="st">"date"</span>:crawl_date}</span>
+<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a>    event_list <span class="op">=</span> json.loads(X.loc[i, <span class="st">"PRICE_EVENTS"</span>]) <span class="op">+</span> [price_dict]</span>
+<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a>    correct_price_events <span class="op">+=</span> [event_list]</span>
+<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-9"><a href="#cb35-9" aria-hidden="true" tabindex="-1"></a>correct_price_events[<span class="dv">0</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="22">
+<pre><code>[{'price': 48868.0, 'date': '2019-07-25'},
+ {'price': 48893.0, 'date': '2019-08-14'}]</code></pre>
+</div>
+</div>
+<div id="cell-43" class="cell" data-execution_count="23">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(price_not_in_event)):</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>    X.loc[price_not_in_event[i], <span class="st">"PRICE_EVENTS"</span>] <span class="op">=</span> json.dumps(correct_price_events[i])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Étant donné que nous nous assurons que la colonne “PRICE_EVENTS” contient les informations les plus récentes, certaines colonnes deviennent redondantes et sont donc retirées de notre étude :</p>
+<div id="cell-45" class="cell" data-execution_count="24">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> X.drop([<span class="st">"PUBLICATION_START_DATE"</span>, <span class="st">"LAST_CRAWL_DATE"</span>, <span class="st">"PRICE"</span>, <span class="st">"LAST_PRICE_DECREASE_DATE"</span>], axis<span class="op">=</span><span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="description" class="level3">
+<h3 class="anchored" data-anchor-id="description">4. DESCRIPTION</h3>
+<p>On remplit les cellules vides avec fillna:</p>
+<div id="cell-47" class="cell" data-execution_count="25">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>X[<span class="st">'DESCRIPTION'</span>].isnull().<span class="bu">sum</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="25">
+<pre><code>4</code></pre>
+</div>
+</div>
+<div id="cell-48" class="cell" data-execution_count="26">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>X[<span class="st">'DESCRIPTION'</span>] <span class="op">=</span> X[<span class="st">'DESCRIPTION'</span>].fillna(<span class="st">'0'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+</section>
+<section id="classification-des-colonnes-caractéristiques-et-de-leur-fiabilité" class="level2">
+<h2 class="anchored" data-anchor-id="classification-des-colonnes-caractéristiques-et-de-leur-fiabilité">Classification des colonnes caractéristiques et de leur fiabilité</h2>
+<p>Dans cette section, nous allons discuter des colonnes caractéristiques, de leurs types et de leur fiabilité. Commençons par les connaître :</p>
+<div id="cell-50" class="cell" data-execution_count="27">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>X.columns</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="27">
+<pre><code>Index(['ID', 'URL', 'PROPERTY_TYPE', 'NEW_BUILD', 'DESCRIPTION', 'IMAGES',
+       'SURFACE', 'LAND_SURFACE', 'TERRACE_SURFACE', 'ROOM_COUNT',
+       'BEDROOM_COUNT', 'FURNISHED', 'PARKING', 'PARKING_COUNT',
+       'HEATING_TYPES', 'HEATING_MODE', 'FLOOR', 'FLOOR_COUNT',
+       'CONSTRUCTION_YEAR', 'ELEVATOR', 'CARETAKER', 'MARKETING_TYPE',
+       'PRICE_M2', 'PRICE_EVENTS', 'RENTAL_EXPENSES',
+       'RENTAL_EXPENSES_INCLUDED', 'DEPOSIT', 'FEES', 'FEES_INCLUDED',
+       'EXCLUSIVE_MANDATE', 'AGENCIES_UNWANTED', 'OCCUPIED', 'DEALER_NAME',
+       'DEALER_TYPE'],
+      dtype='object')</code></pre>
+</div>
+</div>
+<div id="cell-51" class="cell" data-execution_count="28">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(X.columns)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="28">
+<pre><code>34</code></pre>
+</div>
+</div>
+<div id="cell-52" class="cell" data-execution_count="29">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>X.dtypes</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="29">
+<pre><code>ID                           object
+URL                          object
+PROPERTY_TYPE                object
+NEW_BUILD                    object
+DESCRIPTION                  object
+IMAGES                       object
+SURFACE                     float64
+LAND_SURFACE                float64
+TERRACE_SURFACE             float64
+ROOM_COUNT                   object
+BEDROOM_COUNT                object
+FURNISHED                    object
+PARKING                        bool
+PARKING_COUNT                object
+HEATING_TYPES                object
+HEATING_MODE                 object
+FLOOR                        object
+FLOOR_COUNT                  object
+CONSTRUCTION_YEAR            object
+ELEVATOR                     object
+CARETAKER                    object
+MARKETING_TYPE               object
+PRICE_M2                    float64
+PRICE_EVENTS                 object
+RENTAL_EXPENSES             float64
+RENTAL_EXPENSES_INCLUDED     object
+DEPOSIT                     float64
+FEES                        float64
+FEES_INCLUDED                object
+EXCLUSIVE_MANDATE              bool
+AGENCIES_UNWANTED            object
+OCCUPIED                     object
+DEALER_NAME                  object
+DEALER_TYPE                  object
+dtype: object</code></pre>
+</div>
+</div>
+<section id="colonnes-id-url-et-images" class="level3">
+<h3 class="anchored" data-anchor-id="colonnes-id-url-et-images">Colonnes “ID”, “URL” et “IMAGES” :</h3>
+<ul>
+<li>“ID” : Nous utilisons “ID” pour générer les clés de regroupement. Nous vérifions si chaque annonce a un “ID” différent.</li>
+<li>“URL” : De nature similaire à “ID”.</li>
+</ul>
+<div id="cell-54" class="cell" data-execution_count="30">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb48"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>X[<span class="st">"ID"</span>].nunique() <span class="op">==</span> <span class="bu">len</span>(X.index),  X[<span class="st">"URL"</span>].nunique() <span class="op">==</span> <span class="bu">len</span>(X.index)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="30">
+<pre><code>(True, True)</code></pre>
+</div>
+</div>
+<div id="cell-55" class="cell" data-execution_count="31">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb50"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>id_cols <span class="op">=</span> [<span class="st">"ID"</span>, <span class="st">"URL"</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ul>
+<li>“IMAGES” : Il est très probable que deux annonces se rapportent au même bien immobilier si leurs liens “IMAGES” ont une intersection non nulle.</li>
+</ul>
+<p>Cependant, certaines annonces ne contiennent qu’une image de type publicité, par exemple :</p>
+<div id="cell-57" class="cell" data-execution_count="32">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb51"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>image_cols <span class="op">=</span> [<span class="st">"IMAGES"</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="cell-58" class="cell" data-execution_count="33">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb52"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>X.loc[<span class="dv">26</span>, <span class="st">"IMAGES"</span>], X.loc[<span class="dv">687</span>, <span class="st">"IMAGES"</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="33">
+<pre><code>('["https://v.seloger.com/s/cdn/x/visuels/1/r/y/p/1ryphs9d2l7xv8w1s80a8t7csl6d49ed62tw60lic.jpg"]',
+ '["https://v.seloger.com/s/cdn/x/visuels/1/r/y/p/1ryphs9d2l7xv8w1s80a8t7csl6d49ed62tw60lic.jpg"]')</code></pre>
+</div>
+</div>
+</section>
+<section id="colonne-description" class="level3">
+<h3 class="anchored" data-anchor-id="colonne-description">Colonne Description :</h3>
+<p>Nous allons utiliser un modèle de langage pour traiter les descriptions des annonces. Nous détaillerons cela ultérieurement :</p>
+<div id="cell-60" class="cell" data-execution_count="34">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb54"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>desc_cols <span class="op">=</span> [<span class="st">"DESCRIPTION"</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="colonnes-catégoriques" class="level3">
+<h3 class="anchored" data-anchor-id="colonnes-catégoriques">Colonnes Catégoriques :</h3>
+<ul>
+<li>Colonnes Booléennes : Certaines colonnes sont de nature booléenne, et nous pouvons comparer les valeurs associées une par une :</li>
+</ul>
+<div id="cell-62" class="cell" data-execution_count="35">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb55"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>bool_cols <span class="op">=</span> [cname <span class="cf">for</span> cname <span class="kw">in</span> X.columns <span class="cf">if</span> (X[cname].nunique() <span class="op">==</span> <span class="dv">2</span>) <span class="kw">and</span> (X[cname].dtype <span class="kw">in</span> [<span class="st">'bool'</span>, <span class="st">'boolean'</span>, <span class="st">'object'</span>])]</span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(bool_cols)</span>
+<span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">len</span>(bool_cols))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>['NEW_BUILD', 'FURNISHED', 'PARKING', 'ELEVATOR', 'CARETAKER', 'MARKETING_TYPE', 'RENTAL_EXPENSES_INCLUDED', 'FEES_INCLUDED', 'EXCLUSIVE_MANDATE', 'AGENCIES_UNWANTED', 'OCCUPIED']
+11</code></pre>
+</div>
+</div>
+<p><strong>Contre-exemple :</strong> Dans un premier coup, il semblait que ce sont de bons indicateurs pour déterminer si deux annonces sont associées à <strong>différents</strong> biens immobiliers. Malheureusement, nous avons repéré certaines anomalies, par exemple, dans la colonne “EXCLUSIVE_MANDATE” :</p>
+<div id="cell-64" class="cell" data-execution_count="36">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb57"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a>X.loc[[<span class="dv">58</span>, <span class="dv">762</span>], <span class="st">"EXCLUSIVE_MANDATE"</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="36">
+<pre><code>58      True
+762    False
+Name: EXCLUSIVE_MANDATE, dtype: bool</code></pre>
+</div>
+</div>
+<p>Cependant, en examinant d’autres colonnes et leurs descriptions, il est apparu que les annonces 58 et 762 sont presque identiques, y compris leurs descriptions…</p>
+<div id="cell-66" class="cell" data-execution_count="37">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb59"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(X.loc[[<span class="dv">58</span>, <span class="dv">762</span>], :].nunique()), </span>
+<span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(X.loc[ [<span class="dv">58</span>, <span class="dv">762</span>], <span class="st">"DESCRIPTION"</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>ID                          2
+URL                         2
+PROPERTY_TYPE               1
+NEW_BUILD                   1
+DESCRIPTION                 2
+IMAGES                      1
+SURFACE                     1
+LAND_SURFACE                0
+TERRACE_SURFACE             0
+ROOM_COUNT                  1
+BEDROOM_COUNT               1
+FURNISHED                   0
+PARKING                     1
+PARKING_COUNT               0
+HEATING_TYPES               1
+HEATING_MODE                1
+FLOOR                       1
+FLOOR_COUNT                 1
+CONSTRUCTION_YEAR           1
+ELEVATOR                    1
+CARETAKER                   1
+MARKETING_TYPE              1
+PRICE_M2                    1
+PRICE_EVENTS                2
+RENTAL_EXPENSES             0
+RENTAL_EXPENSES_INCLUDED    0
+DEPOSIT                     0
+FEES                        0
+FEES_INCLUDED               1
+EXCLUSIVE_MANDATE           2
+AGENCIES_UNWANTED           0
+OCCUPIED                    1
+DEALER_NAME                 1
+DEALER_TYPE                 1
+dtype: int64
+58     LEVALLOIS / GREFFULHE Dans un immeuble récent ...
+762    LEVALLOIS / GREFFULHE Dans un immeuble récent ...
+Name: DESCRIPTION, dtype: object</code></pre>
+</div>
+</div>
+<ul>
+<li>Colonnes de type liste : Nous extrairons les valeurs de ces colonnes en utilisant json.loads :</li>
+</ul>
+<div id="cell-68" class="cell" data-execution_count="38">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb61"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a>list_cols <span class="op">=</span> [<span class="st">"HEATING_TYPES"</span>, <span class="st">"PRICE_EVENTS"</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ul>
+<li>Colonnes de type objet :</li>
+</ul>
+<div id="cell-70" class="cell" data-execution_count="39">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb62"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a>object_cols <span class="op">=</span> [cname <span class="cf">for</span> cname <span class="kw">in</span> X.columns <span class="cf">if</span> (cname <span class="kw">not</span> <span class="kw">in</span> bool_cols <span class="op">+</span> list_cols <span class="op">+</span> id_cols <span class="op">+</span> image_cols <span class="op">+</span> desc_cols) <span class="kw">and</span> (X[cname].dtype <span class="kw">in</span> [<span class="st">'object'</span>])]</span>
+<span id="cb62-2"><a href="#cb62-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">len</span>(object_cols), object_cols)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>10 ['PROPERTY_TYPE', 'ROOM_COUNT', 'BEDROOM_COUNT', 'PARKING_COUNT', 'HEATING_MODE', 'FLOOR', 'FLOOR_COUNT', 'CONSTRUCTION_YEAR', 'DEALER_NAME', 'DEALER_TYPE']</code></pre>
+</div>
+</div>
+<div id="cell-71" class="cell" data-execution_count="40">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb64"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a>categorical_cols <span class="op">=</span> bool_cols <span class="op">+</span> object_cols</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="colonnes-numériques" class="level3">
+<h3 class="anchored" data-anchor-id="colonnes-numériques">Colonnes Numériques :</h3>
+<div id="cell-73" class="cell" data-execution_count="41">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb65"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a>numeric_cols  <span class="op">=</span> [cname <span class="cf">for</span> cname <span class="kw">in</span> X.columns <span class="cf">if</span> X[cname].dtype <span class="kw">in</span> [<span class="st">'int64'</span>, <span class="st">'float64'</span>]]</span>
+<span id="cb65-2"><a href="#cb65-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">len</span>(numeric_cols), numeric_cols)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>7 ['SURFACE', 'LAND_SURFACE', 'TERRACE_SURFACE', 'PRICE_M2', 'RENTAL_EXPENSES', 'DEPOSIT', 'FEES']</code></pre>
+</div>
+</div>
+</section>
+<section id="regroupement-des-colonnes-caractéristiques" class="level3">
+<h3 class="anchored" data-anchor-id="regroupement-des-colonnes-caractéristiques">Regroupement des colonnes caractéristiques :</h3>
+<div id="cell-75" class="cell" data-execution_count="42">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb67"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">len</span>(X.columns), X.columns)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>34 Index(['ID', 'URL', 'PROPERTY_TYPE', 'NEW_BUILD', 'DESCRIPTION', 'IMAGES',
+       'SURFACE', 'LAND_SURFACE', 'TERRACE_SURFACE', 'ROOM_COUNT',
+       'BEDROOM_COUNT', 'FURNISHED', 'PARKING', 'PARKING_COUNT',
+       'HEATING_TYPES', 'HEATING_MODE', 'FLOOR', 'FLOOR_COUNT',
+       'CONSTRUCTION_YEAR', 'ELEVATOR', 'CARETAKER', 'MARKETING_TYPE',
+       'PRICE_M2', 'PRICE_EVENTS', 'RENTAL_EXPENSES',
+       'RENTAL_EXPENSES_INCLUDED', 'DEPOSIT', 'FEES', 'FEES_INCLUDED',
+       'EXCLUSIVE_MANDATE', 'AGENCIES_UNWANTED', 'OCCUPIED', 'DEALER_NAME',
+       'DEALER_TYPE'],
+      dtype='object')</code></pre>
+</div>
+</div>
+<div id="cell-76" class="cell" data-execution_count="43">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb69"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a>categorical_cols <span class="op">=</span> bool_cols <span class="op">+</span> object_cols </span>
+<span id="cb69-2"><a href="#cb69-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-3"><a href="#cb69-3" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Colonnes Caractéristiques"</span>)</span>
+<span id="cb69-4"><a href="#cb69-4" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Nb de colonnes"</span>)</span>
+<span id="cb69-5"><a href="#cb69-5" aria-hidden="true" tabindex="-1"></a>sns.barplot(x<span class="op">=</span> [<span class="st">'Image'</span>, <span class="st">'List'</span>, <span class="st">'Description'</span>, <span class="st">'Categorical'</span>, <span class="st">'Numeric'</span>], y <span class="op">=</span> [<span class="bu">len</span>(image_cols), <span class="bu">len</span>(list_cols), <span class="bu">len</span>(desc_cols), <span class="bu">len</span>(categorical_cols), <span class="bu">len</span>(numeric_cols) ], )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="real_estate_Chih-Kang_HUANG_files/figure-html/cell-44-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="similarités-entre-les-annonces-immobilières" class="level2">
+<h2 class="anchored" data-anchor-id="similarités-entre-les-annonces-immobilières">Similarités entre les annonces immobilières :</h2>
+<section id="comparaison-entre-les-liens-images" class="level3">
+<h3 class="anchored" data-anchor-id="comparaison-entre-les-liens-images">Comparaison entre les liens images :</h3>
+<p>Nous considérons que deux annonces sont associées au même bien immobilier si :</p>
+<ul>
+<li>“IMAGES” : Leurs liens images ont une intersection non nulle, et en plus, nous imposons qu’ils partagent au moins 2 liens en commun pour éviter le cas des photos publicitaires (voir l’exemple des annonces 26 et 687).</li>
+</ul>
+<p><strong>Remarques :</strong> Puisque certains liens d’images, par exemple ceux du LE BON COIN 14, ne sont plus accessibles, nous nous contentons de comparer les liens au lieu de visualiser leurs photos contenues.</p>
+<div id="cell-78" class="cell" data-execution_count="44">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb70"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> common_links(a, b):</span>
+<span id="cb70-2"><a href="#cb70-2" aria-hidden="true" tabindex="-1"></a>    a_set <span class="op">=</span> <span class="bu">set</span>(a)</span>
+<span id="cb70-3"><a href="#cb70-3" aria-hidden="true" tabindex="-1"></a>    b_set <span class="op">=</span> <span class="bu">set</span>(b)</span>
+<span id="cb70-4"><a href="#cb70-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">len</span>(a_set.intersection(b_set))<span class="op">&gt;=</span><span class="dv">2</span>:</span>
+<span id="cb70-5"><a href="#cb70-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">True</span></span>
+<span id="cb70-6"><a href="#cb70-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb70-7"><a href="#cb70-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">False</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="cell-79" class="cell" data-execution_count="45">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb71"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> compare_image(df, icols, i, j):</span>
+<span id="cb71-2"><a href="#cb71-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> k <span class="kw">in</span> icols:</span>
+<span id="cb71-3"><a href="#cb71-3" aria-hidden="true" tabindex="-1"></a>        i_links <span class="op">=</span> json.loads(df.loc[i, k])</span>
+<span id="cb71-4"><a href="#cb71-4" aria-hidden="true" tabindex="-1"></a>        j_links <span class="op">=</span> json.loads(df.loc[j, k])</span>
+<span id="cb71-5"><a href="#cb71-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> common_links(i_links, j_links)</span>
+<span id="cb71-6"><a href="#cb71-6" aria-hidden="true" tabindex="-1"></a>    </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Exemples :</p>
+<div id="cell-81" class="cell" data-execution_count="46">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb72"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a>compare_image(X, image_cols, <span class="dv">26</span>, <span class="dv">687</span>), compare_image(X, image_cols, <span class="dv">3</span>, <span class="dv">85</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="46">
+<pre><code>(False, True)</code></pre>
+</div>
+</div>
+<div id="cell-82" class="cell" data-execution_count="47">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb74"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a>output <span class="op">=</span> []</span>
+<span id="cb74-2"><a href="#cb74-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> j <span class="kw">in</span> X.index:</span>
+<span id="cb74-3"><a href="#cb74-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> compare_image(X, image_cols, <span class="dv">3</span>, j):</span>
+<span id="cb74-4"><a href="#cb74-4" aria-hidden="true" tabindex="-1"></a>        output.append(j)</span>
+<span id="cb74-5"><a href="#cb74-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb74-6"><a href="#cb74-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(output)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[3, 85, 493, 1119, 1548, 1845, 1866]</code></pre>
+</div>
+</div>
+<div id="cell-83" class="cell" data-execution_count="48">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb76"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a>json.loads(X.loc[<span class="dv">3</span>, <span class="st">"IMAGES"</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="48">
+<pre><code>['https://pix.yanport.com/ads/e9e07ed0-812f-11e8-82aa-61eacebe4584/image_fc7d9181f6042f4a630c7fdbc9f40ba3.jpg',
+ 'https://v.seloger.com/s/width/800/visuels/1/j/4/5/1j4582b04i58fwekzdtgiu20uqw3a640e7w3papd4.jpg',
+ 'https://v.seloger.com/s/width/800/visuels/1/y/c/d/1ycdcnohlrp0qttlt6edgfs4cjajfz8nmo02ox7fs.jpg',
+ 'https://v.seloger.com/s/width/800/visuels/1/p/0/1/1p01zgt2uxdey4rb322p2lk8iq17l1c8w1ukk6bjc.jpg',
+ 'https://v.seloger.com/s/width/800/visuels/0/g/d/o/0gdod5pizzrepy7g3gi4h4aq4b34ycr2lq6do10bs.jpg',
+ 'https://v.seloger.com/s/width/800/visuels/2/0/o/g/20ogztaombstv4wfenyhqgj3r906mur2vbbvp70jw.jpg']</code></pre>
+</div>
+</div>
+<div id="cell-84" class="cell" data-execution_count="49">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb78"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a>json.loads(X.loc[<span class="dv">85</span>, <span class="st">"IMAGES"</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="49">
+<pre><code>['https://pix.yanport.com/ads/ac3439f0-812f-11e8-82aa-61eacebe4584/image_685502e001f0730593f66ff91b4f1c1a.jpg',
+ 'https://v.seloger.com/s/width/800/visuels/1/p/0/1/1p01zgt2uxdey4rb322p2lk8iq17l1c8w1ukk6bjc.jpg',
+ 'https://v.seloger.com/s/width/800/visuels/1/y/c/d/1ycdcnohlrp0qttlt6edgfs4cjajfz8nmo02ox7fs.jpg',
+ 'https://v.seloger.com/s/width/800/visuels/0/g/d/o/0gdod5pizzrepy7g3gi4h4aq4b34ycr2lq6do10bs.jpg',
+ 'https://v.seloger.com/s/width/800/visuels/1/n/1/y/1n1ycskv7p348kabig6p2bbnz4kwo3umpscyhdr6w.jpg',
+ 'https://v.seloger.com/s/width/800/visuels/1/j/4/5/1j4582b04i58fwekzdtgiu20uqw3a640e7w3papd4.jpg',
+ 'https://v.seloger.com/s/width/800/visuels/2/0/o/g/20ogztaombstv4wfenyhqgj3r906mur2vbbvp70jw.jpg']</code></pre>
+</div>
+</div>
+</section>
+<section id="comparaison-des-textes-des-descriptions" class="level3">
+<h3 class="anchored" data-anchor-id="comparaison-des-textes-des-descriptions">Comparaison des textes des descriptions :</h3>
+<p>Nous utilisons un modèle de langage de base SentenceTransformer. Tout d’abord, nous calculons les longueurs maximales des descriptions :</p>
+<div id="cell-86" class="cell" data-execution_count="50">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb80"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb80-1"><a href="#cb80-1" aria-hidden="true" tabindex="-1"></a>max_length <span class="op">=</span><span class="dv">0</span></span>
+<span id="cb80-2"><a href="#cb80-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> X.index:</span>
+<span id="cb80-3"><a href="#cb80-3" aria-hidden="true" tabindex="-1"></a>    desc <span class="op">=</span> X.loc[i, <span class="st">"DESCRIPTION"</span>]</span>
+<span id="cb80-4"><a href="#cb80-4" aria-hidden="true" tabindex="-1"></a>    max_length <span class="op">=</span> <span class="bu">max</span>(max_length, <span class="bu">len</span>(desc))</span>
+<span id="cb80-5"><a href="#cb80-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(s)</span>
+<span id="cb80-6"><a href="#cb80-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb80-7"><a href="#cb80-7" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> CrossEncoder(<span class="st">'dangvantuan/CrossEncoder-camembert-large'</span>, max_length<span class="op">=</span>max_length)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[]</code></pre>
+</div>
+</div>
+<p>Limité par le modèle et la puissance de mon propre ordinateur portable, nous choisissons ici de prendre en compte seulement des 800 premiers caractères pour estimer les similarités entre deux textes.</p>
+<div id="cell-88" class="cell" data-execution_count="51">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb82"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb82-1"><a href="#cb82-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> compare_desc(df, dcols, i, j):</span>
+<span id="cb82-2"><a href="#cb82-2" aria-hidden="true" tabindex="-1"></a>    df[<span class="st">"DESCRIPTION"</span>].astype(<span class="st">'string'</span>)</span>
+<span id="cb82-3"><a href="#cb82-3" aria-hidden="true" tabindex="-1"></a>    i_desc <span class="op">=</span> <span class="bu">str</span>(df.loc[i, <span class="st">"DESCRIPTION"</span>]).lower()[<span class="dv">0</span>:<span class="dv">800</span>]</span>
+<span id="cb82-4"><a href="#cb82-4" aria-hidden="true" tabindex="-1"></a>    j_desc <span class="op">=</span> <span class="bu">str</span>(df.loc[j, <span class="st">"DESCRIPTION"</span>]).lower()[<span class="dv">0</span>:<span class="dv">800</span>]</span>
+<span id="cb82-5"><a href="#cb82-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span>  (model.predict([i_desc, j_desc]))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Les exemples avec les annonces (26, 687) et (58, 762) :</p>
+<div id="cell-90" class="cell" data-execution_count="52">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb83"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb83-1"><a href="#cb83-1" aria-hidden="true" tabindex="-1"></a>compare_desc(X, desc_cols, <span class="dv">26</span>, <span class="dv">687</span>), compare_desc(X, desc_cols, <span class="dv">58</span>, <span class="dv">762</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="52">
+<pre><code>(0.43317997, 0.9946484)</code></pre>
+</div>
+</div>
+</section>
+<section id="comparaison-des-colonnes-catégoriques" class="level3">
+<h3 class="anchored" data-anchor-id="comparaison-des-colonnes-catégoriques">Comparaison des colonnes catégoriques :</h3>
+<p>Nous considérons que deux annonces ne sont pas associées au même bien immobilier s’il y a plus de <strong>deux</strong> valeurs distinctes dans les colonnes catégoriques.</p>
+<div id="cell-92" class="cell" data-execution_count="53">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb85"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb85-1"><a href="#cb85-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> compare_cat(df, ccols, i, j): </span>
+<span id="cb85-2"><a href="#cb85-2" aria-hidden="true" tabindex="-1"></a>    i_list <span class="op">=</span> df.loc[i, ccols].to_list()</span>
+<span id="cb85-3"><a href="#cb85-3" aria-hidden="true" tabindex="-1"></a>    j_list <span class="op">=</span> df.loc[j, ccols].to_list()</span>
+<span id="cb85-4"><a href="#cb85-4" aria-hidden="true" tabindex="-1"></a>    result <span class="op">=</span><span class="dv">0</span></span>
+<span id="cb85-5"><a href="#cb85-5" aria-hidden="true" tabindex="-1"></a>    k <span class="op">=</span> <span class="dv">0</span> <span class="co"># compteur des comparaisons valables</span></span>
+<span id="cb85-6"><a href="#cb85-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> (result <span class="op">&lt;=</span> <span class="dv">1</span>) <span class="kw">and</span> (k<span class="op">&lt;</span><span class="bu">len</span>(ccols)):</span>
+<span id="cb85-7"><a href="#cb85-7" aria-hidden="true" tabindex="-1"></a>        i_k <span class="op">=</span> i_list[k]</span>
+<span id="cb85-8"><a href="#cb85-8" aria-hidden="true" tabindex="-1"></a>        j_k <span class="op">=</span> j_list[k]</span>
+<span id="cb85-9"><a href="#cb85-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="kw">not</span> pd.isnull(i_k) <span class="kw">and</span> <span class="kw">not</span> pd.isnull(j_k):</span>
+<span id="cb85-10"><a href="#cb85-10" aria-hidden="true" tabindex="-1"></a>            result <span class="op">+=</span> (i_k <span class="op">!=</span> j_k)</span>
+<span id="cb85-11"><a href="#cb85-11" aria-hidden="true" tabindex="-1"></a>        k <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb85-12"><a href="#cb85-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-13"><a href="#cb85-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (result <span class="op">&lt;=</span><span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Encore les fameux exemples avec (26, 687) et (58, 762) :</p>
+<div id="cell-94" class="cell" data-execution_count="54">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb86"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb86-1"><a href="#cb86-1" aria-hidden="true" tabindex="-1"></a>compare_cat(X, categorical_cols, <span class="dv">26</span>, <span class="dv">687</span>), compare_cat(X, categorical_cols, <span class="dv">58</span>, <span class="dv">762</span>),</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="54">
+<pre><code>(False, True)</code></pre>
+</div>
+</div>
+</section>
+<section id="comparaison-des-colonnes-numériques-et-listes" class="level3">
+<h3 class="anchored" data-anchor-id="comparaison-des-colonnes-numériques-et-listes">Comparaison des colonnes numériques et listes</h3>
+<div id="cell-96" class="cell" data-execution_count="55">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb88"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(list_cols, numeric_cols)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>['HEATING_TYPES', 'PRICE_EVENTS'] ['SURFACE', 'LAND_SURFACE', 'TERRACE_SURFACE', 'PRICE_M2', 'RENTAL_EXPENSES', 'DEPOSIT', 'FEES']</code></pre>
+</div>
+</div>
+<div id="cell-97" class="cell" data-execution_count="56">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb90"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb90-1"><a href="#cb90-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> compare_list(df, lcols, i, j):</span>
+<span id="cb90-2"><a href="#cb90-2" aria-hidden="true" tabindex="-1"></a>    i_heat <span class="op">=</span> <span class="bu">set</span>(json.loads(df.loc[i, <span class="st">"HEATING_TYPES"</span>]))</span>
+<span id="cb90-3"><a href="#cb90-3" aria-hidden="true" tabindex="-1"></a>    j_heat <span class="op">=</span> <span class="bu">set</span>(json.loads(df.loc[j, <span class="st">"HEATING_TYPES"</span>]))</span>
+<span id="cb90-4"><a href="#cb90-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">not</span> (i_heat.issubset(j_heat) <span class="kw">or</span> j_heat.issubset(i_heat)):</span>
+<span id="cb90-5"><a href="#cb90-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">False</span></span>
+<span id="cb90-6"><a href="#cb90-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>: </span>
+<span id="cb90-7"><a href="#cb90-7" aria-hidden="true" tabindex="-1"></a>        i_price_ev<span class="op">=</span> json.loads(df.loc[i, <span class="st">"PRICE_EVENTS"</span>])</span>
+<span id="cb90-8"><a href="#cb90-8" aria-hidden="true" tabindex="-1"></a>        j_price_ev <span class="op">=</span> json.loads(df.loc[j, <span class="st">"PRICE_EVENTS"</span>])</span>
+<span id="cb90-9"><a href="#cb90-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb90-10"><a href="#cb90-10" aria-hidden="true" tabindex="-1"></a>        i_price <span class="op">=</span> i_price_ev[<span class="op">-</span><span class="dv">1</span>][<span class="st">'price'</span>]</span>
+<span id="cb90-11"><a href="#cb90-11" aria-hidden="true" tabindex="-1"></a>        j_price <span class="op">=</span> j_price_ev[<span class="op">-</span><span class="dv">1</span>][<span class="st">'price'</span>]</span>
+<span id="cb90-12"><a href="#cb90-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> (<span class="bu">abs</span>(i_price <span class="op">-</span> j_price) <span class="op">&lt;</span><span class="dv">5</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="cell-98" class="cell" data-execution_count="57">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb91"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb91-1"><a href="#cb91-1" aria-hidden="true" tabindex="-1"></a>compare_list(X, list_cols, <span class="dv">26</span>, <span class="dv">687</span>), compare_cat(X, list_cols, <span class="dv">58</span>, <span class="dv">762</span>),</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="57">
+<pre><code>(False, True)</code></pre>
+</div>
+</div>
+<div id="cell-99" class="cell" data-execution_count="58">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb93"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb93-1"><a href="#cb93-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> compare_num(df, ncols, i, j):</span>
+<span id="cb93-2"><a href="#cb93-2" aria-hidden="true" tabindex="-1"></a>    criteria <span class="op">=</span> <span class="dv">0</span> </span>
+<span id="cb93-3"><a href="#cb93-3" aria-hidden="true" tabindex="-1"></a>    k <span class="op">=</span> <span class="dv">0</span> <span class="co"># compteur des comparisons valables</span></span>
+<span id="cb93-4"><a href="#cb93-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb93-5"><a href="#cb93-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># SURFACE</span></span>
+<span id="cb93-6"><a href="#cb93-6" aria-hidden="true" tabindex="-1"></a>    i_surf <span class="op">=</span> df.loc[i, <span class="st">"SURFACE"</span>]</span>
+<span id="cb93-7"><a href="#cb93-7" aria-hidden="true" tabindex="-1"></a>    j_surf <span class="op">=</span> df.loc[j, <span class="st">"SURFACE"</span>]</span>
+<span id="cb93-8"><a href="#cb93-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> pd.notnull(i_surf) <span class="kw">and</span> pd.notnull(j_surf):</span>
+<span id="cb93-9"><a href="#cb93-9" aria-hidden="true" tabindex="-1"></a>        criteria <span class="op">+=</span> (<span class="bu">abs</span>(i_surf <span class="op">-</span> j_surf) <span class="op">&lt;=</span> <span class="dv">1</span>)</span>
+<span id="cb93-10"><a href="#cb93-10" aria-hidden="true" tabindex="-1"></a>        k<span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb93-11"><a href="#cb93-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb93-12"><a href="#cb93-12" aria-hidden="true" tabindex="-1"></a>    <span class="co"># LAND SURFACE </span></span>
+<span id="cb93-13"><a href="#cb93-13" aria-hidden="true" tabindex="-1"></a>    i_land <span class="op">=</span> df.loc[i, <span class="st">"LAND_SURFACE"</span>]</span>
+<span id="cb93-14"><a href="#cb93-14" aria-hidden="true" tabindex="-1"></a>    j_land <span class="op">=</span> df.loc[j, <span class="st">"LAND_SURFACE"</span>]</span>
+<span id="cb93-15"><a href="#cb93-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> pd.notnull(i_land) <span class="kw">and</span> pd.notnull(j_land):</span>
+<span id="cb93-16"><a href="#cb93-16" aria-hidden="true" tabindex="-1"></a>        criteria <span class="op">+=</span> (<span class="bu">abs</span>(i_land <span class="op">-</span> j_land) <span class="op">&lt;=</span> <span class="dv">1</span>)</span>
+<span id="cb93-17"><a href="#cb93-17" aria-hidden="true" tabindex="-1"></a>        k<span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb93-18"><a href="#cb93-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb93-19"><a href="#cb93-19" aria-hidden="true" tabindex="-1"></a>    <span class="co"># TERRACE SURFACE</span></span>
+<span id="cb93-20"><a href="#cb93-20" aria-hidden="true" tabindex="-1"></a>    i_terrace <span class="op">=</span> df.loc[i, <span class="st">"TERRACE_SURFACE"</span>]</span>
+<span id="cb93-21"><a href="#cb93-21" aria-hidden="true" tabindex="-1"></a>    j_terrace <span class="op">=</span> df.loc[j, <span class="st">"TERRACE_SURFACE"</span>]</span>
+<span id="cb93-22"><a href="#cb93-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> pd.notnull(i_terrace) <span class="kw">and</span> pd.notnull(j_terrace):</span>
+<span id="cb93-23"><a href="#cb93-23" aria-hidden="true" tabindex="-1"></a>        criteria <span class="op">+=</span> (<span class="bu">abs</span>(i_terrace <span class="op">-</span> j_terrace) <span class="op">&lt;=</span> <span class="dv">1</span>)</span>
+<span id="cb93-24"><a href="#cb93-24" aria-hidden="true" tabindex="-1"></a>        k<span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb93-25"><a href="#cb93-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb93-26"><a href="#cb93-26" aria-hidden="true" tabindex="-1"></a>    <span class="co"># PRICE M2</span></span>
+<span id="cb93-27"><a href="#cb93-27" aria-hidden="true" tabindex="-1"></a>    i_pricem2 <span class="op">=</span> df.loc[i, <span class="st">"PRICE_M2"</span>]</span>
+<span id="cb93-28"><a href="#cb93-28" aria-hidden="true" tabindex="-1"></a>    j_pricem2 <span class="op">=</span> df.loc[j, <span class="st">"PRICE_M2"</span>]</span>
+<span id="cb93-29"><a href="#cb93-29" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> pd.notnull(i_pricem2) <span class="kw">and</span> pd.notnull(j_pricem2):</span>
+<span id="cb93-30"><a href="#cb93-30" aria-hidden="true" tabindex="-1"></a>        criteria <span class="op">+=</span> (<span class="bu">abs</span>(i_pricem2 <span class="op">-</span> j_pricem2) <span class="op">&lt;=</span> <span class="dv">5</span>)</span>
+<span id="cb93-31"><a href="#cb93-31" aria-hidden="true" tabindex="-1"></a>        k<span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb93-32"><a href="#cb93-32" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb93-33"><a href="#cb93-33" aria-hidden="true" tabindex="-1"></a>    <span class="co"># RENTAL_EXPENSES</span></span>
+<span id="cb93-34"><a href="#cb93-34" aria-hidden="true" tabindex="-1"></a>    i_rent <span class="op">=</span> df.loc[i, <span class="st">"RENTAL_EXPENSES"</span>]</span>
+<span id="cb93-35"><a href="#cb93-35" aria-hidden="true" tabindex="-1"></a>    j_rent <span class="op">=</span> df.loc[j, <span class="st">"RENTAL_EXPENSES"</span>]</span>
+<span id="cb93-36"><a href="#cb93-36" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> pd.notnull(i_rent) <span class="kw">and</span> pd.notnull(j_rent):</span>
+<span id="cb93-37"><a href="#cb93-37" aria-hidden="true" tabindex="-1"></a>        criteria <span class="op">+=</span> (<span class="bu">abs</span>(i_rent <span class="op">-</span> j_rent) <span class="op">&lt;=</span> <span class="dv">5</span>)</span>
+<span id="cb93-38"><a href="#cb93-38" aria-hidden="true" tabindex="-1"></a>        k<span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb93-39"><a href="#cb93-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb93-40"><a href="#cb93-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb93-41"><a href="#cb93-41" aria-hidden="true" tabindex="-1"></a>    <span class="co"># FEES</span></span>
+<span id="cb93-42"><a href="#cb93-42" aria-hidden="true" tabindex="-1"></a>    i_fees <span class="op">=</span> df.loc[i, <span class="st">"FEES"</span>]</span>
+<span id="cb93-43"><a href="#cb93-43" aria-hidden="true" tabindex="-1"></a>    j_fees <span class="op">=</span> df.loc[j, <span class="st">"FEES"</span>]</span>
+<span id="cb93-44"><a href="#cb93-44" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> pd.notnull(i_fees) <span class="kw">and</span> pd.notnull(j_fees):</span>
+<span id="cb93-45"><a href="#cb93-45" aria-hidden="true" tabindex="-1"></a>        criteria <span class="op">+=</span> (<span class="bu">abs</span>(i_fees <span class="op">-</span> j_fees) <span class="op">&lt;=</span> <span class="dv">5</span>)</span>
+<span id="cb93-46"><a href="#cb93-46" aria-hidden="true" tabindex="-1"></a>        k<span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb93-47"><a href="#cb93-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb93-48"><a href="#cb93-48" aria-hidden="true" tabindex="-1"></a>    <span class="co"># DEPOSIT </span></span>
+<span id="cb93-49"><a href="#cb93-49" aria-hidden="true" tabindex="-1"></a>    i_deposit <span class="op">=</span> df.loc[i, <span class="st">"DEPOSIT"</span>]</span>
+<span id="cb93-50"><a href="#cb93-50" aria-hidden="true" tabindex="-1"></a>    j_deposit <span class="op">=</span> df.loc[j, <span class="st">"DEPOSIT"</span>]</span>
+<span id="cb93-51"><a href="#cb93-51" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> pd.notnull(i_deposit) <span class="kw">and</span> pd.notnull(j_deposit):</span>
+<span id="cb93-52"><a href="#cb93-52" aria-hidden="true" tabindex="-1"></a>        criteria <span class="op">+=</span> (<span class="bu">abs</span>(i_deposit <span class="op">-</span> j_deposit) <span class="op">&lt;=</span> <span class="dv">5</span>)</span>
+<span id="cb93-53"><a href="#cb93-53" aria-hidden="true" tabindex="-1"></a>        k<span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb93-54"><a href="#cb93-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb93-55"><a href="#cb93-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb93-56"><a href="#cb93-56" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (criteria <span class="op">&gt;</span> (k<span class="op">/</span><span class="dv">2</span>)) <span class="co"># retourner true si la moitié de comparaisons valables sont true</span></span>
+<span id="cb93-57"><a href="#cb93-57" aria-hidden="true" tabindex="-1"></a>    </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Exemples :</p>
+<div id="cell-101" class="cell" data-execution_count="59">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb94"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb94-1"><a href="#cb94-1" aria-hidden="true" tabindex="-1"></a>compare_num(X, numeric_cols, <span class="dv">26</span>, <span class="dv">687</span>), compare_num(X, numeric_cols, <span class="dv">58</span>, <span class="dv">762</span>),</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="59">
+<pre><code>(False, True)</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="création-des-clés-de-regroupement" class="level2">
+<h2 class="anchored" data-anchor-id="création-des-clés-de-regroupement">Création des clés de regroupement</h2>
+<p>Nous disposons maintenant de toutes les fonctions de critères/comparaisons et nous sommes en mesure de regrouper les annonces qui se rapportent au même bien immobilier.</p>
+<div id="cell-103" class="cell" data-execution_count="60">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb96"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb96-1"><a href="#cb96-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> same_real_estate(df, icols, dcols, ccols, lcols, ncols, i, j):</span>
+<span id="cb96-2"><a href="#cb96-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> compare_image(df, icols, i, j):</span>
+<span id="cb96-3"><a href="#cb96-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">True</span></span>
+<span id="cb96-4"><a href="#cb96-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> compare_cat(df, ccols, i, j): </span>
+<span id="cb96-5"><a href="#cb96-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> compare_list(df, lcols, i, j) <span class="kw">and</span> compare_num(df, ncols, i, j):</span>
+<span id="cb96-6"><a href="#cb96-6" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> (compare_desc(df, dcols, i, j) <span class="op">&gt;=</span> <span class="fl">0.85</span>)</span>
+<span id="cb96-7"><a href="#cb96-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb96-8"><a href="#cb96-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">False</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Nous soulignons que l’on compare les descriptions texte seulement au moment où nous n’arrivons pas à distincter deux annonces avec les autres colonnes caractéristiques. Nous mettre le seuil <strong>0.85</strong> pour dire comme quoi 2 annonces sont associées au même bien immobilier, mais ce choix du seuil n’est pas impartial. Nous revenons à ce seuil à la fin, et nous discuterons des possibilités pour rendre ce choix plus neutre et objectif.</p>
+<div id="cell-105" class="cell" data-execution_count="61">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb97"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb97-1"><a href="#cb97-1" aria-hidden="true" tabindex="-1"></a>same_real_estate(X, image_cols, desc_cols, categorical_cols, list_cols, numeric_cols, <span class="dv">3</span>, <span class="dv">85</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="61">
+<pre><code>True</code></pre>
+</div>
+</div>
+<div id="cell-106" class="cell" data-execution_count="62">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb99"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb99-1"><a href="#cb99-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb99-2"><a href="#cb99-2" aria-hidden="true" tabindex="-1"></a>same_real_estate(X, image_cols, desc_cols, categorical_cols, list_cols, numeric_cols, <span class="dv">26</span>, <span class="dv">687</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="62">
+<pre><code>False</code></pre>
+</div>
+</div>
+<div id="cell-107" class="cell" data-execution_count="63">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb101"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb101-1"><a href="#cb101-1" aria-hidden="true" tabindex="-1"></a>same_real_estate(X, image_cols, desc_cols, categorical_cols, list_cols, numeric_cols, <span class="dv">58</span>, <span class="dv">762</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="63">
+<pre><code>True</code></pre>
+</div>
+</div>
+<p>Enfin, nous exécutons une boucle for : pour chaque annonce, si la clé n’a pas encore été attribuée, nous utilisons son “ID” comme clé et examinons si les annonces ultérieures sont associée au même bien immobilier.</p>
+<div id="cell-109" class="cell" data-execution_count="64">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb103"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb103-1"><a href="#cb103-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> df_with_keys(df <span class="op">=</span> X, icols <span class="op">=</span> image_cols, dcols <span class="op">=</span> desc_cols, ccols <span class="op">=</span> categorical_cols, lcols <span class="op">=</span> list_cols, ncols <span class="op">=</span> numeric_cols): </span>
+<span id="cb103-2"><a href="#cb103-2" aria-hidden="true" tabindex="-1"></a>    Y <span class="op">=</span> df.copy()</span>
+<span id="cb103-3"><a href="#cb103-3" aria-hidden="true" tabindex="-1"></a>    Y[<span class="st">'KEY'</span>] <span class="op">=</span> pd.Series(dtype<span class="op">=</span><span class="st">'object'</span>)</span>
+<span id="cb103-4"><a href="#cb103-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> Y.index : </span>
+<span id="cb103-5"><a href="#cb103-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> pd.isnull(Y.loc[i, <span class="st">'KEY'</span>]):</span>
+<span id="cb103-6"><a href="#cb103-6" aria-hidden="true" tabindex="-1"></a>            Y.loc[i, <span class="st">'KEY'</span>] <span class="op">=</span> Y.loc[i, <span class="st">'ID'</span>]</span>
+<span id="cb103-7"><a href="#cb103-7" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(i<span class="op">+</span><span class="dv">1</span>, <span class="bu">len</span>(Y.index)) :</span>
+<span id="cb103-8"><a href="#cb103-8" aria-hidden="true" tabindex="-1"></a>                <span class="cf">if</span> same_real_estate(df, icols, dcols, ccols, lcols, ncols, i, j):</span>
+<span id="cb103-9"><a href="#cb103-9" aria-hidden="true" tabindex="-1"></a>                    Y.loc[j, <span class="st">'KEY'</span>] <span class="op">=</span> Y.loc[i, <span class="st">'KEY'</span>]</span>
+<span id="cb103-10"><a href="#cb103-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> Y</span>
+<span id="cb103-11"><a href="#cb103-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb103-12"><a href="#cb103-12" aria-hidden="true" tabindex="-1"></a>        </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Mise en action !</p>
+<div id="cell-111" class="cell" data-execution_count="65">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb104"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb104-1"><a href="#cb104-1" aria-hidden="true" tabindex="-1"></a>X_with_keys <span class="op">=</span> df_with_keys(X)</span>
+<span id="cb104-2"><a href="#cb104-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(X_with_keys)</span>
+<span id="cb104-3"><a href="#cb104-3" aria-hidden="true" tabindex="-1"></a><span class="co"># X_with_keys["KEY"].nunique()</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                                        ID  \
+0     22c05930-0eb5-11e7-b53d-bbead8ba43fe   
+1     8d092fa0-bb99-11e8-a7c9-852783b5a69d   
+2     44b6a5c0-3466-11e9-8213-25cc7d9bf5fc   
+3     e9e07ed0-812f-11e8-82aa-61eacebe4584   
+4     872302b0-5a21-11e9-950c-510fefc1ed35   
+...                                    ...   
+2159  d3579370-824f-11e9-af18-9742751bcff8   
+2160  cce3fc60-c86b-11e9-a6b2-651beb16710e   
+2161  beec50b0-c85e-11e9-92d3-cb429fb9e457   
+2162  8cba88c0-a07a-11e9-a8e6-0de7b497e456   
+2163  f3ae8be0-9fcf-11e9-ab3e-47ec2b68d334   
+
+                                                    URL PROPERTY_TYPE  \
+0     http://www.avendrealouer.fr/location/levallois...     APARTMENT   
+1     https://www.bienici.com/annonce/ag440414-16547...     APARTMENT   
+2     https://www.bellesdemeures.com/annonces/vente/...     APARTMENT   
+3     https://www.seloger.com/annonces/locations/bur...      PREMISES   
+4     https://www.bellesdemeures.com/annonces/vente/...         HOUSE   
+...                                                 ...           ...   
+2159  https://www.bienici.com/annonce/ag750861-20035...     APARTMENT   
+2160  https://www.meilleursagents.com/annonces/locat...     APARTMENT   
+2161  https://www.leboncoin.fr/ventes_immobilieres/1...     APARTMENT   
+2162  https://www.logic-immo.com/detail-location-bae...       PARKING   
+2163  https://immobilier.lefigaro.fr/annonces/annonc...     APARTMENT   
+
+     NEW_BUILD                                        DESCRIPTION  \
+0        False  Au rez de chaussée d'un bel immeuble récent,ap...   
+1        False  Je vous propose un appartement dans la rue Col...   
+2        False  Dans un cadre arboré, calme et fleuri, un pent...   
+3        False  "Le meilleur coworking flexible de la ville, 5...   
+4        False  Levallois - Parc de la Planchette A toute prox...   
+...        ...                                                ...   
+2159     False  LEVALLOIS-PERRET. Bel appartement idéalement s...   
+2160     False  À 300 mètres du Métro Pont de Levallois Bécon,...   
+2161     False  Levallois / Rue barbes - Dans un immeuble réce...   
+2162       NaN  Levallois-Perret, rue Paul Vaillant Couturier,...   
+2163     False  2 pièces de 40 m² composé d'un séjour avec ter...   
+
+                                                 IMAGES  SURFACE  \
+0     ["https://cf-medias.avendrealouer.fr/image/_87...     72.0   
+1     ["http://photos.ubiflow.net/440414/165474561/p...     48.0   
+2     ["https://v.seloger.com/s/width/965/visuels/0/...    267.0   
+3     ["https://pix.yanport.com/ads/e9e07ed0-812f-11...     50.0   
+4     ["https://v.seloger.com/s/width/966/visuels/0/...    330.0   
+...                                                 ...      ...   
+2159  ["http://photos.ubiflow.net/750861/200354631/p...     50.0   
+2160  ["http://thumbor.meilleursagents.com/j8Xioi19Y...     31.0   
+2161                                                 []     67.0   
+2162  ["https://mmf.logic-immo.com/mmf/ads/photo-pro...      NaN   
+2163  ["http://d1qfj231ug7wdu.cloudfront.net/picture...     40.0   
+
+      LAND_SURFACE  TERRACE_SURFACE ROOM_COUNT  ... RENTAL_EXPENSES_INCLUDED  \
+0              NaN              NaN        3.0  ...                     True   
+1              NaN              NaN        2.0  ...                      NaN   
+2              NaN              NaN        6.0  ...                      NaN   
+3              NaN              NaN        0.0  ...                      NaN   
+4              NaN              NaN        8.0  ...                      NaN   
+...            ...              ...        ...  ...                      ...   
+2159           NaN              NaN        2.0  ...                      NaN   
+2160           NaN              NaN        2.0  ...                     True   
+2161           NaN              NaN        3.0  ...                      NaN   
+2162           NaN              NaN        NaN  ...                     True   
+2163           NaN              NaN        2.0  ...                      NaN   
+
+     DEPOSIT   FEES FEES_INCLUDED EXCLUSIVE_MANDATE AGENCIES_UNWANTED  \
+0        NaN    NaN           NaN             False               NaN   
+1        NaN    NaN         False             False               NaN   
+2        NaN    NaN           NaN             False               NaN   
+3        NaN    NaN           NaN             False               NaN   
+4        NaN    NaN           NaN             False               NaN   
+...      ...    ...           ...               ...               ...   
+2159     NaN    NaN         False             False               NaN   
+2160     NaN  465.0          True             False               NaN   
+2161     NaN    NaN          True             False               NaN   
+2162     NaN    NaN           NaN              True               NaN   
+2163     NaN    NaN         False             False               NaN   
+
+     OCCUPIED                 DEALER_NAME DEALER_TYPE  \
+0         NaN        Lamirand Et Associes      AGENCY   
+1       False          Proprietes Privees   MANDATARY   
+2       False      Propriétés Parisiennes      AGENCY   
+3         NaN                         Iwg      AGENCY   
+4       False         Daniel Feau Neuilly      AGENCY   
+...       ...                         ...         ...   
+2159    False          Haussmann Prestige      AGENCY   
+2160      NaN   MISTER PROPERTY LEVALLOIS      AGENCY   
+2161    False              Groupe Auteuil      AGENCY   
+2162      NaN  Nicolas Lanteri Immobilier      AGENCY   
+2163    False              Blg Immobilier      AGENCY   
+
+                                       KEY  
+0     22c05930-0eb5-11e7-b53d-bbead8ba43fe  
+1     8d092fa0-bb99-11e8-a7c9-852783b5a69d  
+2     44b6a5c0-3466-11e9-8213-25cc7d9bf5fc  
+3     e9e07ed0-812f-11e8-82aa-61eacebe4584  
+4     872302b0-5a21-11e9-950c-510fefc1ed35  
+...                                    ...  
+2159  86a5a800-81c3-11e9-a3ea-ffe50e0986b0  
+2160  538190f0-c8a5-11e9-92d3-cb429fb9e457  
+2161  ce8f07b0-a4a5-11e9-96d9-fb3253f8fc6c  
+2162  8cba88c0-a07a-11e9-a8e6-0de7b497e456  
+2163  31ab5210-9f1d-11e9-ab3e-47ec2b68d334  
+
+[2164 rows x 35 columns]</code></pre>
+</div>
+</div>
+<div id="cell-112" class="cell" data-execution_count="66">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb106"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb106-1"><a href="#cb106-1" aria-hidden="true" tabindex="-1"></a>X_with_keys[<span class="st">"KEY"</span>].value_counts()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="66">
+<pre><code>KEY
+ddc272a0-3991-11e9-8a1a-297fbcac27e2    43
+57baa230-c862-11e9-a6b2-651beb16710e     7
+bde25540-c4f1-11e9-a6b2-651beb16710e     7
+872302b0-5a21-11e9-950c-510fefc1ed35     7
+78e1ca10-35a5-11e9-8a1a-297fbcac27e2     7
+                                        ..
+e6511700-349b-11e9-8213-25cc7d9bf5fc     1
+6fc4cb10-8c6e-11e9-a7f2-f5443208fc78     1
+990b3520-ab51-11e9-aa5e-8b8909b4f047     1
+d04cd4f0-a28f-11e9-aa5e-8b8909b4f047     1
+8cba88c0-a07a-11e9-a8e6-0de7b497e456     1
+Name: count, Length: 1484, dtype: int64</code></pre>
+</div>
+</div>
+</section>
+<section id="sortie-des-données" class="level2">
+<h2 class="anchored" data-anchor-id="sortie-des-données">Sortie des données</h2>
+<div id="cell-114" class="cell" data-execution_count="67">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb108"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb108-1"><a href="#cb108-1" aria-hidden="true" tabindex="-1"></a>df_with_keys <span class="op">=</span> df.copy()</span>
+<span id="cb108-2"><a href="#cb108-2" aria-hidden="true" tabindex="-1"></a>df_with_keys[<span class="st">"KEY"</span>] <span class="op">=</span> X_with_keys[<span class="st">"KEY"</span>]</span>
+<span id="cb108-3"><a href="#cb108-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb108-4"><a href="#cb108-4" aria-hidden="true" tabindex="-1"></a>df_with_keys.to_csv(<span class="st">'./submission.csv'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="piste-damélioration" class="level2">
+<h2 class="anchored" data-anchor-id="piste-damélioration">Piste d’amélioration :</h2>
+<p>À la fin de cette étude, nous proposons quelques pistes d’amélioration. Certaines n’ont pas pu être réalisées en raison du manque de temps ou de ressources disponibles :</p>
+<ul>
+<li><strong>Dans cette étude</strong>, en raison du manque de données suffisantes, nous avons utilisé un modèle pré-entraîné pour évaluer les similarités entre les textes des descriptions. Nous avons choisi un seuil de 0,85 pour déterminer si deux descriptions sont similaires ou non. Une manière de rendre ce choix plus rigoureux serait de réaliser une méthode de “minmax” itératif sur un sous-ensemble des données, plus concrètement,</li>
+</ul>
+<div id="cell-116" class="cell" data-execution_count="68">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb109"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb109-1"><a href="#cb109-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb109-2"><a href="#cb109-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random</span>
+<span id="cb109-3"><a href="#cb109-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> seuil(df, n, p): </span>
+<span id="cb109-4"><a href="#cb109-4" aria-hidden="true" tabindex="-1"></a><span class="co"># n = nb de fois d'iteration, p nb de sous-ensemble pris pour estimer le seuil</span></span>
+<span id="cb109-5"><a href="#cb109-5" aria-hidden="true" tabindex="-1"></a>    seuil_list <span class="op">=</span> []</span>
+<span id="cb109-6"><a href="#cb109-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> k <span class="kw">in</span> <span class="bu">range</span>(n):</span>
+<span id="cb109-7"><a href="#cb109-7" aria-hidden="true" tabindex="-1"></a>        max_score <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb109-8"><a href="#cb109-8" aria-hidden="true" tabindex="-1"></a>        L <span class="op">=</span> random.sample(<span class="bu">list</span>(df.index), p)</span>
+<span id="cb109-9"><a href="#cb109-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(p):</span>
+<span id="cb109-10"><a href="#cb109-10" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(i<span class="op">+</span><span class="dv">1</span>, p):</span>
+<span id="cb109-11"><a href="#cb109-11" aria-hidden="true" tabindex="-1"></a>                max_score <span class="op">=</span> <span class="bu">max</span>(max_score, compare_desc(df, desc_cols, i, j))</span>
+<span id="cb109-12"><a href="#cb109-12" aria-hidden="true" tabindex="-1"></a>        seuil_list.append(max_score)</span>
+<span id="cb109-13"><a href="#cb109-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">min</span>(seuil_list)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Par exemple, nous pourrions calculer le score maximal sur un ensemble de 50 données aléatoires, puis prendre le minimum sur les 5 itérations :</p>
+<div id="cell-118" class="cell" data-execution_count="69">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb110"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb110-1"><a href="#cb110-1" aria-hidden="true" tabindex="-1"></a>seuil(X, <span class="dv">5</span>, <span class="dv">50</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="69">
+<pre><code>0.8465062</code></pre>
+</div>
+</div>
+<ul>
+<li><p>Critère de confiance : Il serait possible d’ajouter une pondération pour améliorer la précision de l’identification. On pourrait s’attendre à une combinaison linéaire ou non linéaire des fonctions comparatives. Si nous disposions de suffisamment de données d’entraînement et de validation, nous pourrions tenter de trouver les coefficients de pondération pour les fonctions de comparaison d’images, de listes, de catégories, de numéros et de descriptions. Cela permettrait également de minimiser l’impact des saisies incorrectes.</p></li>
+<li><p>Analyse des photos : Il serait possible d’exploiter les informations utiles contenues dans les images, mais cela dépendrait de la qualité et des conditions de prise de vue des photos. (par exemple, la luminosité lors de la capture de l’extérieur du bâtiment le matin)</p></li>
+<li><p>Analyse Géo-spatiale : Intégrer des données géospatiales pour affiner les regroupements en fonction de la localisation.</p></li>
+<li><p>Correction des mauvaises saisies (typographie, fuzzywuzzy) : Mettre en place des mécanismes de correction automatique pour les saisies incorrectes.</p></li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

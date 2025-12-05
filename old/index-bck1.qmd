@@ -1,0 +1,43 @@
+---
+title: "My Academic Page"
+format: html
+---
+
+<!-- Floating section links -->
+<nav class="floating-menu">
+  <img src="me.png" alt="Profile Photo" class="profile-photo">
+  <!-- <a href="#about">About</a> -->
+  <a href="#research">Research</a>
+  <a href="#publications">Publications</a>
+  <a href="#teaching">Teaching</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- Top-right theme toggle -->
+<div class="topbar">
+  <!-- Quarto live search box will appear here -->
+  <!-- <div class="floating-search q-search-box-container"></div> -->
+  <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+</div>
+
+
+
+<!-- ## About Me {#about} -->
+<!-- I am a researcher focusing on machine learning and computational modeling... -->
+
+## Research {.vallout-note appearance="simple" #research}
+My work explores neural networks, reproducibility, and structured learning...
+
+:::{.callout-tip collapse="True" appearance="default" #publications} 
+## Publications 
+- Doe, J. (2025). *Everforest architectures and interpretability*.  
+- Doe, J. (2024). *Reproducible MultiH5Datasets in AI research.*
+:::
+
+## Teaching {.collapsible #teaching}
+I teach graduate-level courses on deep learning and model interpretability.
+
+## Contact {#contact}
+📧 [you@example.com](mailto:you@example.com)  
+🌐 [yourwebsite.com](https://yourwebsite.com)
+

@@ -1,0 +1,147 @@
+/* Custom CSS for Everforest Dark Theme */
+
+
+/* Define Everforest Dark Colors */
+:root {
+  /* Everforest Color Variables (Dark Hard) */
+  --ef-bg: #2b3339;
+  --ef-fg: #d3c6aa;
+  --ef-red: #e67e80;
+  --ef-green: #a7c080;
+  --ef-yellow: #dbbc7f;
+  --ef-blue: #7fbbb3;
+}
+
+/* Base body/background styles for Dark Theme */
+.quarto-dark .content {
+  background-color: var(--ef-bg) !important;
+  color: var(--ef-fg) !important;
+}
+
+/* Headings in Dark Theme */
+.quarto-dark h1, .quarto-dark h2, .quarto-dark h3, .quarto-dark h4, .quarto-dark h5, .quarto-dark h6 {
+  color: var(--ef-yellow) !important;
+}
+
+/* Links in Dark Theme */
+.quarto-dark a {
+  color: var(--ef-blue) !important;
+}
+.quarto-dark a:hover {
+  color: var(--ef-fg) !important;
+}
+/* --- ABOUT ME SECTION STYLING (ROBUST FLEX) --- */
+
+.about-header {
+  display: flex;
+  align-items: flex-start; /* Aligns photo and text to the top */
+  gap: 30px; 
+  max-width: 900px;
+  margin: 0 auto; 
+  padding-bottom: 20px;
+}
+
+/* Ensure the photo element is fixed size and stays on the left */
+.about-photo {
+  flex-shrink: 0; 
+}
+
+.about-photo img {
+  width: 150px !important; 
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid var(--ef-yellow); 
+  object-fit: cover;
+}
+
+/* Ensure the text element takes up the remaining space */
+.about-text {
+  flex-grow: 1; 
+  text-align: left;
+}
+
+.tagline {
+  font-size: 1.25em;
+  color: var(--ef-green); 
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+/* Style for the links paragraph */
+.social-links {
+    margin-top: 15px;
+    font-size: 1.1em;
+    /* Ensure the links are styled by the global 'a' rule */
+}
+
+/* Add space between icon and text */
+.social-links i {
+  margin-right: 5px;
+}
+/* Collapsible 'Presentations' Section Styling */
+details > summary {
+  cursor: pointer;
+  /* Ensure the H3 color is applied to the clickable title */
+  color: var(--ef-yellow) !important; 
+  padding-bottom: 5px; /* Little space below the title */
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  /* Ensures the collapsible arrow/icon is styled */
+  list-style-type: '▶ '; 
+}
+details[open] > summary {
+  list-style-type: '▼ '; 
+}
+
+/* Theme Toggle Button Styling */
+.theme-switcher-label {
+    margin-right: 5px; 
+    color: var(--ef-yellow) !important; 
+}
+
+/* Button container for section jumps */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.button-container a {
+  text-decoration: none;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+    color: rgba(211, 198, 170, 0.7); /* Slightly dimmed text for copyright */
+}
+
+/* --- Navigation Button Hover Effect --- */
+
+/* Target the anchor tags within the button-container */
+.button-container a {
+  /* Add smooth transition for scale and color changes */
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out, color 0.2s ease-in-out; 
+  text-decoration: none;
+}
+
+/* Define the hover state */
+.button-container a:hover {
+  /* Slightly scales the button up (105% size) */
+  transform: scale(1.05); 
+  /* Set background to a prominent color, like the theme's blue/cyan */
+  background-color: var(--ef-blue) !important; 
+  /* Change text color to foreground or background for contrast */
+  color: var(--ef-bg) !important; 
+  /* Optional: Add a subtle box shadow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
+}
+
+/* Ensure the default 'btn-outline-primary' text color is set correctly in dark mode */
+.quarto-dark .btn-outline-primary {
+    color: var(--ef-yellow) !important;
+    border-color: var(--ef-yellow) !important;
+}
