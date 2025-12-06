@@ -44,44 +44,44 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Chih-Kang Huang, PhD",
+    "title": "Chih-Kang Huang",
     "section": "",
-    "text": "[Postdoctoral Researcher | PhD in Applied Maths | ENS Lyon]\n\n\nI am a postdoctoral researcher specializing in physics-informed machine learning and control theory of PDEs at Institut Elie Cartan de Lorrane and Institut Jean Lamour. My current work focuses on modeling, simulation, and optimization in materials science, with keen interests in quantum computing and quantitative finance.\nPreviously, I received my Ph.D. in Applied Mathematics at Institut Camille Jordan, University of Lyon. My manuscript can be found here.\n\n\n GitHub •  LinkedIn •  Email\n\n\n\n\nResearch Scientific Works Projects Misc\n\n\n\n\n[07/2025] Invited talk of our work at TMS2026!"
+    "text": "Research Publications Projects Misc"
   },
   {
     "objectID": "index.html#about",
     "href": "index.html#about",
-    "title": "Chih-Kang Huang, PhD",
-    "section": "",
-    "text": "[Postdoctoral Researcher | PhD in Applied Maths | ENS Lyon]\n\n\nI am a postdoctoral researcher specializing in physics-informed machine learning and control theory of PDEs at Institut Elie Cartan de Lorrane and Institut Jean Lamour. My current work focuses on modeling, simulation, and optimization in materials science, with keen interests in quantum computing and quantitative finance.\nPreviously, I received my Ph.D. in Applied Mathematics at Institut Camille Jordan, University of Lyon. My manuscript can be found here.\n\n\n GitHub •  LinkedIn •  Email\n\n\n\n\nResearch Scientific Works Projects Misc\n\n\n\n\n[07/2025] Invited talk of our work at TMS2026!"
+    "title": "Chih-Kang Huang",
+    "section": "👋 About Me",
+    "text": "👋 About Me\n\n\n\n\n\n\nPostdoctoral Researcher | PhD in Applied Maths | ENS Lyon\n\n\nI am a postdoctoral researcher specializing in physics-informed machine learning and control theory of PDEs at Institut Elie Cartan de Lorrane and Institut Jean Lamour. My current work focuses on modeling, simulation, and optimization in materials science, with keen interests in quantum computing and quantitative finance.\nPreviously, I received my Ph.D. in Applied Mathematics at Institut Camille Jordan, University of Lyon. My manuscript can be found here.\n\n\n GitHub •  LinkedIn •  Email\n\n\n\n\n\n📣 News\n\n[2025/07] Invited talk of our work at TMS2026!"
   },
   {
     "objectID": "index.html#research",
     "href": "index.html#research",
-    "title": "Chih-Kang Huang, PhD",
+    "title": "Chih-Kang Huang",
     "section": "🔬 Research",
-    "text": "🔬 Research\n\n\nControl Theory of Deep learning\nAnalysis of PDEs and Calculus of variations\nApplication of AI to Materials Science\nQuantum Simulations and Control\n\n\n\nSkills\n\n\nProgramming : Python (Pandas, scikit-learn, JAX, Pytorch), MatLab\nTools : Linux, Latex, Git, Docker, Slurm (HPC), JupyterLab"
+    "text": "🔬 Research\n\n\nControl Theory of Deep learning\nAnalysis of PDEs and Calculus of variations\nApplication of AI to Materials Science\nQuantum Simulations and Control\n\n\n\n🛠️ Skills\n\n\nProgramming : Python (Pandas, scikit-learn, JAX, Pytorch), MatLab\nTools : Linux, Latex, Git, Docker, Slurm (HPC), JupyterLab"
   },
   {
     "objectID": "index.html#works",
     "href": "index.html#works",
-    "title": "Chih-Kang Huang, PhD",
-    "section": "📜 Scientific Works",
-    "text": "📜 Scientific Works\n\n\nPublications\n\n\nC-K. Huang, L. Gagnon, B. Appolaire, M. Zaloznik. Neural network approximation of a phase-field model for dendritic growth.\nE.Bretin, C-K. Huang, S. Masnou. A thickness-aware Allen-Cahn equation for the mean curvature flow of thin structures, accepted.\nC-K. Huang. Questions of approximation and compactness for geometric variational problems, Thesis, Université de Lyon, 2021\nC-K. Huang. Asymptotic Analysis of embedded Willmore spheres in 3-dimensional manifolds.\nL. Gagnon, C-K. Huang. Null controllability of Allen-Cahn eqaution, in preparation.\n\n\n\n\nPresentations\n\n\n\nUnder construction"
+    "title": "Chih-Kang Huang",
+    "section": "📜 Publications and Preprints",
+    "text": "📜 Publications and Preprints\n\n\n\nC-K. Huang, L. Gagnon, B. Appolaire, M. Zaloznik. Neural network approximation of a phase-field model for dendritic growth.\nE.Bretin, C-K. Huang, S. Masnou. A thickness-aware Allen-Cahn equation for the mean curvature flow of thin structures, accepted.\nC-K. Huang. Questions of approximation and compactness for geometric variational problems, Thesis, 2021\nC-K. Huang. Asymptotic Analysis of embedded Willmore spheres in 3-dimensional manifolds.\nL. Gagnon, C-K. Huang. Null controllability of Allen-Cahn eqaution, in preparation.\n\n\n\n\n🗣️ Presentations (Click to Expand)\n\n\nUnder construction"
   },
   {
     "objectID": "index.html#projects",
     "href": "index.html#projects",
-    "title": "Chih-Kang Huang, PhD",
+    "title": "Chih-Kang Huang",
     "section": "🔨 Projects",
-    "text": "🔨 Projects\n\n\nContributions to Variational Quantum Brushes using VQE and quantum control, Quantinuum Hackathon, Bradford 2025\nIBM Quantum Computing Hackathon, Quantum framework for dynamic portfolio optimization, London 2025\nDelivered lectures on Physics-Informed Machine Learning at the International PEPR DIADEM Summer School, Paris 2025\nCENTURI Hackathon 2024 for Quantitative Biology, Deep single molecule unfolding detection, First Price.\nG-Research Paris Quant Challenge 2024, Introductory session on cointegration for pairs trading.\nChatbot for automated meal order collection, a chatbot to collect automatically meal orders during my mandatory civil service in Taiwan"
+    "text": "🔨 Projects\n\n\nContributions to Variational Quantum Brushes using VQE and quantum control, Quantinuum Hackathon, Bradford 2025\nDelivered lectures on Physics-Informed Machine Learning at the International PEPR DIADEM Summer School, Paris 2025\nChatbot for automated meal order collection, a chatbot to collect automatically meal orders during my mandatory civil service in Taiwan\n\n\n💡 Hackathons\n\nIBM Quantum Computing Hackathon, Quantum framework for dynamic portfolio optimization, London 2025\nG-Research Paris Quant Challenge 2024, Introductory session on cointegration for pairs trading.\nCENTURI Hackathon 2024 for Quantitative Biology, Deep single molecule unfolding detection, First Price."
   },
   {
     "objectID": "index.html#misc",
     "href": "index.html#misc",
-    "title": "Chih-Kang Huang, PhD",
-    "section": "📚 Misc",
-    "text": "📚 Misc\n\nIn my spare time, i enjoy studying and playing Bridge, a probabilistic trick-taking card game. My system based on Precision Club and Symmetric Relay can be found here.\n\n\n\n© 2025 Chih-Kang Huang. All rights reserved."
+    "title": "Chih-Kang Huang",
+    "section": "♦️ Misc",
+    "text": "♦️ Misc\n\nIn my spare time, i enjoy studying and playing Bridge, a probabilistic trick-taking card game. My system based on Precision Club and Symmetric Relay can be found here.\n\n\n\n📚 Teaching (Click to Expand)\n\n\nUnder construction \n\n\n\nResearch Publications Projects Misc\n\n\n\n© 2025 Chih-Kang Huang. All rights reserved."
   },
   {
     "objectID": "backup/markdown_generator/readme.html",
