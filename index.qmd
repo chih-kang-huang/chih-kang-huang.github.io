@@ -68,9 +68,9 @@ format:
 --->
 
 * Control Theory of Deep learning
-* Analysis of PDEs and Calculus of variations
-* Application of AI to Materials Science
 * Quantum Simulations and Control
+* AI4Science and AI4Materials
+* Analysis of PDEs and Calculus of variations
 
 <!---
 * **Topic 2:** Description of your work in this area.
@@ -79,8 +79,8 @@ format:
 ### 🛠️ Skills
 <!---* **Mathematics :** Analysis of PDEs, Numerical Simulations, Calculus of Variations, Control theory of Machine Learning
 --->
-* **Programming :** Python (Pandas, scikit-learn, JAX, Pytorch), MatLab
-* **Tools :** Linux, Latex, Git, Docker, Slurm (HPC), JupyterLab
+* **Programming :** Python (Pandas, scikit-learn, JAX, Pytorch), MatLab, Bash
+* **Tools :** Linux, Latex, Git, Docker, Slurm (HPC), JupyterLab, Quarto
 
 ---
 
@@ -147,6 +147,7 @@ A brief description of Project Alpha, what it does, and what technologies you us
 --->
 * Contributions to [Variational Quantum Brushes](https://github.com/moth-quantum/QuantumBrush) using VQE and quantum control, Quantinuum Hackathon, Bradford 2025
 * Delivered lectures on **Physics-Informed Machine Learning** at the [International PEPR DIADEM Summer School](https://ecolediadem.sciencesconf.org/resource/page/id/3), Paris 2025 
+* Thales proejct on [Quantum group convolution for PDEs and Equivariant Neural Networks](https://cemracs2025.math.cnrs.fr/en/hackathon/projets/quantum-group-convolution-for-pdes/) at [CEMRACS](https://cemracs2025.math.cnrs.fr/en/), Marseille 2025
 * [Chatbot for automated meal order collection](https://github.com/chih-kang-huang/nca-linebot), a chatbot to collect automatically meal orders during my mandatory civil service in Taiwan, Nantou 2023
 
 ### 💡 Hackathons
