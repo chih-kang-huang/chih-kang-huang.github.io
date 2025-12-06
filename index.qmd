@@ -4,8 +4,8 @@ format:
   html:
     css: styles.css
     theme:
-      dark: darkly
       light: cosmo
+      dark: darkly
     page-layout: full
     toc: false
     smooth-scroll: true
@@ -27,7 +27,7 @@ format:
 <div class="about-header">
 
 <div class="about-photo">
-  ![](images/ckhuang.jpg){width=150} 
+  ![](images/ckhuang.jpg) 
 </div>
 
 <div class="about-text">
