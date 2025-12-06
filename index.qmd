@@ -113,6 +113,29 @@ List your publications, talks, and presentations.
   --->
 </details>
 
+<details> 
+  <summary><h3 style="display: inline;">🔢 Outreach <span class="expand-cue">(Click to Expand)</span></h3></summary>
+  Under construction
+  <!---
+    <li>[Talk Title] at [Event Name] (Year) - [Link to Slides]</li>
+    <li>[Another Talk Title] at [Another Event] (Year)</li>
+    This text is initially hidden. You can place Markdown, lists, or even code blocks here.
+  * Item 1
+  * Item 2
+  --->
+</details>
+
+<details> 
+  <summary><h3 style="display: inline;">📚 Teaching <span class="expand-cue">(Click to Expand)</span></h3></summary>
+  Under construction
+  <!---
+    <li>[Talk Title] at [Event Name] (Year) - [Link to Slides]</li>
+    <li>[Another Talk Title] at [Another Event] (Year)</li>
+    This text is initially hidden. You can place Markdown, lists, or even code blocks here.
+  * Item 1
+  * Item 2
+  --->
+</details>
 
 ---
 
@@ -149,17 +172,7 @@ Include anything else relevant, like teaching experience, hobbies, or blog links
 In my spare time, i enjoy studying and playing [Bridge](https://en.wikipedia.org/wiki/Contract_bridge), a probabilistic trick-taking card game. 
 My system based on Precision Club and Symmetric Relay can be found [here](https://github.com/chih-kang-huang/bridge).
 
-<details> 
-  <summary><h3 style="display: inline;">📚 Teaching <span class="expand-cue">(Click to Expand)</span></h3></summary>
-  Under construction
-  <!---
-    <li>[Talk Title] at [Event Name] (Year) - [Link to Slides]</li>
-    <li>[Another Talk Title] at [Another Event] (Year)</li>
-    This text is initially hidden. You can place Markdown, lists, or even code blocks here.
-  * Item 1
-  * Item 2
-  --->
-</details>
+I also enjoy puzzle solving. For instance, [my solutions to Advent of Challenge 2025](https://gitbhub/chih-kang-huang/adventOfCode2025)
 
 ---
 
