@@ -98,23 +98,33 @@
 
 /* --- Collapsible Section Styling (for clear indicators) --- */
 
+/* The style for the actual list items */
+details {
+  /* Indent the whole section block slightly */
+  margin-left: 5px;
+}
+
 details > summary {
   cursor: pointer;
+   
+  /* Indent the title further to align with standard subsection headings */
+  padding-left: 10px; 
   
   /* Inherit the custom title style */
-  font-size: 1.2rem; 
+  font-size: 1.3rem;
   font-weight: 600; 
   color: var(--ef-yellow) !important; 
   
-  padding-bottom: 5px; 
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
+  padding-bottom: 1px; 
+  margin-top: 0.5rem;
+  margin-bottom: 0.3rem;
   
   /* Marker when CLOSED (indicates it can be opened) */
   list-style-type: '▶ '; 
 }
 
 details[open] > summary {
+  font-size: 1.8rem;
   /* Marker when OPEN (indicates it can be closed) */
   list-style-type: '▼ '; 
 }
@@ -134,6 +144,45 @@ details[open] .expand-cue {
   display: none;
 }
 
+/* 2. Indent the clickable title to appear nested */
+.collapsible-title {
+  cursor: pointer;
+  /* Indent the title further to align with standard subsection headings */
+  padding-left: 10px; 
+
+  /* Ensure the title maintains H3/H4 look */
+  font-size: 1.4rem; 
+  font-weight: 600; 
+  color: var(--ef-yellow) !important; 
+  
+  padding-bottom: 2px; 
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+  
+  /* Retain the marker icon styling */
+  list-style-type: '▶ '; 
+}
+
+details[open] .collapsible-title {
+  list-style-type: '▼ '; 
+}
+
+.collapsible-content-text {
+  /* Match the indentation of the list content (should align with .presentations-list) */
+  margin-left: 10px; 
+  /* Add a little space above and below the text */
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+/* 3. Indent the content list inside the collapsible section */
+.presentations-list {
+  /* This shifts the entire list and its bullets to the right */
+  margin-left: 10px; 
+  /* Reduce top padding if needed to bring it closer to the title */
+  padding-top: 2px; 
+}
+
 /* Theme Toggle Button Styling */
 .theme-switcher-label {
     margin-right: 5px; 
@@ -146,7 +195,7 @@ footer {
     text-align: center;
     padding: 20px 0;
     font-size: 0.9em;
-    color: rgba(211, 198, 170, 0.7); /* Slightly dimmed text for copyright */
+    color: rgba(211, 198, 170, 0.9); /* Slightly dimmed text for copyright */
 }
 
 
