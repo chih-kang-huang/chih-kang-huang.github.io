@@ -102,7 +102,7 @@ List your publications, talks, and presentations.
 
 
 <details> 
-  <summary><h3 style="display: inline;">🗣️ Presentations <span class="expand-cue">(Click to Expand)</span></h3></summary>
+  <summary><h4 style="display: inline;">🗣️ Presentations <span class="expand-cue">(Click to Expand)</span></h4></summary>
   Under construction
   <!---
     <li>[Talk Title] at [Event Name] (Year) - [Link to Slides]</li>
@@ -113,20 +113,15 @@ List your publications, talks, and presentations.
   --->
 </details>
 
+<!---
 <details> 
   <summary><h3 style="display: inline;">🔢 Outreach <span class="expand-cue">(Click to Expand)</span></h3></summary>
   Under construction
-  <!---
-    <li>[Talk Title] at [Event Name] (Year) - [Link to Slides]</li>
-    <li>[Another Talk Title] at [Another Event] (Year)</li>
-    This text is initially hidden. You can place Markdown, lists, or even code blocks here.
-  * Item 1
-  * Item 2
-  --->
 </details>
+--->
 
 <details> 
-  <summary><h3 style="display: inline;">📚 Teaching <span class="expand-cue">(Click to Expand)</span></h3></summary>
+  <summary><h4 style="display: inline;">📚 Teaching <span class="expand-cue">(Click to Expand)</span></h4></summary>
   Under construction
   <!---
     <li>[Talk Title] at [Event Name] (Year) - [Link to Slides]</li>
@@ -151,13 +146,13 @@ A brief description of Project Alpha, what it does, and what technologies you us
 * [Link to GitHub Repo] | [Link to Live Demo]
 --->
 * Contributions to [Variational Quantum Brushes](https://github.com/moth-quantum/QuantumBrush) using VQE and quantum control, Quantinuum Hackathon, Bradford 2025
-* Delivered lectures on *Physics-Informed Machine Learning* at the [International PEPR DIADEM Summer School](https://ecolediadem.sciencesconf.org/resource/page/id/3), Paris 2025 
-* [Chatbot for automated meal order collection](https://github.com/chih-kang-huang/nca-linebot), a chatbot to collect automatically meal orders during my mandatory civil service in Taiwan
+* Delivered lectures on **Physics-Informed Machine Learning** at the [International PEPR DIADEM Summer School](https://ecolediadem.sciencesconf.org/resource/page/id/3), Paris 2025 
+* [Chatbot for automated meal order collection](https://github.com/chih-kang-huang/nca-linebot), a chatbot to collect automatically meal orders during my mandatory civil service in Taiwan, Nantou 2023
 
 ### 💡 Hackathons
 * [IBM Quantum Computing Hackathon](https://www.theglobalcity.uk/insights/quantum-computing-hackathon), Quantum framework for dynamic portfolio optimization, London 2025
-* [G-Research Paris Quant Challenge 2024](https://www.gresearch.com/events/paris-quant-challenge/), Introductory session on cointegration for pairs trading.
-* [CENTURI Hackathon 2024 for Quantitative Biology](https://github.com/CENTURI-Hackathon-2024), Deep single molecule unfolding detection, **First Price**. 
+* [G-Research Quant Challenge](https://www.gresearch.com/events/paris-quant-challenge/), Introductory session on cointegration for pairs trading, Paris 2024.
+* [CENTURI Hackathon for Quantitative Biology](https://github.com/CENTURI-Hackathon-2024), Deep single molecule unfolding detection, **First Price**, Marseille 2024. 
 
 
 ---
@@ -172,7 +167,7 @@ Include anything else relevant, like teaching experience, hobbies, or blog links
 In my spare time, i enjoy studying and playing [Bridge](https://en.wikipedia.org/wiki/Contract_bridge), a probabilistic trick-taking card game. 
 My system based on Precision Club and Symmetric Relay can be found [here](https://github.com/chih-kang-huang/bridge).
 
-I also enjoy puzzle solving. For instance, [my solutions to Advent of Challenge 2025](https://gitbhub/chih-kang-huang/adventOfCode2025)
+I also enjoy puzzle solving. For instance, [my solutions to Advent of Challenge 2025](https://github.com/chih-kang-huang/adventOfCode2025)
 
 ---
 
