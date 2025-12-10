@@ -186,6 +186,7 @@ List your publications, talks, and presentations.
   <div class="collapsible-content-text">
   </div>
   --->
+* Projet des Collèges **La main à la pâte** en médiations scientifiques à la Maison pour la Science en Lorraine, 2025
 * Vulgarisations mathématiques organisées par **MathàLyon**, 2015–2019
 * Commission de jurys à TFJM2 de Lyon, 2017
 * Organiztion of [*Journée de Pi* (Spectacle musical mathématiques)](https://www.piday.fr/) à Lyon, 2016
