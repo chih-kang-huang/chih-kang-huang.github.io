@@ -214,7 +214,7 @@ A brief description of Project Alpha, what it does, and what technologies you us
 * [Chatbot for automated meal order collection](https://github.com/chih-kang-huang/nca-linebot), a chatbot to collect automatically meal orders during my mandatory civil service in Taiwan, Nantou 2023
 
 ### 💡 Hackathons
-* [IBM Quantum Computing Hackathon](https://www.theglobalcity.uk/insights/quantum-computing-hackathon), Quantum framework for dynamic portfolio optimization, London 2025
+* [IBM Quantum Computing Hackathon](https://www.theglobalcity.uk/insights/quantum-computing-hackathon), [Quantum framework for dynamic portfolio optimization](https://github.com/chih-kang-huang/Quantum-dynamic-portfolio-optimization), London 2025
 * [G-Research Quant Challenge](https://www.gresearch.com/events/paris-quant-challenge/), Introductory session on cointegration for pairs trading, Paris 2024.
 * [CENTURI Hackathon for Quantitative Biology](https://github.com/CENTURI-Hackathon-2024), Deep single molecule unfolding detection, **First Price**, Marseille 2024. 
 
