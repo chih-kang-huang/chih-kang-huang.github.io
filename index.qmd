@@ -116,6 +116,7 @@ List your publications, talks, and presentations.
   * Item 1
   * Item 2
   -->
+  1. 2025 November, Séminaire Si2M/Medicis, Institut Jean Lamour, Nancy
   1. 2025 October, THALES JPAL Seminar on Quantum Algorithms & Computing, Remote
   1. 2025 September, Séminaire thématiques et sessions Q&A, UM6P, Remote.
   1. 2025 August, Lectures on Physics-Informed Machine Learning at the *International PEPR DIADEM Summer School*, Paris
