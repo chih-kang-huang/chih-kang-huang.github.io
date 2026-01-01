@@ -104,6 +104,8 @@ List your publications, talks, and presentations.
 1. L. Gagnon, **C-K. Huang**. Null controllability of Allen-Cahn eqaution, in preparation.
 
 
+1. (Outreach paper) J-T. Lu, H. Ennes, **C-K. Huang**, A. Abbassi. [**Variational Quantum Brushes**](https://arxiv.org/abs/2512.24173), 2026. 
+
 <details> 
   <summary><h3 style="display: inline;">🗣️ Presentations <span class="expand-cue">(Click to Expand)</span></h3></summary>
   <!--
@@ -117,12 +119,13 @@ List your publications, talks, and presentations.
   * Item 2
   -->
   1. 2025 November, Séminaire Si2M/Medicis, Institut Jean Lamour, Nancy
-  1. 2025 October, THALES JPAL Seminar on Quantum Algorithms & Computing, Remote
-  1. 2025 September, Séminaire thématiques et sessions Q&A, UM6P, Remote.
-  1. 2025 August, Lectures on Physics-Informed Machine Learning at the *International PEPR DIADEM Summer School*, Paris
-  1. 2024 November, Invited talk to la journée Science Ouverte, Nancy
+  1. 2025 October, THALES JPAL Seminar on Quantum Algorithms & Computing, Remote, Palaiseau
+  1. 2025 September, Séminaire thématiques et sessions Q&A, UM6P, Remote, Marrakech
+  1. 2025 August, Lectures on Physics-Informed Machine Learning at the **International PEPR DIADEM Summer School**, Paris
+  1. 2025 Juin, Presentation at **Icasp 8**, Madrid
+  1. 2024 November, Invited talk at la journée Science Ouverte, Nancy
   1. 2024 April, Séminaire d'EDPs, Institut Elie Cartan de Lorraine, Nancy
-  1. 2021 June, *SMAI2021*, la Grande-Motte
+  1. 2021 June, Presentation at **SMAI2021**, la Grande-Motte
   1. 2019 October, Journée d'équipe EDPA, Institut Camille Jordan, Lyon
   1. 2019 Mars, Sémainaire Compréhensibles, Institut Fourier, Grenoble
   1. 2018 October, Journée d'équipe MMCS, Institut Camille Jordan, Lyon
