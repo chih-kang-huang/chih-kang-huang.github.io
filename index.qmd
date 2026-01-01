@@ -104,7 +104,7 @@ List your publications, talks, and presentations.
 1. L. Gagnon, **C-K. Huang**. Null controllability of Allen-Cahn eqaution, in preparation.
 
 
-1. (Outreach paper) J-T. Lu, H. Ennes, **C-K. Huang**, A. Abbassi. [**Variational Quantum Brushes**](https://arxiv.org/abs/2512.24173), 2026. 
+1. (Outreach paper) J-T. Lu, H. Ennes, **C-K. Huang**, A. Abbassi. [**Variational Quantum Brushes**](https://arxiv.org/abs/2512.24173), 2025. 
 
 <details> 
   <summary><h3 style="display: inline;">🗣️ Presentations <span class="expand-cue">(Click to Expand)</span></h3></summary>
@@ -260,5 +260,5 @@ I also enjoy puzzle solving. For instance, [my solutions to Advent of Challenge 
 
 
 <footer>
-  <p>&copy; 2025 Chih-Kang Huang. All rights reserved.</p>
+  <p>&copy; 2026 Chih-Kang Huang. All rights reserved.</p>
 </footer>
