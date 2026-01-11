@@ -211,6 +211,11 @@ List your publications, talks, and presentations.
 
 </details>
 
+### Supervision
+
+* K. Oubaha, Physics-Informed Neural Operators (PINO), Feb 2026 -- Aug 2026. 
+  Develop a surrogate model for the mechanical response of materials by embedding physical equilibrium constraints into a neural operator.
+
 ---
 
 ## 🔨 Projects {id="projects"}
