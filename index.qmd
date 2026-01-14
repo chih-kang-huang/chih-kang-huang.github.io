@@ -213,8 +213,8 @@ List your publications, talks, and presentations.
 
 ### 🔍 Supervision
 
-* K. Oubaha, Physics-Informed Neural Operators (PINO), Feb 2026 -- Jul 2026. Co-supervised with A. Dimokrati (UM6P) and B. Appolaire (Univ. de Lorraine).
-  Develop a surrogate model for the mechanical response of materials by embedding physical equilibrium constraints into a neural operator.
+* Master Internship:
+  * K. Oubaha, Physics-Informed Neural Operators (PINO), Feb 2026 -- Jul 2026. Co-supervised with A. Dimokrati (UM6P) and B. Appolaire (Univ. de Lorraine). Develop a surrogate model for the mechanical response of materials by embedding physical equilibrium constraints into a neural operator.
 
 ---
 
