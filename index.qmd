@@ -36,11 +36,11 @@ format:
   </p>
   
   <p>
-    I am a postdoctoral researcher in Physics-Informed Machine Learning and control theory of Deep Learning at [Institut Elie Cartan de Lorrane](https://iecl.univ-lorraine.fr) and [Institut Jean Lamour](https://ijl.univ-lorraine.fr), University of Lorraine. 
-    
-    My current work focuses on modeling, simulation using neural neworks in materials science, with keen interests in quantum computing and quantitative finance.
+  I am a postdoctoral researcher at [Centre Inria d'Université Côte d'Azur](https://www.inria.fr/fr/centre-inria-universite-cote-azur) and [Laboratoire J.A. Dieudonné](https://math.univ-cotedazur.fr/).
+    My current work focuses on Control theory for neural network analysis, Physics-Informed Machine Learning and AI4Materials, with keen interests in quantum computing and quantitative finance.
 
-    Previously, I received my Ph.D. in Applied Mathematics at [Institut Camille Jordan](https://math.univ-lyon1.fr/icj/), University of Lyon. My manuscript can be found [here](https://theses.hal.science/tel-03584255). 
+    Previously, I was a postdoctoral researcher at [Institut Elie Cartan de Lorrane](https://iecl.univ-lorraine.fr) and [Institut Jean Lamour](https://ijl.univ-lorraine.fr), University of Lorraine. 
+    I received my Ph.D. in Applied Mathematics at [Institut Camille Jordan](https://math.univ-lyon1.fr/icj/), University of Lyon. My manuscript can be found [here](https://theses.hal.science/tel-03584255). 
   </p>
   
   <p class="social-links">
