@@ -118,19 +118,20 @@ List your publications, talks, and presentations.
   * Item 1
   * Item 2
   -->
-  * 2025 November, Séminaire Si2M/Medicis, Institut Jean Lamour, Nancy
-  * 2025 October, THALES JPAL Seminar on Quantum Algorithms & Computing, Remote, Palaiseau
-  * 2025 September, Séminaire thématiques et sessions Q&A, UM6P, Remote, Marrakech
-  * 2025 August, Lectures on Physics-Informed Machine Learning at the **International PEPR DIADEM Summer School**, Paris
-  * 2025 Juin, Presentation at **ICASP7**, Madrid
-  * 2024 November, Invited talk at la journée Science Ouverte, Nancy
-  * 2024 April, Séminaire d'EDPs, Institut Elie Cartan de Lorraine, Nancy
-  * 2021 June, Presentation at **SMAI2021**, la Grande-Motte
-  * 2019 October, Journée d'équipe EDPA, Institut Camille Jordan, Lyon
-  * 2019 Mars, Sémainaire Compréhensibles, Institut Fourier, Grenoble
-  * 2018 October, Journée d'équipe MMCS, Institut Camille Jordan, Lyon
-  * 2017 Mars, Séminaire des doctorants et doctorantes, Lyon
-  * 2016 May, Colloque Inter'Actions en Mathématiques, Lyon
+
+* 2025 November, Séminaire Si2M/Medicis, Institut Jean Lamour, Nancy
+* 2025 October, THALES JPAL Seminar on Quantum Algorithms & Computing, Remote, Palaiseau
+* 2025 September, Séminaire thématiques et sessions Q&A, UM6P, Remote, Marrakech
+* 2025 August, Lectures on Physics-Informed Machine Learning at the **International PEPR DIADEM Summer School**, Paris
+* 2025 Juin, Presentation at **ICASP7**, Madrid
+* 2024 November, Invited talk at la journée Science Ouverte, Nancy
+* 2024 April, Séminaire d'EDPs, Institut Elie Cartan de Lorraine, Nancy
+* 2021 June, Presentation at **SMAI2021**, la Grande-Motte
+* 2019 October, Journée d'équipe EDPA, Institut Camille Jordan, Lyon
+* 2019 Mars, Sémainaire Compréhensibles, Institut Fourier, Grenoble
+* 2018 October, Journée d'équipe MMCS, Institut Camille Jordan, Lyon
+* 2017 Mars, Séminaire des doctorants et doctorantes, Lyon
+* 2016 May, Colloque Inter'Actions en Mathématiques, Lyon
 
 </details>
 
