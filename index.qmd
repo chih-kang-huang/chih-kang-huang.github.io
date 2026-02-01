@@ -119,6 +119,10 @@ List your publications, talks, and presentations.
   * Item 2
   -->
 
+* 2026 April, Séminaire de l'équipe EDP Analyse Numérique, Nice
+* 2026 March, SMAI-MODE, Nice
+* 2026 March, Congrès des Jeunes Chercheur.e.s en Mathématiques Appliquées, Champs-sur-Marne
+* 2026 February, Séminaire Analyse et Dynamique, Laboratoire J.A. Dieudonné, Nice
 * 2025 November, Séminaire Si2M/Medicis, Institut Jean Lamour, Nancy
 * 2025 October, THALES JPAL Seminar on Quantum Algorithms & Computing, Remote, Palaiseau
 * 2025 September, Séminaire thématiques et sessions Q&A, UM6P, Remote, Marrakech
@@ -130,7 +134,7 @@ List your publications, talks, and presentations.
 * 2019 October, Journée d'équipe EDPA, Institut Camille Jordan, Lyon
 * 2019 Mars, Sémainaire Compréhensibles, Institut Fourier, Grenoble
 * 2018 October, Journée d'équipe MMCS, Institut Camille Jordan, Lyon
-* 2017 Mars, Séminaire des doctorants et doctorantes, Lyon
+* 2017 March, Séminaire des doctorants et doctorantes, Lyon
 * 2016 May, Colloque Inter'Actions en Mathématiques, Lyon
 
 </details>
