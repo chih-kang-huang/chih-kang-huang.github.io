@@ -155,7 +155,7 @@ List your publications, talks, and presentations.
   <summary><h3 style="display: inline;">📚 Teaching <span class="expand-cue">(Click to Expand)</span></h3></summary>
 
   <div class="collapsible-content-text">
-  My Teaching (mostly in french) are listed below 
+  My Teaching (mostly in french and english as well) are listed below 
   </div>
 
 * Ecole des Mines de Nancy
