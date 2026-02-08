@@ -32,7 +32,7 @@ format:
 
 <div class="about-text">
   <p class="tagline">
-    **Postdoctoral Researcher | PhD in Applied Maths | ENS Lyon**
+    **Postdoc in ML & Maths | PhD in Applied Maths | ENS Lyon**
   </p>
   
   <p>
