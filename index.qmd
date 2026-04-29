@@ -36,11 +36,9 @@ format:
   </p>
   
   <p>
-  I am a postdoctoral researcher at [Centre Inria d'Université Côte d'Azur](https://www.inria.fr/fr/centre-inria-universite-cote-azur) and [Laboratoire J.A. Dieudonné](https://math.univ-cotedazur.fr/).
-    My current work focuses on Control theory for neural network analysis, Physics-Informed Machine Learning and AI4Materials, with keen interests in quantum computing and quantitative finance.
+  I am a postdoctoral researcher at [Centre Inria d'Université Côte d'Azur](https://www.inria.fr/fr/centre-inria-universite-cote-azur) and [Laboratoire J.A. Dieudonné](https://math.univ-cotedazur.fr/). My current work focuses on Control theory for neural network analysis and Physics-Informed Machine Learning, with keen interests in quantum computing and AI4Materials.
 
-    Previously, I was a postdoctoral researcher at [Institut Elie Cartan de Lorrane](https://iecl.univ-lorraine.fr) and [Institut Jean Lamour](https://ijl.univ-lorraine.fr), University of Lorraine. 
-    I received my Ph.D. in Applied Mathematics at [Institut Camille Jordan](https://math.univ-lyon1.fr/icj/), University of Lyon. My manuscript can be found [here](https://theses.hal.science/tel-03584255). 
+    Previously, I was a postdoctoral researcher at [Institut Jean Lamour](https://ijl.univ-lorraine.fr), University of Lorraine. I received my Ph.D. in Applied Mathematics at [Institut Camille Jordan](https://math.univ-lyon1.fr/icj/), University of Lyon. My manuscript can be found [here](https://theses.hal.science/tel-03584255). 
   </p>
   
   <p class="social-links">
@@ -69,9 +67,8 @@ format:
 <!--- Summarize your main research interests, affiliations, and any ongoing projects.
 --->
 
-* Control Theory of Deep learning
-* AI4Science and AI4Materials
-* Quantum Simulations and Control
+* Control Theory of Deep learning, Physics-Informed ML, AI4Materials
+* Quantum Simulation and Control
 * Analysis of PDEs and Calculus of variations
 
 <!---
@@ -97,12 +94,13 @@ List your publications, talks, and presentations.
 2.  **"Title of Paper 2"** (Year). *Conference Proceedings*.
 --->
 
-1. **C.-K. Huang**, L. Gagnon, B. Appolaire, M. Zaloznik. [**Neural network approximation of a phase-field model for dendritic growth**](https://www.programmaster.org/PM/PM.nsf/ApprovedAbstracts/FBC91110162EE9C785258CC5008257E0?OpenDocument).
-1. J-T. Lu, H. Ennes, **C.-K. Huang**, A. Abbassi. [**Variational Quantum Brushes**](https://arxiv.org/abs/2512.24173), preprint, 2025. 
-1. E.Bretin, **C.-K. Huang**, S. Masnou. [**A thickness-aware Allen-Cahn equation for the mean curvature flow of thin structures**](https://arxiv.org/abs/2310.10272), Interfaces and Free Boundaries, accepted, 2025.
-1. **C.-K. Huang**. [**Questions of approximation and compactness for geometric variational problems**](https://theses.hal.science/tel-03584255), Thesis, 2021
-1. **C.-K. Huang**. [Asymptotic Analysis of embedded Willmore spheres in 3-dimensional manifolds](https://arxiv.org/abs/1710.08732).
-1. L. Gagnon, **C.-K. Huang**. Null controllability of Allen-Cahn eqaution, in preparation.
+1. with G. Antonioli, F. Barbaresco. [**A Quantum Spectral Framework For solving PDEs**](https://arxiv.org/abs/2604.25825), preprint.
+1. with L. Gagnon, M. Zaloznik, B. Appolaire. [**DeepSplitRitz Neural Operator for Phase-field models via Energy Splitting**](https://arxiv.org/abs/2604.18261), preprint.
+1. with J-T. Lu, H. Ennes, A. Abbassi. [**Variational Quantum Brushes**](https://arxiv.org/abs/2512.24173), preprint. 
+1. with E.Bretin, S. Masnou. [**A thickness-aware Allen-Cahn equation for the mean curvature flow of thin structures**](https://arxiv.org/abs/2310.10272), Interfaces and Free Boundaries, to appear.
+1. [**Questions of approximation and compactness for geometric variational problems**](https://theses.hal.science/tel-03584255), Thesis.
+1. [Asymptotic Analysis of embedded Willmore spheres in 3-dimensional manifolds](https://arxiv.org/abs/1710.08732).
+1. with L. Gagnon. Null controllability of Allen-Cahn eqaution, in preparation.
 
 
 
