@@ -60,6 +60,7 @@ format:
 --->
 
 ### 📣 News 
+* [2026/07] A short version of our [paper](https://arxiv.org/abs/2604.18261) will be presented at the [**ICML2026 AI4Physics Workshop**](https://ai4physics-workshop.github.io/) !
 * [2026/03] **Invited talk** of our [work](https://www.programmaster.org/PM/PM.nsf/ApprovedAbstracts/FBC91110162EE9C785258CC5008257E0?OpenDocument) at [**TMS2026**](https://www.tms.org/TMS2026) !
 
 ## 🔬 Research {id="research"}
@@ -78,8 +79,8 @@ format:
 ### 🛠️ Skills
 <!---* **Mathematics :** Analysis of PDEs, Numerical Simulations, Calculus of Variations, Control theory of Machine Learning
 --->
-* **Programming :** Python (Pandas, scikit-learn, JAX, Pytorch), MatLab, Bash
-* **Tools :** Linux, Latex, Git, Docker, Slurm (HPC), JupyterLab, Quarto
+* **Programming :** Python (Pandas, scikit-learn, JAX, Pytorch), MatLab, C++ (Coursera EPFL)
+* **Tools :** Linux, Latex, Git, Docker, Slurm (HPC), JupyterLab, Quarto, Bash
 * **Languages :** **English**, **French**, **Mandarin**
 
 ---
@@ -97,7 +98,7 @@ List your publications, talks, and presentations.
 1. with G. Antonioli, F. Barbaresco. [**A Quantum Spectral Framework For solving PDEs**](https://arxiv.org/abs/2604.25825), preprint.
 1. with L. Gagnon, M. Zaloznik, B. Appolaire. [**DeepSplitRitz Neural Operator for Phase-field models via Energy Splitting**](https://arxiv.org/abs/2604.18261), preprint.
 1. with J-T. Lu, H. Ennes, A. Abbassi. [**Variational Quantum Brushes**](https://arxiv.org/abs/2512.24173), preprint. 
-1. with E.Bretin, S. Masnou. [**A thickness-aware Allen-Cahn equation for the mean curvature flow of thin structures**](https://arxiv.org/abs/2310.10272), Interfaces and Free Boundaries, to appear.
+1. with E. Bretin, S. Masnou. [**A thickness-aware Allen-Cahn equation for the mean curvature flow of thin structures**](https://arxiv.org/abs/2310.10272), Interfaces and Free Boundaries, to appear.
 1. [**Questions of approximation and compactness for geometric variational problems**](https://theses.hal.science/tel-03584255), Thesis.
 1. [Asymptotic Analysis of embedded Willmore spheres in 3-dimensional manifolds](https://arxiv.org/abs/1710.08732).
 1. with L. Gagnon. Null controllability of Allen-Cahn eqaution, in preparation.
