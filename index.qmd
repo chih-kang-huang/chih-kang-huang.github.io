@@ -118,6 +118,8 @@ List your publications, talks, and presentations.
   * Item 2
   -->
 
+* 2026 Auguest, Lectures on [**Physics-Informed Neural Networks**](https://formation.pepr-diadem.fr/programme) at the PEPR DIADEM Summer School, Grenoble
+* 2026 June, Poster at Mathématiques pour l'Apprentissage Automatique en Bourgogne, Dijon
 * 2026 April, Séminaire de l'équipe EDP Analyse Numérique, Nice
 * 2026 March, SMAI-MODE, Nice
 * 2026 March, Congrès des Jeunes Chercheur.e.s en Mathématiques Appliquées, Champs-sur-Marne
