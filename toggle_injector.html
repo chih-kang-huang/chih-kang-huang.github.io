@@ -1,0 +1,37 @@
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // Check if the toggle already exists (safeguard for preview mode)
+  if (!document.querySelector('.quarto-color-scheme-toggle')) {
+    
+    // Create the button container
+    var toggleBtn = document.createElement('a');
+    toggleBtn.className = 'quarto-color-scheme-toggle nav-link';
+    toggleBtn.href = '#';
+    toggleBtn.role = 'button';
+    toggleBtn.setAttribute('aria-label', 'Toggle dark mode');
+    
+    // Create the icon element that your CSS targets
+    var icon = document.createElement('i');
+    icon.className = 'bi';
+    toggleBtn.appendChild(icon);
+    
+    // Find your page container and prepend the button to it
+    var container = document.querySelector('#quarto-content') || document.body;
+    if (container) {
+      // Put it inside a neat custom wrapper so you can position it easily
+      var wrapper = document.createElement('div');
+      wrapper.className = 'custom-toggle-wrapper';
+      wrapper.appendChild(toggleBtn);
+      container.insertBefore(wrapper, container.firstChild);
+    }
+    
+    // Bind Quarto's native scheme toggle mechanism to your new button
+    if (window.quartoToggleColorScheme) {
+      toggleBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.quartoToggleColorScheme();
+      });
+    }
+  }
+});
+</script>
