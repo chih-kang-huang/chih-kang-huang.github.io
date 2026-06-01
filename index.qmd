@@ -60,7 +60,7 @@ format:
 --->
 
 ### 📣 News 
-* [2026/07] A short version of our [paper](https://arxiv.org/abs/2604.18261) will be presented at the [**ICML2026 AI4Physics Workshop**](https://ai4physics-workshop.github.io/) !
+* [2026/07] A short version of our [paper](https://arxiv.org/abs/2604.18261) is accepted at the [**ICML2026 AI4Physics Workshop**](https://ai4physics-workshop.github.io/) !
 * [2026/03] **Invited talk** of our [work](https://www.programmaster.org/PM/PM.nsf/ApprovedAbstracts/FBC91110162EE9C785258CC5008257E0?OpenDocument) at [**TMS2026**](https://www.tms.org/TMS2026) !
 
 ## 🔬 Research {id="research"}
@@ -118,8 +118,12 @@ List your publications, talks, and presentations.
   * Item 2
   -->
 
+<<<<<<< HEAD
 * 2026 Auguest, Lectures on [**Physics-Informed Neural Networks**](https://formation.pepr-diadem.fr/programme) at the PEPR DIADEM Summer School, Grenoble
 * 2026 June, Poster at Mathématiques pour l'Apprentissage Automatique en Bourgogne, Dijon
+=======
+* 2026 August, Lectures on Physics-Informed Neural Networks at the [**PEPR DIADEM Summer School**](https://formation.pepr-diadem.fr/programme), Grenoble
+>>>>>>> faa986f7194283558ce32add03f05636d83fbd7e
 * 2026 April, Séminaire de l'équipe EDP Analyse Numérique, Nice
 * 2026 March, SMAI-MODE, Nice
 * 2026 March, Congrès des Jeunes Chercheur.e.s en Mathématiques Appliquées, Champs-sur-Marne
