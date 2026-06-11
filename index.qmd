@@ -98,7 +98,7 @@ List your publications, talks, and presentations.
 1. with G. Antonioli, F. Barbaresco. [**A Quantum Spectral Framework For solving PDEs**](https://arxiv.org/abs/2604.25825), preprint.
 1. with L. Gagnon, M. Zaloznik, B. Appolaire. [**DeepSplitRitz Neural Operator for Phase-field models via Energy Splitting**](https://arxiv.org/abs/2604.18261), preprint.
 1. with J-T. Lu, H. Ennes, A. Abbassi. [**Variational Quantum Brushes**](https://arxiv.org/abs/2512.24173), preprint. 
-1. with E. Bretin, S. Masnou. [**A thickness-aware Allen-Cahn equation for the mean curvature flow of thin structures**](https://arxiv.org/abs/2310.10272), Interfaces and Free Boundaries, to appear.
+1. with E. Bretin, S. Masnou. [**A thickness-aware Allen-Cahn equation for the mean curvature flow of thin structures**](https://doi.org/10.4171/ifb/559), Interfaces and Free Boundaries, 2026.
 1. [**Questions of approximation and compactness for geometric variational problems**](https://theses.hal.science/tel-03584255), Thesis.
 1. [Asymptotic Analysis of embedded Willmore spheres in 3-dimensional manifolds](https://arxiv.org/abs/1710.08732).
 1. with L. Gagnon. Null controllability of Allen-Cahn eqaution, in preparation.
